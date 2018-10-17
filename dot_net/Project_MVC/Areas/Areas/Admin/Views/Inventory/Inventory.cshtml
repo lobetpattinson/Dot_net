@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Inventory by " + ViewBag.GroupBy;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="panel panel-default">
+    <table class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>@ViewBag.GroupBy</th>
+                <th>Count</th>
+                <th>Value</th>
+                <th>Min Price</th>
+                <th>Max Price</th>
+                <th>Avg Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Item in Model)
+            {
+                <tr>
+                    <td>@Item.Group</td>
+                    <td>@Item.Count</td>
+                    <td>@Item.Value</td>
+                    <td>@Item.MinPrice</td>
+                    <td>@Item.MaxPrice</td>
+                    <td>@Item.AvgPrice</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,39 @@
+ //tao calss Document
+//Tao entity MessageInfoEntities
+ public class MessageInfoEntities:DbContext
+    {
+        public MessageInfoEntities():base("name=ChuoiKetNoi"){}
+        public DbSet<Document> Documents { get; set; }
+    }
+
+public class Document
+    {
+        [Key]
+        public int DocID { get; set; }
+        public string DocName { get; set; }
+        public long OrderNum { get; set; }
+        public byte[] ImageData { get; set; }
+    }
+
+
+public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Index(Document d,HttpPostedFileBase file)
+        {
+            if (file.ContentLength > 0)
+            {
+                d.ImageData = new byte[file.ContentLength];
+                file.InputStream.Read(d.ImageData, 0, file.ContentLength);
+                using (var context = new MessageInfoEntities())
+               {
+                    context.Documents.Add(d);
+                    context.SaveChanges();
+                }
+            }
+           
+            return View();
+        }
+

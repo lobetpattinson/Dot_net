@@ -1,0 +1,365 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Doan_25.Model;
+using Doan_25.Controllers;
+using Doan_25.Models;
+
+namespace Doan_25.Areas.Admin.Controllers
+{
+    //[Authorize]
+    public class ProductAdminController : BaseController
+    {
+        //
+        // GET: /Admin/ProductAdmin/
+        Web_DenLedDbContext db = new Web_DenLedDbContext();
+        private const int pagezie = 5;
+        private const string PAGE = "CURRENT_PAGE";
+        public ActionResult Index()
+        {
+
+            //ViewBag.user = Session[CommonConstants.USER_SESSION];
+            var p = new _Paging()._getPaging(pagezie, 1, new ProductModel().ListAll());
+            ViewBag.Manufacture = db.tblManufactures.ToList();
+            ViewBag.Cat = db.tblCategories.ToList();
+
+            return View(p);
+        }
+        public ActionResult _paging(int _currentPage)
+        {
+            var p = new _Paging()._getPaging(pagezie, _currentPage, new ProductModel().ListAll());
+            return View(p);
+        }
+        //
+        // GET: /Admin/ProductAdmin/Details/5
+        public ActionResult Details(int id)
+        {
+            return View(db.tblProducts.Find(id));
+        }
+
+        //
+        // GET: /Admin/ProductAdmin/Create
+        public ActionResult Create()
+        {
+            ViewBag.Manufacture = db.tblManufactures.ToList();
+            ViewBag.Cat = db.tblCategories.ToList();
+            return View();
+        }
+
+        //
+        // POST: /Admin/ProductAdmin/Create
+        string path = "/Skin/images/";
+        [HttpPost]
+        public ActionResult createProduct(FormCollection _p)
+        {
+            var p = new tblProduct();
+            p.NameProduct = _p["NameProduct"];
+            p.Content = _p["Content"];
+
+            p.DienAp = _p["DienAp"];
+            p.DoKin = _p["DoKin"];
+            p.GocMo = _p["GocMo"];
+            p.HeSoCongSuat = _p["HeSoCongSuat"];
+            p.HeSoCRI = _p["HeSoCRI"];
+            //p.ImagesMain = _p["ImagesMain"];
+            p.LedChip = _p["LedChip"];
+            p.ManufacturesID = int.Parse(_p["ManufacturesID"]);
+            p.MetaTitle = _p["MetaTitle"];
+            p.NhietDoLamViec = _p["NhietDoLamViec"];
+            p.NhietDoMau = _p["NhietDoMau"];
+            p.CreateDate = DateTime.Now;
+            if (_p["Price"] == "")
+            {
+                p.Price = 0;
+            }
+            else { p.Price = decimal.Parse(_p["Price"]); }
+            if (_p["PriceNews"] == "")
+            {
+                p.PriceNews = 0;
+            }
+            else { p.PriceNews = decimal.Parse(_p["PriceNews"]); }
+
+
+            p.QuangThong = _p["QuangThong"];
+            if (_p["Quantity"] == "")
+            {
+                p.Quantity = 0;
+            }
+            else { p.Quantity = int.Parse(_p["Quantity"]); }
+
+            p.Status = bool.Parse(_p["Status"]);
+            string _imageSave = "";
+            HttpPostedFileBase _imagecollection = Request.Files["ImagesMain"];
+
+
+
+            if (_imagecollection != null || _imagecollection.FileName != "")
+            {
+                var ext = Path.GetExtension(_imagecollection.FileName);//bo loc du lieu
+                if (new ProductModel().isImage(ext))
+                {
+                    string _filename = Guid.NewGuid().ToString();
+                    var fullpath = Path.Combine(Server.MapPath(path), _filename + ext);
+                    _imagecollection.SaveAs(fullpath);
+                    _imageSave = _filename + ext;
+                }
+                else { _imageSave = ""; }
+
+            }
+            else
+            {
+                _imageSave = "";
+            }
+
+
+            if (_imageSave != null || _imageSave.Equals(""))
+            {
+
+                p.ImagesMain = _imageSave;
+
+
+            }
+            int idP = new ProductModel().Create(p);
+            var cat = new tblCategoryProduct();
+            cat.CategoryID = int.Parse(_p["CategoryID"]);
+            cat.ProductID = idP;
+            int idC = new CategoryModel().Create(cat);
+            if (idP > 0 && idC > 0)
+            {
+                SetAlert("Thêm thành công", "success");
+                return RedirectToAction("Index", "ProductAdmin");
+            }
+            else
+            {
+                SetAlert("Thêm mới không thành công", "warning");
+            }
+            return View();
+        }
+
+        //
+        // GET: /Admin/ProductAdmin/Edit/5
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            var obj = db.tblProducts.Find(id);
+            return View(obj);
+        }
+
+        //
+        // POST: /Admin/ProductAdmin/Edit/5
+        [HttpPost]
+        public ActionResult getDatatoEdit(FormCollection _p)
+        {
+            var p = new tblProduct();
+            int id = int.Parse(_p["ProductID"]);
+            p.NameProduct = _p["NameProduct"];
+            p.Content = _p["Content"];
+
+            p.DienAp = _p["DienAp"];
+            p.DoKin = _p["DoKin"];
+            p.GocMo = _p["GocMo"];
+            p.HeSoCongSuat = _p["HeSoCongSuat"];
+            p.HeSoCRI = _p["HeSoCRI"];
+            p.ImagesMain = _p["ImagesMain"];
+            p.LedChip = _p["LedChip"];
+            p.ManufacturesID = int.Parse(_p["ManufacturesID"]);
+            p.MetaTitle = _p["MetaTitle"];
+            p.NhietDoLamViec = _p["NhietDoLamViec"];
+            p.NhietDoMau = _p["NhietDoMau"];
+
+            p.Price = decimal.Parse(_p["Price"]);
+            p.PriceNews = decimal.Parse(_p["PriceNews"]);
+
+            p.QuangThong = _p["QuangThong"];
+            p.Quantity = int.Parse(_p["Quantity"]);
+            p.Status = bool.Parse(_p["Status"]);
+            string _imageSaved = "";//là danh sách các ảnh đã có? !equal(""):...
+            string _imageSave = "";//danh sách name mới
+
+            _imageSaved = new ProductModel().getImage(id);//lấy danh sách cũ
+
+
+            HttpPostedFileBase _imagecollection = Request.Files["ImagesMain"];
+
+
+
+            if (_imagecollection != null || _imagecollection.FileName != "")
+            {
+                var ext = Path.GetExtension(_imagecollection.FileName);//bo loc du lieu
+                if (new ProductModel().isImage(ext))
+                {
+                    string _filename;
+                    string fullpath;
+                    if (_imageSaved != "")
+                    {
+                        _filename = _imageSaved;
+                        fullpath = Path.Combine(Server.MapPath(path) + _filename + ext);
+                        System.IO.File.Exists(fullpath);
+                        _imageSave = _filename;
+                    }
+                    else
+                    {
+                        _filename = Guid.NewGuid().ToString();
+                        fullpath = Path.Combine(Server.MapPath(path) + _filename + ext);
+                        _imageSave = path + _filename + ext;
+                    }
+                    _imagecollection.SaveAs(fullpath);
+
+                }
+                else { _imageSave = ""; }
+
+            }
+            else
+            {
+                _imageSave = "";
+            }
+
+
+
+            if (_imageSaved != "") { _imageSave = _imageSaved; }
+            else _imageSave = "";
+
+
+
+
+            p.ImagesMain = _imageSave;
+
+
+            if (new ProductModel().EditProduct(p, id))
+            {
+                SetAlert("Sửa thành công", "success");
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+        public ActionResult _SendDetail(int id)
+        {
+            var p = new ProductModel().getById(id);
+            Session["ID_UPDATE"] = p.ProductID;
+            var _p = new tblProduct();
+            //tblProduct pro = new ProductModel().getById(id);
+            _p.ProductID = p.ProductID;
+            _p.NameProduct = p.NameProduct;
+            _p.Content = p.Content;
+            _p.CreateDate = p.CreateDate;
+            _p.DienAp = p.DienAp;
+            _p.DoKin = p.DoKin;
+            _p.GocMo = p.GocMo;
+            _p.HeSoCongSuat = p.HeSoCongSuat;
+            _p.HeSoCRI = p.HeSoCRI;
+            _p.ImagesMain = p.ImagesMain;
+            _p.LedChip = p.LedChip;
+            _p.ManufacturesID = p.ManufacturesID;
+            _p.MetaTitle = p.MetaTitle;
+            _p.NhietDoLamViec = p.NhietDoLamViec;
+            _p.NhietDoMau = p.NhietDoMau;
+
+            _p.Price = p.Price;
+            _p.PriceNews = p.PriceNews;
+            _p.ProductID = id;
+            _p.QuangThong = p.QuangThong;
+            _p.Quantity = p.Quantity;
+            _p.Status = p.Status;
+            return Json(_p, JsonRequestBehavior.AllowGet);
+        }
+        //
+        // GET: /Admin/ProductAdmin/Delete/5
+        public ActionResult Delete(int id)
+        {
+
+            if (new ProductModel().Delete(id))
+            {
+                SetAlert("Xóa thành công", "success");
+                return RedirectToAction("Index", "ProductAdmin");
+            }
+            return View();
+        }
+
+        //
+        // POST: /Admin/ProductAdmin/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult ThemMoi(Dictionary<string, string> p, Dictionary<string, string> other)
+        {
+            var _p = new tblProduct();
+            _p.Content = p["Content"];
+            _p.CreateDate = DateTime.Now;
+            _p.NameProduct = p["NameProduct"];
+            _p.Content = p["Content"];
+            _p.DienAp = p["DienAp"];
+            _p.DoKin = p["DoKin"];
+            _p.GocMo = p["GocMo"];
+            _p.HeSoCongSuat = p["HeSoCongSuat"];
+            _p.HeSoCRI = p["HeSoCRI"];
+            //_p.ImagesMain = p["ImagesMain"];
+            _p.LedChip = p["LedChip"];
+            _p.ManufacturesID = int.Parse(p["ManufacturesID"]);
+            _p.MetaTitle = p["MetaTitle"];
+            _p.NhietDoLamViec = p["NhietDoLamViec"];
+            _p.NhietDoMau = p["NhietDoMau"];
+            _p.CreateDate = DateTime.Now;
+            if (p["Price"] == "")
+            {
+                _p.Price = 0;
+            }
+            else { _p.Price = decimal.Parse(p["Price"]); }
+            if (p["PriceNews"] == "")
+            {
+                _p.Price = 0;
+            }
+            else { _p.PriceNews = decimal.Parse(p["PriceNews"]); }
+
+
+            _p.QuangThong = p["QuangThong"];
+            if (p["Quantity"] == "")
+            {
+                _p.Price = 0;
+            }
+            else { _p.Quantity = int.Parse(p["Quantity"]); }
+
+            _p.Status = bool.Parse(p["Status"]);
+            //if (p["Warranty"] == "")
+            //{
+            //    _p.Warranty = 0;
+            //}
+            //else { _p.Warranty = int.Parse(p["Warranty"]); }
+
+
+
+            int idP = new ProductModel().Create(_p);
+            var cat = new tblCategoryProduct();
+            cat.CategoryID = int.Parse(p["CategoryID"]);
+            cat.ProductID = idP;
+            int idC = new CategoryModel().Create(cat);
+            if (idP > 0 && idC > 0)
+            {
+                SetAlert("Thêm thành công", "success");
+                return RedirectToAction("Index", "ProductAdmin");
+            }
+            else
+            {
+                SetAlert("Thêm mới không thành công", "warning");
+            }
+            return View();
+        }
+
+
+
+
+    }
+}

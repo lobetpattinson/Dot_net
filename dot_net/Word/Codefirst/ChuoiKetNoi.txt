@@ -1,0 +1,5 @@
+<connectionStrings>
+    <add name="ChuoiKetNoi" 
+         connectionString="Server=.\sqlexpress;Database=Test2;Integrated Security=True" 
+         providerName="System.Data.SqlClient" />
+  </connectionStrings>

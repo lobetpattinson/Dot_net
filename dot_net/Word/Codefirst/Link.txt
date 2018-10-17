@@ -1,0 +1,2 @@
+upload file:
+https://stackoverflow.com/questions/23517615/upload-save-and-retrieve-image-from-database-by-using-their-id-in-code-first-met

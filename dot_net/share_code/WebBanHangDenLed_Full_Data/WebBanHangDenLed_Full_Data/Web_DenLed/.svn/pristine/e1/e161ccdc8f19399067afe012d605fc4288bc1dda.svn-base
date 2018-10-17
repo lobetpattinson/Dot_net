@@ -1,0 +1,26 @@
+﻿using Models.EF;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Models.Function
+{
+    public class _Paging
+    {
+        public PageInfo<tblProduct> _getPaging(int _pagesize, int _pageCurrent, IList<tblProduct> listProduct)
+        {
+            var count = listProduct.Count;
+            var products = (from p in listProduct orderby p.ProductID select p).Skip((_pageCurrent - 1) * _pagesize).Take(_pagesize).ToList();
+            var pageinfor = new PageInfo<tblProduct>
+            {
+                CurrentPage = _pageCurrent,
+                ItemProduct = products,
+                pageSize = _pagesize,
+                pageCount = count / _pagesize + 1
+            };
+            return pageinfor;
+        }
+    }
+}

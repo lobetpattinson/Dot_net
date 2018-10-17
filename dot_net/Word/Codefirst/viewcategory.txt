@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Category</div>
+    <div class="list-group">
+        @foreach(var item in Model)
+        {
+            <a href="/Product/ListByCategory/@item.Id" class="list-group-item">@item.NameVN</a>
+        }
+    </div>
+</div>

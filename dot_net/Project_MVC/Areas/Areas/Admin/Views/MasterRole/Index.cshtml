@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Master-Roles Manager";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        @Html.DropDownList("MasterId", null, new { @class = "form-control" })
+    </div>
+    <div class="panel-body">
+        <ul class="list-unstyled">
+            @foreach (var Item in ViewBag.Roles as List<EShop.Models.Role>)
+            {
+                <li class="form-group">
+                    <label class="form-control"><input value="@Item.Id" type="checkbox" /> @Item.Name</label>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+@section scripts{
+<script>
+    $(document).ready(function () {
+        $("#MasterId").change(function () {
+            var mid = $(this).val();
+            $.ajax({
+                url: "/Admin/MasterRole/GetRoleIds/" + mid,
+                success: function (response) {
+                    $(":checkbox").prop("checked", false);
+                    $(response).each(function (index, item) {
+                        $(":checkbox[value='" + item + "']").prop("checked", true);
+                    });
+                }
+            });
+        });
+        $("#MasterId").change();
+
+        $(":checkbox").click(function () {
+            var rid = $(this).val();
+            var mid = $("#MasterId").val();
+
+            $.ajax({
+                url: "/Admin/MasterRole/AddOrDelete",
+                data:{MasterId: mid, RoleId: rid},
+                success: function (response) {
+                    alert(response);
+                }
+            });
+        });
+    });
+</script>
+}

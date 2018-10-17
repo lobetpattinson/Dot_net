@@ -1,0 +1,114 @@
+E:\NetPros\MVC180331\EShop\bin\EShop.dll.config
+E:\NetPros\MVC180331\EShop\bin\EShop.dll
+E:\NetPros\MVC180331\EShop\bin\EShop.pdb
+E:\NetPros\MVC180331\EShop\bin\vi\EShop.resources.dll
+E:\NetPros\MVC180331\EShop\bin\Antlr3.Runtime.dll
+E:\NetPros\MVC180331\EShop\bin\EntityFramework.dll
+E:\NetPros\MVC180331\EShop\bin\Microsoft.Web.Infrastructure.dll
+E:\NetPros\MVC180331\EShop\bin\Newtonsoft.Json.dll
+E:\NetPros\MVC180331\EShop\bin\System.Web.Helpers.dll
+E:\NetPros\MVC180331\EShop\bin\System.Web.Mvc.dll
+E:\NetPros\MVC180331\EShop\bin\System.Web.Optimization.dll
+E:\NetPros\MVC180331\EShop\bin\System.Web.Razor.dll
+E:\NetPros\MVC180331\EShop\bin\System.Web.WebPages.Deployment.dll
+E:\NetPros\MVC180331\EShop\bin\System.Web.WebPages.dll
+E:\NetPros\MVC180331\EShop\bin\System.Web.WebPages.Razor.dll
+E:\NetPros\MVC180331\EShop\bin\WebGrease.dll
+E:\NetPros\MVC180331\EShop\bin\EntityFramework.xml
+E:\NetPros\MVC180331\EShop\bin\System.Web.Helpers.xml
+E:\NetPros\MVC180331\EShop\bin\System.Web.Mvc.xml
+E:\NetPros\MVC180331\EShop\bin\System.Web.Optimization.xml
+E:\NetPros\MVC180331\EShop\bin\System.Web.Razor.xml
+E:\NetPros\MVC180331\EShop\bin\System.Web.WebPages.xml
+E:\NetPros\MVC180331\EShop\bin\System.Web.WebPages.Deployment.xml
+E:\NetPros\MVC180331\EShop\bin\System.Web.WebPages.Razor.xml
+E:\NetPros\MVC180331\EShop\bin\Antlr3.Runtime.pdb
+E:\NetPros\MVC180331\EShop\bin\Newtonsoft.Json.xml
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.i18n.Global.resources
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.i18n.Global.vi.resources
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.csproj.GenerateResource.Cache
+E:\NetPros\MVC180331\EShop\obj\Debug\vi\EShop.resources.dll
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.dll
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.pdb
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.i18n.Account.Login.resources
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.i18n.Account.Login.vi.resources
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.i18n.CustomerRex.resources
+E:\NetPros\MVC180331\EShop\obj\Debug\EShop.i18n.CustomerRex.vi.resources
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EShop.dll.config
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EShop.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EShop.pdb
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\vi\EShop.resources.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Antlr3.Runtime.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EntityFramework.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Newtonsoft.Json.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Helpers.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Mvc.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Optimization.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Razor.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.Deployment.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.Razor.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\WebGrease.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EntityFramework.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Helpers.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Mvc.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Optimization.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Razor.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.Deployment.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.Razor.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Antlr3.Runtime.pdb
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Newtonsoft.Json.xml
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.csprojResolveAssemblyReference.cache
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.Account.Login.resources
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.CustomerRex.resources
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.Global.resources
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.Account.Login.vi.resources
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.CustomerRex.vi.resources
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.Global.vi.resources
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.csproj.GenerateResource.Cache
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\vi\EShop.resources.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.dll
+D:\Net_mvc\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.pdb
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EShop.dll.config
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EShop.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EShop.pdb
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\vi\EShop.resources.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Antlr3.Runtime.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EntityFramework.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Newtonsoft.Json.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Helpers.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Mvc.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Optimization.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Razor.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.Deployment.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.Razor.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\WebGrease.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EntityFramework.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Helpers.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Mvc.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Optimization.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.Razor.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.Deployment.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\System.Web.WebPages.Razor.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Antlr3.Runtime.pdb
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\Newtonsoft.Json.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.Account.Login.resources
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.CustomerRex.resources
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.Global.resources
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.Account.Login.vi.resources
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.CustomerRex.vi.resources
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.i18n.Global.vi.resources
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.csproj.GenerateResource.cache
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.csproj.CoreCompileInputs.cache
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\vi\EShop.resources.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.csproj.CopyComplete
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.pdb
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EntityFramework.SqlServer.dll
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\bin\EntityFramework.SqlServer.xml
+D:\Doan_ dot_net\dot_net\Project_MVC\22-MVC180331\MVC180331\EShop\obj\Debug\EShop.csprojAssemblyReference.cache

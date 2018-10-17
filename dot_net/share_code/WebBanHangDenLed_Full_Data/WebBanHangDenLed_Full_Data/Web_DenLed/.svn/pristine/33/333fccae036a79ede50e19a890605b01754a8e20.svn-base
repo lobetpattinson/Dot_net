@@ -1,0 +1,20 @@
+namespace Models.EF
+{
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("tblVisister")]
+    public partial class tblVisister
+    {
+        public int ID { get; set; }
+
+        [Column(TypeName = "ntext")]
+        public string IP { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? DateJoin { get; set; }
+    }
+}

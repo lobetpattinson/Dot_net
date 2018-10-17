@@ -1,0 +1,141 @@
+﻿using Models;
+using MyWeb.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Script.Serialization;
+using Models.EF;
+namespace MyWeb.Controllers
+{
+    public class CartController : Controller
+    {
+        public const string CartSession = "CartSession";
+        Web_DenLedDbContext db = new Web_DenLedDbContext();
+        
+        //
+        // GET: /Admin/CartItem/
+        public ActionResult Index()
+        {
+            var cart = Session[CartSession];
+            var list = new List<CartItem>();
+            if (cart != null)
+            {
+                list = (List<CartItem>)cart;
+            }
+            ViewBag.TotalCart = list.Count();
+            ViewBag.TotalMoney = 0;
+            return View(cart);
+        }
+        public PartialViewResult CartInfo()
+        {
+            var cart = Session[CartSession];
+            var list = new List<CartItem>();
+            if (cart != null)
+            {
+                list = (List<CartItem>)cart;
+            }
+            ViewBag.tongtien = 0;
+            return PartialView("_CartInfo", list);
+        }
+        public ActionResult AddItem(int ProductID, int Quantity)
+        {
+            var product = new ProductModel().getById(ProductID);
+            var cart = Session[CartSession];
+            if (cart != null)
+            {
+                var list = (List<CartItem>)cart;
+                if (list.Exists(x => x.Product.ProductID == ProductID))
+                {
+                    foreach (var item in list)
+                    {
+                        if (item.Product.ProductID == ProductID)
+                        {
+                            item.Quantity += Quantity;
+                        }
+
+                    }
+                }
+                else
+                {//tao moi doi tuong Cart item
+                    var item = new CartItem();
+                    item.Product = product;
+                    item.Quantity = Quantity;
+                    list.Add(item);
+                }
+                //Gan vao Session
+                Session[CartSession] = list;
+            }
+            else
+            {
+                //tao moi doi tuong CartItem
+                var item = new CartItem();
+                item.Product = product;
+                item.Quantity = Quantity;
+                var list = new List<CartItem>();
+                list.Add(item);
+                //Gan vao Session
+                Session[CartSession] = list;
+            }
+            return RedirectToAction("Index");
+        }
+        public JsonResult Update(string cartModel)
+        {
+            var jsonCart = new JavaScriptSerializer().Deserialize<List<CartItem>>(cartModel);
+            var sessionCart =(List<CartItem>)Session[CartSession];
+            foreach (var item in sessionCart)
+            {
+                var jsonItem = jsonCart.SingleOrDefault(x => x.Product.ProductID == item.Product.ProductID);
+                if (jsonItem!= null)
+                {
+                    item.Quantity = jsonItem.Quantity;
+                }
+            }
+            return Json(new { status = true });
+        }
+        public JsonResult DeleteAll()
+        {
+            Session[CartSession] = null;
+            return Json(new { status = true });
+        }
+        public JsonResult DeleteById(int id)
+        {
+          
+            var sessionCart = (List<CartItem>)Session[CartSession];
+            sessionCart.RemoveAll(x => x.Product.ProductID == id);
+            Session[CartSession] = sessionCart;
+            
+            return Json(new { status = true });
+        }
+        public ActionResult CartSuccess(string cartModel)
+        {
+            var jsonCart = new JavaScriptSerializer().Deserialize<List<CartItem>>(cartModel);
+            
+            tblOrder order = new tblOrder();
+            order.CustomerID = 1;
+            order.DateSet = DateTime.Now;
+            order.DeliveryDate = DateTime.Now;
+            order.Status = true;
+            var _tblOrder = db.tblOrders.Add(order);
+            tblOrderDetail orderDetail = new tblOrderDetail();
+            db.SaveChanges();
+           
+           
+            foreach (var item in jsonCart)
+            {
+               
+               
+                orderDetail.OrderID = _tblOrder.OrderID;
+                orderDetail.ProductID = item.Product.ProductID;
+                orderDetail.Quantity = item.Quantity;
+                orderDetail.Price = db.tblProducts.Find(item.Product.ProductID).PriceNews;
+                db.tblOrderDetails.Add(orderDetail);
+                db.SaveChanges();
+
+            }
+           
+            return View();
+        }
+    }
+}

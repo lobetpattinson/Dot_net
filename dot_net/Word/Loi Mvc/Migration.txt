@@ -1,0 +1,13 @@
+Automatic migration was not applied because it would result in data loss.
+ Set AutomaticMigrationDataLossAllowed to 'true' on your DbMigrationsConfiguration
+ to allow application of automatic migrations even if they might cause data loss.
+ Alternately, use Update-Database with the
+ '-Force' option, or scaffold an explicit migration.
+
+cac buoc debug:
+b1:sua lai AutomaticMigrationsEnabled =true tu true thanh false va them dong code nay vao:
+AutomaticMigrationDataLossAllowed = true =>van ko chay duoc
+
+
+b2:ko thay doi gi het chi them dong code nay vao:AutomaticMigrationDataLossAllowed = true
+=>van chay duoc binh thuong=>ok

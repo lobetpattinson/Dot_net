@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a href="~/Views/Home/Index.cshtml">~/Views/Home/Index.cshtml</a>
+
+<div id="ProductList">
+    @Html.Action("List", "Home")
+</div>
+

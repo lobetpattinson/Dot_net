@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Web_DenLedModelStoreContainer" CdmEntityContainer="Web_DenLedEntities">
+    <EntitySetMapping Name="tblCategories">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblCategory">
+        <MappingFragment StoreEntitySet="tblCategories">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Levels" ColumnName="Levels" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCategoryProducts">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblCategoryProduct">
+        <MappingFragment StoreEntitySet="tblCategoryProducts">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContacts">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblContact">
+        <MappingFragment StoreEntitySet="tblContact">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomers">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="NameCus" ColumnName="NameCus" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblManufactures">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblManufacture">
+        <MappingFragment StoreEntitySet="tblManufactures">
+          <ScalarProperty Name="ManufacturesID" ColumnName="ManufacturesID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrderDetails">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblOrderDetail">
+        <MappingFragment StoreEntitySet="tblOrderDetail">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOrders">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblOrder">
+        <MappingFragment StoreEntitySet="tblOrders">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="DateSet" ColumnName="DateSet" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct_Images">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblProduct_Images">
+        <MappingFragment StoreEntitySet="tblProduct_Images">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Images_Thum" ColumnName="Images_Thum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProducts">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProducts">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceNews" ColumnName="PriceNews" />
+          <ScalarProperty Name="ManufacturesID" ColumnName="ManufacturesID" />
+          <ScalarProperty Name="ImagesMain" ColumnName="ImagesMain" />
+          <ScalarProperty Name="DienAp" ColumnName="DienAp" />
+          <ScalarProperty Name="LedChip" ColumnName="LedChip" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="TuoiTho" ColumnName="TuoiTho" />
+          <ScalarProperty Name="QuangThong" ColumnName="QuangThong" />
+          <ScalarProperty Name="HeSoCRI" ColumnName="HeSoCRI" />
+          <ScalarProperty Name="NhietDoMau" ColumnName="NhietDoMau" />
+          <ScalarProperty Name="GocMo" ColumnName="GocMo" />
+          <ScalarProperty Name="DoKin" ColumnName="DoKin" />
+          <ScalarProperty Name="NhietDoLamViec" ColumnName="NhietDoLamViec" />
+          <ScalarProperty Name="HeSoCongSuat" ColumnName="HeSoCongSuat" />
+          <ScalarProperty Name="VatLieu" ColumnName="VatLieu" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRoles">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblRole">
+        <MappingFragment StoreEntitySet="tblRoles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="NameRole" ColumnName="NameRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="Web_DenLedModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ListProductByCat" FunctionName="Web_DenLedModel.Store.ListProductByCat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Web_DenLedModel.ListProductByCat_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceNews" ColumnName="PriceNews" />
+          <ScalarProperty Name="ManufacturesID" ColumnName="ManufacturesID" />
+          <ScalarProperty Name="ImagesMain" ColumnName="ImagesMain" />
+          <ScalarProperty Name="DienAp" ColumnName="DienAp" />
+          <ScalarProperty Name="LedChip" ColumnName="LedChip" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="TuoiTho" ColumnName="TuoiTho" />
+          <ScalarProperty Name="QuangThong" ColumnName="QuangThong" />
+          <ScalarProperty Name="HeSoCRI" ColumnName="HeSoCRI" />
+          <ScalarProperty Name="NhietDoMau" ColumnName="NhietDoMau" />
+          <ScalarProperty Name="GocMo" ColumnName="GocMo" />
+          <ScalarProperty Name="DoKin" ColumnName="DoKin" />
+          <ScalarProperty Name="NhietDoLamViec" ColumnName="NhietDoLamViec" />
+          <ScalarProperty Name="HeSoCongSuat" ColumnName="HeSoCongSuat" />
+          <ScalarProperty Name="VatLieu" ColumnName="VatLieu" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProductID1" ColumnName="ProductID1" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sp_Account_Login" FunctionName="Web_DenLedModel.Store.Sp_Account_Login" />
+    <FunctionImportMapping FunctionImportName="tblCategory_Insert" FunctionName="Web_DenLedModel.Store.tblCategory_Insert" />
+    <FunctionImportMapping FunctionImportName="tblCategory_List" FunctionName="Web_DenLedModel.Store.tblCategory_List">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Web_DenLedModel.tblCategory_List_Result">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Levels" ColumnName="Levels" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="tblProducts_List" FunctionName="Web_DenLedModel.Store.tblProducts_List">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Web_DenLedModel.tblProducts_List_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceNews" ColumnName="PriceNews" />
+          <ScalarProperty Name="ManufacturesID" ColumnName="ManufacturesID" />
+          <ScalarProperty Name="ImagesMain" ColumnName="ImagesMain" />
+          <ScalarProperty Name="DienAp" ColumnName="DienAp" />
+          <ScalarProperty Name="LedChip" ColumnName="LedChip" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="TuoiTho" ColumnName="TuoiTho" />
+          <ScalarProperty Name="QuangThong" ColumnName="QuangThong" />
+          <ScalarProperty Name="HeSoCRI" ColumnName="HeSoCRI" />
+          <ScalarProperty Name="NhietDoMau" ColumnName="NhietDoMau" />
+          <ScalarProperty Name="GocMo" ColumnName="GocMo" />
+          <ScalarProperty Name="DoKin" ColumnName="DoKin" />
+          <ScalarProperty Name="NhietDoLamViec" ColumnName="NhietDoLamViec" />
+          <ScalarProperty Name="HeSoCongSuat" ColumnName="HeSoCongSuat" />
+          <ScalarProperty Name="VatLieu" ColumnName="VatLieu" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,53 @@
+﻿@model Models.Function.PageInfo<Models.EF.tblCustomer>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-content">
+
+    <div class="page-header">
+
+        <h2>DANH SÁCH NGƯỜI DÙNG</h2>
+    </div>
+
+    <div class="row" id="_pagingla">
+
+        @Html.Partial("_paging", Model)
+    </div>
+
+</div>
+
+<script>
+    function _pagela(_bien) {
+
+        $.ajax({
+            url: '/Admin/ManageUser/_paging',
+            type: "GET",
+            data: { "_currentPage": _bien },
+            success: function (data) {
+
+                $("#_pagingla").html(data)
+            }
+        });
+    }
+    function EditStatus(id) {
+        $.ajax({
+            url: '/Admin/ManageUser/EditStatus',
+            type: "GET",
+            data: { "id": id },
+            success: function (data) {
+                console.log(data)
+                window.location.href = "/Admin/ManageUser/List"
+            }
+        });
+    }
+
+</script>
+
+
+
+
+
+

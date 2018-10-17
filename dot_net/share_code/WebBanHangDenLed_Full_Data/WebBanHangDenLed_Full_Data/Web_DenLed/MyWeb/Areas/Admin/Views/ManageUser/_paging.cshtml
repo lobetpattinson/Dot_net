@@ -1,0 +1,103 @@
+﻿@model Models.Function.PageInfo<Models.EF.tblCustomer>
+
+
+
+<table id="simple-table" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                UserID
+            </th>
+
+            <th>Tên tài khoản</th>
+
+            <th class="hidden-480">Mật khẩu</th>
+
+            <th>Họ tên</th>
+
+            <th>
+                Emails
+            </th>
+            <th>
+                <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                Số ĐT
+            </th>
+
+            <th>Trạng thái</th>
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.ListItem)
+        {
+
+            <tr id="@item.CustomerID">
+                <td>
+                    <a href="#">@item.CustomerID</a>
+
+                </td>
+                <td>
+                    <a href="#">@item.NameCus</a>
+                </td>
+                <td>@item.Account</td>
+                <td>@item.Password</td>
+                <td class="hidden-480">@item.Phone</td>
+                <td>@item.Adress</td>
+
+
+                <td class="hidden-480">
+                    @if (@item.Status == false)
+                    {
+                        <button type="submit" class="btn btn-xs btn-danger" onclick="EditStatus(@item.CustomerID)">
+
+                            <span> Not Active </span>
+
+                        </button>
+                    }
+                    else
+                    {
+                        <button class="btn btn-xs btn-success" onclick="EditStatus(@item.CustomerID)">
+
+
+                            <span>Active</span>
+
+
+                        </button>
+                    }
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<!-------------------PHAN TRANG---------------->
+<div class="row">
+    <div class="col-xs-6">
+        <div class="dataTables_info" id="dynamic-table_info" role="status" aria-live="polite" style="text-align: right; font-size: x-large;">Trang : @Model.CurrentPage</div>
+
+    </div>
+    <div class="col-xs-12">
+        <div class="dataTables_paginate paging_simple_numbers" id="dynamic-table_paginate">
+            @{var inc = Model.CurrentPage + 1; var des = Model.CurrentPage - 1;}
+
+
+            <ul class="pagination">
+                @for (var i = 1; i <= Model.pageCount; i++)
+                {
+                    <li class="paginate_button " aria-controls="dynamic-table" tabindex="0">
+                        <a class="page_@i" href="javascript:_pagela(@i)">@i</a>
+                    </li>
+
+                }
+            </ul>
+
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,34 @@
+﻿using Models.EF;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace MyWeb.Areas.Admin.Controllers
+{
+    public class CategoryAdminController : Controller
+    {
+        //
+        // GET: /Admin/CategoryAdmin/
+        DenLedShopDbContext db = new DenLedShopDbContext();
+        public ActionResult List()
+        {
+            var list = db.tblCategories.ToList();
+            return View(list);
+        }
+        [HttpGet]
+        public ActionResult Insert()
+        { 
+           
+            return View();
+        }
+        [HttpPost]
+         public ActionResult Insert(tblCategory model)
+        {
+            db.tblCategories.Add(model);
+            db.SaveChanges();
+            return View("List");
+        }   
+	}
+}

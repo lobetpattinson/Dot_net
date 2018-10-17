@@ -1,0 +1,104 @@
+/* fix for IE6 */
+* html .hitarea {
+    display: inline;
+    float: none;
+}
+
+#treecontrol {
+    margin: 1em 0;
+    display: none;
+}
+
+
+.filetree {
+    list-style: none;
+    color: #fff;
+    border: 1px solid #CCC;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    border-top: 0;
+}
+
+    .filetree a, .filetree span {
+        color: #30887C;
+        display: block;
+        padding: 6px 10px 6px 29px
+    }
+
+        .filetree a:hover, .filetree span:hover {
+            text-decoration: underline;
+        }
+
+    .filetree li {
+        font-size: 10pt;
+        background: url('../images/li_icon.png') no-repeat 7px 8px #e1e1e1;
+        min-height: 22px;
+        font-weight: normal;
+        border-top: 1px solid #CCC;
+    }
+
+        .filetree li span {
+            margin: 0 7px 0 27px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .filetree li ul {
+            background: #f3f3f3;
+            margin: 0px;
+            display: none
+        }
+
+        .filetree li:hover ul {
+            display: block
+        }
+
+            .filetree li ul li {
+                font-size: 10pt;
+                list-style: none;
+                background: #FFF;
+                font-weight: normal;
+                min-height: 0;
+            }
+
+                .filetree li ul li:hover {
+                    background: #f1f1f1
+                }
+
+                .filetree li ul li span {
+                    color: #1168e9;
+                    margin: 0 7px;
+                    cursor: pointer;
+                    display: inline-block;
+                }
+
+                    .filetree li ul li span a {
+                        color: #4b4b4b;
+                    }
+
+                .filetree li ul li ul {
+                    background: #ededed;
+                    border-top: 1px solid #BFDDF4;
+                }
+
+                    .filetree li ul li ul li {
+                        font-size: 10pt;
+                        background: url('../../img/bullet/12.gif') no-repeat 25px 9px;
+                        font-weight: normal; /*border-top:1px solid #d8c23c;*/
+                    }
+
+                        .filetree li ul li ul li span {
+                            margin-left: 40px;
+                            cursor: pointer;
+                        }
+
+                            .filetree li ul li ul li span a {
+                                color: #1168e9;
+                                cursor: pointer;
+                            }
+
+        .filetree li.selected a, .filetree li.selected a span {
+            color: red;
+        }
+
+/*background: url('/Styles/tienpromobile/th-cate-subtab.jpg') repeat-y top left*/

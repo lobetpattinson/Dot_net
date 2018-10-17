@@ -1,0 +1,94 @@
+Home controller:
+
+using Doan_22.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Doan_22.Controllers
+{
+    public class HomeController : Controller
+    {
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult DisplayImage()
+        {
+            return View();
+        }
+        public ActionResult FileUpload(HttpPostedFileBase file)
+        {
+            if (file != null)
+            {
+                ManagerDbContext db = new ManagerDbContext();
+                string ImageName = System.IO.Path.GetFileName(file.FileName);
+                string physicalPath = Server.MapPath("~/Images/" + ImageName);
+                file.SaveAs(physicalPath);
+                tblStudent student = new tblStudent();
+                student.FirstName = Request.Form["firstname"];
+                student.LastName = Request.Form["lastname"];
+                student.ImageUrl = ImageName;
+                db.tblStudents.Add(student);
+                db.SaveChanges();
+
+            }
+            return RedirectToAction("../home/DisplayImage/");
+        }
+    }
+}
+
+
+view index:
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm("FileUpload", "Home", FormMethod.Post,
+                                new { enctype = "multipart/form-data" }))
+{
+    <div>
+
+        <h1>Add student information</h1>
+        First Name : @Html.TextBox("firstname") <br /><br />
+
+        Last Name :  @Html.TextBox("lastname") <br /><br />
+
+        Image : <input type="file" name="file" id="file" style="width: 100%;" /> <br /><br />
+
+        <input type="submit" value="Upload student info" />
+    </div>
+}
+
+view display image:
+@using Doan_22.Models
+model Doan_22.Models.tblStudent
+@{
+    ViewBag.Title = "DisplayImage";
+    ManagerDbContext db = new ManagerDbContext();
+}
+
+<h1>Student Details</h1>
+@using (Html.BeginForm())
+{
+<table border="1">
+<thead>
+    <tr>
+        <th>Image</th>
+        <th>First name</th>
+        <th>Last name</th>
+    </tr>
+</thead>
+<tbody>
+   @foreach(var item in db.tblStudents)
+    {
+        <tr>
+            <td><img src="~/images/@item.ImageUrl" width="100" height="100" /></td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+        </tr>
+    }
+</tbody>
+</table>
+}

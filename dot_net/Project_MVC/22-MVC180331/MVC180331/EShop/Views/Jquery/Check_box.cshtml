@@ -1,0 +1,14 @@
+﻿<fieldset>
+    <input type="checkbox" class="checkall"> Check all <br>
+    <input type="checkbox"> Checkbox <br>
+    <input type="checkbox"> Checkbox <br>
+    <input type="checkbox"> Checkbox <br>
+    <input type="checkbox"> Checkbox <br>
+</fieldset>
+<script>
+    $(function () {
+        $('.checkall').click(function () {
+            $(this).parents('fieldset:eq(0)').find(':checkbox').attr('checked', this.checked);
+        });
+    });
+</script>

@@ -1,0 +1,24 @@
+﻿
+<table class="table table-bordered tblEmployee" id="tblEmployee">
+    <thead>
+        <tr>
+            <th>ProductId</th>
+            <th>NameProduct</th>
+            <th>Price</th>
+            <th>PriceNew</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.NameProduct</td>
+                <td>@item.Price</td>
+                <td>@item.PriceNews</td>
+            </tr>
+        </tbody>
+    }
+       
+    </table>
+    

@@ -1,0 +1,41 @@
+﻿<button class="btn btn-danger" id="btn-Add">Them moi</button>
+<div id="UpdatePanel"></div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btn-Add").click(function () {
+           
+            $.ajax({
+
+                type: 'GET',
+                url: 'Test/GetData_01',
+                dataType: 'json',
+                data: {},
+                success: function (data) {
+                    LoadData(data);
+                },
+                error: function () {
+                    alert("failed! please try again");
+                }
+            });
+        })
+        function LoadData(data) {
+            var tab = $('<table class=table></table>');
+            var thead = $('<thead></thead>');
+            thead.append('<th>ProductID</th>');
+            thead.append('<th>NameProduct</th>');
+            thead.append('<th>Price</th>');
+            thead.append('<th>PriceNews</th>');
+            tab.append(thead);
+            $.each(data, function (i, val) {
+                var trow = $('<tr></tr>');
+                trow.append('<td>' + val.ProductID + '</td>');
+                trow.append('<td>' + val.NameProduct + '</td>');
+                trow.append('<td>' + val.Price + '</td>');
+                trow.append('<td>' + val.PriceNews + '</td>');
+                tab.append(trow);
+            });
+            $("#UpdatePanel").html(tab);
+        }
+    });
+
+</script>

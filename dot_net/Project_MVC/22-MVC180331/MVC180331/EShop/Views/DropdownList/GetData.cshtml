@@ -1,0 +1,6 @@
+﻿<div class="form-group">
+    <div class="col-md-4">
+        @*<select class="form-control" id="THELOAI" name="THELOAI"><option value="1000">Watches</option>*@
+        @Html.DropDownList("THELOAI", (IEnumerable<SelectListItem>)ViewBag.CategoryList, new { @class = "form-control" })
+    </div>
+</div>

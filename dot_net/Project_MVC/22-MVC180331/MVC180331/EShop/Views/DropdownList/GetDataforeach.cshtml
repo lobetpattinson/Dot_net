@@ -1,0 +1,11 @@
+﻿<div class="form-group">
+    <div class="col-md-4">
+        <select name="test" class="form-control">
+            @foreach (var item in Model)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </select>
+    </div>
+   
+</div>

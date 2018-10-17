@@ -1,0 +1,110 @@
+﻿@model Models.Function.PageInfo<Models.EF.tblCategory>
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>DANH MỤC</h2>
+   
+@if (TempData["AlertMes"] != null)
+{
+    <div id="AlertBox" class="alert @TempData["AlertType"] hide" style="text-align: center; font-size:x-large;">@TempData["AlertMes"]</div>
+}
+<div class="row" id="_pagingla">
+    @Html.Partial("_pagingCat", Model)
+</div>
+
+
+<!--------- Modal THÊM -------------------------->
+<div id="addCategory" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!--  Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="font-weight:600">THÊM DANH MỤC SẢN PHẨM</h4>
+            </div>
+            <form action="/Admin/CategoryAdmin/Create" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <input hidden type="text" name="CategoryID" />
+
+                    <p><label class="col-xs-3">Name</label><input class="col-xs-9" id="Name1" type="text" name="Name" placeholder="Name" /></p>
+                    <br>
+                    <span id="LoiName1"></span>
+                    <p><label class="col-xs-3">Levels</label><input class="col-xs-9" type="text" name="Levels" placeholder="Levels" /></p>
+                    <p>
+                        <label class="col-xs-3">Status</label>
+                        <select class="col-xs-9" name="Status">
+                            <option value="False">False</option>
+                            <option selected value="True">True</option>
+                        </select>
+                    </p>
+                    <p><label class="col-xs-3">Createdate</label><input class="col-xs-9" type="date" name="Createdate" placeholder="Createdate" /></p>
+                    <p><label class="col-xs-3">TypeID</label><input class="col-xs-9" type="text" name="TypeID" placeholder="TypeID" /></p>
+
+                </div>
+
+                <div class="modal-footer">
+                    <input id="btnDemo" type="submit" class="btn btn-primary" value="Submit">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!---------------------------------------------------->
+<!-------------------- Modal SỬA -------------------------->
+<div id="editCategory" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="font-weight:600">SỬA DANH MỤC SẢN PHẨM</h4>
+            </div>
+            <form action="/Admin/CategoryAdmin/GetDataEdit" method="post" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <input hidden type="text" name="CategoryID" />
+
+                    <p><label class="col-xs-3">Name</label><input class="col-xs-9" type="text" id="Name" name="Name" placeholder="Name" /></p>\
+
+                    <p><label class="col-xs-3">Levels</label><input class="col-xs-9" type="text" name="Levels" placeholder="Levels" /></p>
+                    <p>
+                        <label class="col-xs-3">Status</label>
+                        <select class="col-xs-9" name="Status">
+                            <option value="False">False</option>
+                            <option selected value="True">True</option>
+                        </select>
+                    </p>
+                    <p><label class="col-xs-3">Createdate</label><input id="CreateDate" class="col-xs-9" type="date" name="Createdate" placeholder="Createdate" /></p>
+                    <p><label class="col-xs-3">TypeID</label><input class="col-xs-9" type="text" name="TypeID" placeholder="TypeID" /></p>
+
+                </div>
+
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!---------------------------------------------------->
+@section JqueryPage{
+
+
+<script src="~/Skin/js/JSCat.js"></script>
+
+    <script type="text/javascript">
+
+        $('.btn.btn-xs.btn-info').click(function () {
+            $("select[name='Status']").find("option[value='true']").attr("selected", true);
+
+        })
+        $("#btnDemo").click(function () {
+            console.log("1")
+        })
+    </script>
+}

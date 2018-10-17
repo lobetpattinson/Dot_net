@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Web_DenLedModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblCategories">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Levels" Type="int" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreateDate" Type="date" />
+    <Property Name="TypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="tblCategoryProducts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="CategoryID" Type="int" />
+  </EntityType>
+  <EntityType Name="tblContact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="ntext" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="DateSent" Type="date" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblCustomer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameCus" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Adress" Type="ntext" />
+    <Property Name="Sex" Type="nchar" MaxLength="10" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="CreateDate" Type="date" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Account" Type="nchar" MaxLength="40" />
+    <Property Name="Password" Type="ntext" />
+  </EntityType>
+  <EntityType Name="tblManufactures">
+    <Key>
+      <PropertyRef Name="ManufacturesID" />
+    </Key>
+    <Property Name="ManufacturesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblOrderDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="tblOrders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="DateSet" Type="date" />
+    <Property Name="DeliveryDate" Type="date" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblProduct_Images">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="Images" Type="varchar" MaxLength="100" />
+    <Property Name="Images_Thum" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblProducts">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MetaTitle" Type="ntext" />
+    <Property Name="NameProduct" Type="ntext" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PriceNews" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ManufacturesID" Type="int" />
+    <Property Name="ImagesMain" Type="nvarchar" MaxLength="100" />
+    <Property Name="DienAp" Type="nchar" MaxLength="10" />
+    <Property Name="LedChip" Type="nvarchar" MaxLength="50" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="TuoiTho" Type="nvarchar" MaxLength="50" />
+    <Property Name="QuangThong" Type="nchar" MaxLength="10" />
+    <Property Name="HeSoCRI" Type="nchar" MaxLength="10" />
+    <Property Name="NhietDoMau" Type="nchar" MaxLength="10" />
+    <Property Name="GocMo" Type="nchar" MaxLength="10" />
+    <Property Name="DoKin" Type="nchar" MaxLength="10" />
+    <Property Name="NhietDoLamViec" Type="ntext" />
+    <Property Name="HeSoCongSuat" Type="nchar" MaxLength="10" />
+    <Property Name="VatLieu" Type="nchar" MaxLength="10" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="Warranty" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="CreateDate" Type="date" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblRoles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameRole" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblUsers">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Account" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <Association Name="FK_tblCategoryProducts_tblCategories">
+    <End Role="tblCategories" Type="Self.tblCategories" Multiplicity="0..1" />
+    <End Role="tblCategoryProducts" Type="Self.tblCategoryProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="tblCategoryProducts">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblOrderDetail_tblOrders">
+    <End Role="tblOrders" Type="Self.tblOrders" Multiplicity="0..1" />
+    <End Role="tblOrderDetail" Type="Self.tblOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblOrders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="tblOrderDetail">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblOrders_tblCustomer">
+    <End Role="tblCustomer" Type="Self.tblCustomer" Multiplicity="0..1" />
+    <End Role="tblOrders" Type="Self.tblOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCustomer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="tblOrders">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ListProductByCat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cat" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sp_Account_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="tblCategory_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MetaTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Levels" Type="int" Mode="In" />
+    <Parameter Name="ParentID" Type="int" Mode="In" />
+    <Parameter Name="SEOTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="TypeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="tblCategory_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="tblProducts_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="Web_DenLedModelStoreContainer">
+    <EntitySet Name="tblCategories" EntityType="Self.tblCategories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCategoryProducts" EntityType="Self.tblCategoryProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblContact" EntityType="Self.tblContact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCustomer" EntityType="Self.tblCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblManufactures" EntityType="Self.tblManufactures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOrderDetail" EntityType="Self.tblOrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOrders" EntityType="Self.tblOrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProduct_Images" EntityType="Self.tblProduct_Images" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblProducts" EntityType="Self.tblProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRoles" EntityType="Self.tblRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUsers" EntityType="Self.tblUsers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tblCategoryProducts_tblCategories" Association="Self.FK_tblCategoryProducts_tblCategories">
+      <End Role="tblCategories" EntitySet="tblCategories" />
+      <End Role="tblCategoryProducts" EntitySet="tblCategoryProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblOrderDetail_tblOrders" Association="Self.FK_tblOrderDetail_tblOrders">
+      <End Role="tblOrders" EntitySet="tblOrders" />
+      <End Role="tblOrderDetail" EntitySet="tblOrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblOrders_tblCustomer" Association="Self.FK_tblOrders_tblCustomer">
+      <End Role="tblCustomer" EntitySet="tblCustomer" />
+      <End Role="tblOrders" EntitySet="tblOrders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

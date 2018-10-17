@@ -1,0 +1,117 @@
+﻿@model Models.RegisterModel
+@using BotDetect.Web.Mvc;
+
+@{ MvcCaptcha registerCapcha = new MvcCaptcha("registerCapcha"); }
+
+
+
+@{
+    ViewBag.Title = "Đăng ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl"
+      rel="stylesheet" type="text/css" />
+<div class="content">
+    @using (Html.BeginForm("Register", "User", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal" style="margin: 0 0 0 -147px;">
+            <h4 style="font:bold; font-size:x-large;color:red;">Đăng ký thành viên</h4>
+            @if (TempData["AlertMes"] != null)
+            {
+                <div id="AlertBox" class="alert @TempData["AlertType"]" style="text-align: center;font-weight:bold; font-size:140%; height: 10%;">@TempData["AlertMes"]</div>
+            }
+            <hr />
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", style = "height:30px;    width: 200px;", id = "UserName" })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    <span id="LoiUserName"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", style = "height:30px;    width: 200px;", id = "Password" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    <span id="LoiPassword"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", style = "height:30px;    width: 200px;", id = "ConfirmPass" })
+                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+                    <span id="LoiConfirmPass"></span>
+                    <span id="LoiConfirmChuaDung"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", style = "height:30px;    width: 200px;", id = "Name" })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    <span id="LoiName"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.TextAreaFor(model => model.Address, new { @class = "form-control", style = "height:128px;    width: 200px;", id = "Address" })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                    <span id="LoiAddress"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", style = "height:30px;width: 200px;", placeholder = "MyEmail@gmail.com", type = "email", id = "Email" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    <span id="LoiEmail"></span>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", style = "height:30px;width: 200px;", id = "Phone" })
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    <span id="LoiPhone"></span>
+
+                </div>
+            </div>
+           
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-9" style="padding-left:100px;">
+                    <input type="submit" id="btnSubmit" value="Đăng ký" class="btn btn-default" style="background-color:#67B459; font-size:140%;" />
+                    <input type="button" id="reset" value="Nhập lại" class="btn btn-default" style="background-color:#67B459; font-size:140%;">
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<script src="~/Skin/JSUser.js"></script>
+<script>
+    $("#reset").click(function () {
+        $("#UserName").val("")
+        $("#Password").val("")
+        $("#ConfirmPass").val("")
+        $("#Name").val("")
+        $("#Address").val("")
+        $("#Email").val("")
+        $("#Phone").val("")
+    })
+</script>

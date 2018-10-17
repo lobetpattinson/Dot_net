@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="881b6dd14fbc4c6ab5f74297d29e54c0" Name="Diagram1">
+        <EntityTypeShape EntityType="EShopV20Model.ActionRole" Width="1.5" PointX="8" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.Category" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.Customer" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.MasterRole" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.Master" Width="1.5" PointX="5.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.OrderDetail" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.Order" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.Product" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.Role" Width="1.5" PointX="5.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.Supplier" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EShopV20Model.WebAction" Width="1.5" PointX="5.75" PointY="16.125" IsExpanded="true" />
+        <AssociationConnector Association="EShopV20Model.FK_Permissions_Actions" ManuallyRouted="false" />
+        <AssociationConnector Association="EShopV20Model.FK_Permissions_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="EShopV20Model.FK_HangHoa_Loai1" ManuallyRouted="false" />
+        <AssociationConnector Association="EShopV20Model.FK_Orders_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="EShopV20Model.FK_UserInRoles_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="EShopV20Model.FK_UserInRoles_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="EShopV20Model.FK_OrderDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="EShopV20Model.FK_OrderDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="EShopV20Model.FK_Products_Suppliers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

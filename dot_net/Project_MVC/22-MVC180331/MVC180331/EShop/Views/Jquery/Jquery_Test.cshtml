@@ -1,0 +1,14 @@
+﻿Checkbox: <input type="checkbox" id="myCheck">
+
+<button class="btn btn-warning" onclick="check()">Check Checkbox</button>
+<button class="btn btn-primary" onclick="uncheck()">Uncheck Checkbox</button>
+
+<script>
+    function check() {
+        document.getElementById("myCheck").checked = true;
+    }
+
+    function uncheck() {
+        document.getElementById("myCheck").checked = false;
+    }
+</script>

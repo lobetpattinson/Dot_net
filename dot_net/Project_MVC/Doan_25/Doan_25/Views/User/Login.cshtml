@@ -1,0 +1,76 @@
+﻿
+@model Doan_25.Model.LoginCusModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h4>@ViewBag.ThongBao</h4>
+<div class="content">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal" style="margin: 0 0 0 -147px;">
+            <h4 style="font:bold; font-size:x-large;color:red;">Đăng Nhập</h4>
+
+            <hr />
+            @Html.ValidationSummary(true, null, new { @class = "text-danger" })
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    <span id="LoiUserName"></span>
+                    @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", style = "height:30px;    width: 200px;", id = "UserName" })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-3" })
+                <div class="col-md-9">
+                    <span id="Biloi"> </span>
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", style = "height:30px;    width: 200px;", id = "Password" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+
+            <div class="checkbox" style="padding-left: 188px;">
+                <label>
+                    @Html.CheckBoxFor(model => model.Rememberme)
+                    Remember Me
+                </label>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-9" style="padding-left:80px; padding-top:10px;">
+                    <input type="submit" id="btnSubmit" value="Đăng nhập" class="btn btn-default" style="background-color:#67B459; font-size:140%;" />
+                    <input type="reset" value="Nhập lại" class="btn btn-default" style="background-color:#67B459; font-size:140%;">
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+@section Js{
+
+    @*<script>
+            $("#btnSubmit").click(function () {
+                console.log("a")
+                var model = {
+                    UserName :$("#UserName").val(),
+                    Password: $("#Password").val()
+                }
+                $.ajax({
+                    type:'POST',
+                    url: '/User/LoginCheck',
+                    data: {'m': JSON.stringify(model) },
+                    success: function (data,res) {
+                        console.log(data +','+ res)
+                        $("#Login_out").html("<li><a href='#'>Xin chào </a></li>");
+                    }
+                });
+            })
+
+        </script>*@
+}

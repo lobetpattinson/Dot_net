@@ -1,0 +1,3 @@
+no  ra 2 giao dien
+
+=>phai xoa phan view start hoac cho layout ==null

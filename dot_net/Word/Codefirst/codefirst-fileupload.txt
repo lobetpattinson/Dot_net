@@ -1,0 +1,83 @@
+
+using Doan_23.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Doan_23.Controllers
+{
+    public class FileUploadController : Controller
+    {
+        ManageDbContext db = new ManageDbContext();
+        public ActionResult Index()
+        {
+            return View();
+        }
+           
+       public class Product
+       {
+        public int UploadId { get; set; }
+        public string UploadTitle { get; set; }
+        public string Image { get; set; }
+       }
+        
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(HttpPostedFileBase file, Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                if (file != null)
+                {
+                    string fil = System.IO.Path.GetFileName(file.FileName);
+                    string path = System.IO.Path.Combine(Server.MapPath("/UploadFiles"), fil);
+                    file.SaveAs(path);
+                    product.Image = "~/UploadFiles/" + file.FileName;
+                }
+                db.Products.Add(product);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(upload);
+        }
+    }
+}
+
+//Tren day sua dong code  product.UploadURL = "~/UploadFiles/" + file.FileName; thanh upload.UploadURL = file.FileName thi anh se chui vao csdl co ten la file.filename
+ 
+
+
+@using (Html.BeginForm("Create", "Products", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+{
+@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        <div class="control-label col-md-2">
+            <label for="file">Upload Image  for Slide:</label>
+        </div>
+        <div class="col-md-10">
+            <input type="file" name="file" id="file" style="width:50%" />
+        </div>
+
+    </div>
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}

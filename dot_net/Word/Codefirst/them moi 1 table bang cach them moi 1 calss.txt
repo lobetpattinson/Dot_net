@@ -1,0 +1,48 @@
+b1:ta co class sau:
+
+public class Category
+    { 
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+b2:ta them moi 1 class nhu sau:
+ public class Product
+    {
+        public int Id { get; set; }
+        public String Name { get; set; }
+    }
+b3:tao controler cung voi entity product=>ta thay trong entity tu dong them 1 entity Products
+
+=>ta thay khi chay xuat hien loi sau:
+The model backing the 'ManageDbContext' context has changed since the database was created.
+Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+
+b4:trong global.aspx them vao cuoi cau lenh sau:
+
+ Database.SetInitializer(new MigrateDatabaseToLatestVersion<ManageDbContext,Migrations.Configuration>());
+
+b5:go cau lenh sau:Enable-Migrations
+b6:sua trong AutomaticMigrationsEnabled = false;doi false thanh true
+b7:chayj create =>ta thay xuats hien bang products trong database
+
+
+
+
+
+
+truong ho thu 2:
+b1:tao moi 1 class Upload:
+ public class Upload
+    {
+        public int UploadId { get; set; }
+        public string UploadTitle { get; set; }
+        public string UploadURL { get; set; }
+    }
+
+b2:tao moi 1 dbset trong managerDbContext:
+public DbSet<Upload> Uploads { get; set; }
+b3:tao view
+
+b4 chay:=>thanh cong
+
+

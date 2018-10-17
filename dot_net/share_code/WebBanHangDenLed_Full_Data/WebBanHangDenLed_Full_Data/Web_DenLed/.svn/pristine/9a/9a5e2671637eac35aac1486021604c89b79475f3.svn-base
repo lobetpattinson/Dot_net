@@ -1,0 +1,24 @@
+﻿using Models.EF;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Models
+{
+    public class CategoryModel
+    {
+        Web_DenLedDbContext db = null;
+        public CategoryModel()
+       {
+           db = new Web_DenLedDbContext();
+       }
+        public int Create(tblCategoryProduct cat)
+        {
+            var c = db.tblCategoryProducts.Add(cat);
+            db.SaveChanges();
+            return c.ID;
+        }
+    }
+}

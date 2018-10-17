@@ -1,0 +1,294 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using UploadAndDisplayImageInMvc.Models;
+using UploadAndDisplayImageInMvc.Repositories;
+using UploadAndDisplayImageInMvc.ViewModel;
+
+namespace UploadAndDisplayImageInMvc.Controllers
+{
+    [RoutePrefix("Content")]
+    [ValidateInput(false)]
+    public class ContentController : Controller
+    {
+        private DBContext db = new DBContext();
+        /// <summary>
+        /// Retrive content from database 
+        /// </summary>
+        /// <returns></returns>
+        [Route("Index")]
+        [HttpGet]
+        public ActionResult Index()
+        {
+            var content = db.Contents.Select(s => new
+            {
+                s.ID,
+                s.Title,
+                s.Image,
+                s.Contents,
+                s.Description
+            });
+
+            List<ContentViewModel> contentModel = content.Select(item => new ContentViewModel()
+            {
+                ID = item.ID,
+                Title = item.Title,
+                Image = item.Image,
+                Description = item.Description,
+                Contents = item.Contents
+            }).ToList();
+            return View(contentModel);
+        }
+
+        /// <summary>
+        /// Retrive Image from database 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult RetrieveImage(int id)
+        {
+            byte[] cover = GetImageFromDataBase(id);
+            if (cover != null)
+            {
+                return File(cover, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        public byte[] GetImageFromDataBase(int Id)
+        {
+            var q = from temp in db.Contents where temp.ID == Id select temp.Image;
+            byte[] cover = q.First();
+            return cover;
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+        /// <summary>
+        /// Save content and images
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [Route("Create")]
+        [HttpPost]
+        public ActionResult Create(ContentViewModel model)
+        {
+            HttpPostedFileBase file = Request.Files["ImageData"];
+            ContentRepository service = new ContentRepository();
+            int i = service.UploadImageInDataBase(file, model);
+            if (i == 1)
+            {
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+	}
+}
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using UploadAndDisplayImageInMvc.Models;
+
+namespace UploadAndDisplayImageInMvc.Controllers
+{
+    public class ProductController : Controller
+    {
+        private DBContext db = new DBContext();
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult List()
+        {
+            var model = db.Contents.ToList();
+            return View(model);
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace UploadAndDisplayImageInMvc.Models
+{
+    public class Content 
+    {
+        [Key]
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Contents { get; set; }
+        public byte[] Image { get; set; }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace UploadAndDisplayImageInMvc.Models
+{
+    public class DBContext : DbContext
+    {
+        public DBContext()
+            : base("Name=dbContext")
+        {
+            Database.SetInitializer<DBContext>(new DropCreateDatabaseIfModelChanges<DBContext>());
+        }
+        public DbSet<Content> Contents { get; set; }
+    }
+}
+
+@model UploadAndDisplayImageInMvc.ViewModel.ContentViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<script src="~/ckeditor/ckeditor.js"></script>
+<script src="~/ckeditor/adapters/jquery.js"></script>
+
+<h2>Create New Content With Image</h2>
+
+<script type="text/javascript">
+    function fileCheck(obj) {
+        var fileExtension = ['jpeg', 'jpg', 'png', 'gif', 'bmp'];
+        if ($.inArray($(obj).val().split('.').pop().toLowerCase(), fileExtension) == -1) {
+            alert("Only '.jpeg','.jpg', '.png', '.gif', '.bmp' formats are allowed.");
+        }
+    }
+</script>
+
+@using (Html.BeginForm("Create","Content", FormMethod.Post, new { enctype ="multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Content</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Title, new { @class = "form-control", placeholder = "Content Title" })
+                @Html.ValidationMessageFor(model => model.Title)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Image, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="ImageData" id="ImageData" onchange="fileCheck(this);" />
+                @Html.ValidationMessageFor(model => model.Image)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", placeholder = "Content Description" })
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Contents, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Contents, new { @class = "ckeditor", placeholder = "Content" })
+                @Html.ValidationMessageFor(model => model.Contents)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+@model IEnumerable<UploadAndDisplayImageInMvc.ViewModel.ContentViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Page Content", "Create",null, new { @class="btn btn-primary"})
+</p>
+
+<br />
+<table class="table" style="width: 1200px;">
+    <tr>
+        <th>
+            <b>Title</b>
+        </th>
+        <th>
+            <b>Content</b>
+        </th>
+        <th>
+            <b>Image</b>
+        </th>
+        <th>
+            <b>Description</b>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td style="width: 500px;">
+                @Html.Raw(item.Contents)
+            </td>
+            <td>
+                <img src="/Content/RetrieveImage/@item.ID" alt="" height=100 width=200 />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+        </tr>
+    }
+</table>
+
+
+@foreach (var item in Model)
+{
+    <td>
+
+        <img src="/Content/RetrieveImage/@item.ID" alt="" height=100 width=200 />
+
+    </td>
+}

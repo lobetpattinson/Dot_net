@@ -1,0 +1,7 @@
+﻿@model IEnumerable<Doan_26.Models.tblCategory>
+@foreach (var item in Model)
+{
+    <li>
+        <a href="/Product/ListByCat/@item.CategoryID">@item.Name</a>
+    </li>
+}

@@ -1,0 +1,1286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D2474FC-4606-4268-8ED2-D31A25AEC6AC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyWeb</RootNamespace>
+    <AssemblyName>MyWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Code\CommonConstants.cs" />
+    <Compile Include="Areas\Admin\Code\Encryptor.cs" />
+    <Compile Include="Areas\Admin\Code\SessionHelper.cs" />
+    <Compile Include="Areas\Admin\Code\UserSession.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Home_AdController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
+    <Compile Include="Areas\Admin\Models\LoginModel.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\GioiThieuController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HuongDanController.cs" />
+    <Compile Include="Controllers\LienHeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Areas\Admin\Views\Home_Ad\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Menu.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryAdmin\List.cshtml" />
+    <Content Include="Areas\Admin\Views\CategoryAdmin\Insert.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductAdmin\_paging.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductAdmin\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Home_Ad\Navbar.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Skin\Admin\assets\avatars\avatar.png" />
+    <Content Include="Skin\Admin\assets\avatars\avatar1.png" />
+    <Content Include="Skin\Admin\assets\avatars\avatar2.png" />
+    <Content Include="Skin\Admin\assets\avatars\avatar3.png" />
+    <Content Include="Skin\Admin\assets\avatars\avatar4.png" />
+    <Content Include="Skin\Admin\assets\avatars\avatar5.png" />
+    <Content Include="Skin\Admin\assets\avatars\profile-pic.jpg" />
+    <Content Include="Skin\Admin\assets\avatars\user.jpg" />
+    <Content Include="Skin\Admin\assets\css\ace-fonts.css" />
+    <Content Include="Skin\Admin\assets\css\ace-ie.css" />
+    <Content Include="Skin\Admin\assets\css\ace-part2.css" />
+    <Content Include="Skin\Admin\assets\css\ace-rtl.css" />
+    <Content Include="Skin\Admin\assets\css\ace-skins.css" />
+    <Content Include="Skin\Admin\assets\css\ace.css" />
+    <Content Include="Skin\Admin\assets\css\ace.onpage-help.css" />
+    <Content Include="Skin\Admin\assets\css\bootstrap-datepicker3.css" />
+    <Content Include="Skin\Admin\assets\css\bootstrap-datetimepicker.css" />
+    <Content Include="Skin\Admin\assets\css\bootstrap-duallistbox.css" />
+    <Content Include="Skin\Admin\assets\css\bootstrap-editable.css" />
+    <Content Include="Skin\Admin\assets\css\bootstrap-multiselect.css" />
+    <Content Include="Skin\Admin\assets\css\bootstrap-timepicker.css" />
+    <Content Include="Skin\Admin\assets\css\bootstrap.css" />
+    <Content Include="Skin\Admin\assets\css\chosen-sprite%402x.png" />
+    <Content Include="Skin\Admin\assets\css\chosen-sprite.png" />
+    <Content Include="Skin\Admin\assets\css\chosen.css" />
+    <Content Include="Skin\Admin\assets\css\colorbox.css" />
+    <Content Include="Skin\Admin\assets\css\colorpicker.css" />
+    <Content Include="Skin\Admin\assets\css\daterangepicker.css" />
+    <Content Include="Skin\Admin\assets\css\dropzone.css" />
+    <Content Include="Skin\Admin\assets\css\font-awesome.css" />
+    <Content Include="Skin\Admin\assets\css\fullcalendar.css" />
+    <Content Include="Skin\Admin\assets\css\fullcalendar.print.css" />
+    <Content Include="Skin\Admin\assets\css\images\border.png" />
+    <Content Include="Skin\Admin\assets\css\images\border1.png" />
+    <Content Include="Skin\Admin\assets\css\images\border2.png" />
+    <Content Include="Skin\Admin\assets\css\images\controls.png" />
+    <Content Include="Skin\Admin\assets\css\images\ie6\borderBottomCenter.png" />
+    <Content Include="Skin\Admin\assets\css\images\ie6\borderBottomLeft.png" />
+    <Content Include="Skin\Admin\assets\css\images\ie6\borderBottomRight.png" />
+    <Content Include="Skin\Admin\assets\css\images\ie6\borderMiddleLeft.png" />
+    <Content Include="Skin\Admin\assets\css\images\ie6\borderMiddleRight.png" />
+    <Content Include="Skin\Admin\assets\css\images\ie6\borderTopCenter.png" />
+    <Content Include="Skin\Admin\assets\css\images\ie6\borderTopLeft.png" />
+    <Content Include="Skin\Admin\assets\css\images\ie6\borderTopRight.png" />
+    <Content Include="Skin\Admin\assets\css\images\loading.gif" />
+    <Content Include="Skin\Admin\assets\css\images\loading_background.png" />
+    <Content Include="Skin\Admin\assets\css\images\meteorshower.jpg" />
+    <Content Include="Skin\Admin\assets\css\images\meteorshower2.jpg" />
+    <Content Include="Skin\Admin\assets\css\images\overlay.png" />
+    <Content Include="Skin\Admin\assets\css\images\pattern.jpg" />
+    <Content Include="Skin\Admin\assets\css\images\pattern.png" />
+    <Content Include="Skin\Admin\assets\css\images\spritemap%402x.png" />
+    <Content Include="Skin\Admin\assets\css\images\spritemap.png" />
+    <Content Include="Skin\Admin\assets\css\img\alpha.png" />
+    <Content Include="Skin\Admin\assets\css\img\hue.png" />
+    <Content Include="Skin\Admin\assets\css\img\saturation.png" />
+    <Content Include="Skin\Admin\assets\css\jquery-ui.css" />
+    <Content Include="Skin\Admin\assets\css\jquery-ui.custom.css" />
+    <Content Include="Skin\Admin\assets\css\jquery.gritter.css" />
+    <Content Include="Skin\Admin\assets\css\pace.css" />
+    <Content Include="Skin\Admin\assets\css\prettify.css" />
+    <Content Include="Skin\Admin\assets\css\select2-spinner.gif" />
+    <Content Include="Skin\Admin\assets\css\select2.css" />
+    <Content Include="Skin\Admin\assets\css\select2.png" />
+    <Content Include="Skin\Admin\assets\css\select2x2.png" />
+    <Content Include="Skin\Admin\assets\css\ui.jqgrid.css" />
+    <Content Include="Skin\Admin\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Skin\Admin\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Skin\Admin\assets\images\back_disabled.png" />
+    <Content Include="Skin\Admin\assets\images\back_enabled.png" />
+    <Content Include="Skin\Admin\assets\images\back_enabled_hover.png" />
+    <Content Include="Skin\Admin\assets\images\email1.png" />
+    <Content Include="Skin\Admin\assets\images\email2.png" />
+    <Content Include="Skin\Admin\assets\images\email3.png" />
+    <Content Include="Skin\Admin\assets\images\email4.png" />
+    <Content Include="Skin\Admin\assets\images\forward_disabled.png" />
+    <Content Include="Skin\Admin\assets\images\forward_enabled.png" />
+    <Content Include="Skin\Admin\assets\images\forward_enabled_hover.png" />
+    <Content Include="Skin\Admin\assets\images\gallery\image-1.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\image-2.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\image-3.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\image-4.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\image-5.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\image-6.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\thumb-1.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\thumb-2.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\thumb-3.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\thumb-4.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\thumb-5.jpg" />
+    <Content Include="Skin\Admin\assets\images\gallery\thumb-6.jpg" />
+    <Content Include="Skin\Admin\assets\images\sort_asc.png" />
+    <Content Include="Skin\Admin\assets\images\sort_asc_disabled.png" />
+    <Content Include="Skin\Admin\assets\images\sort_both.png" />
+    <Content Include="Skin\Admin\assets\images\sort_desc.png" />
+    <Content Include="Skin\Admin\assets\images\sort_desc_disabled.png" />
+    <Content Include="Skin\Admin\assets\images\spritemap%402x.png" />
+    <Content Include="Skin\Admin\assets\images\spritemap.png" />
+    <Content Include="Skin\Admin\assets\img\clear.png" />
+    <Content Include="Skin\Admin\assets\img\glyphicons-halflings-white.png" />
+    <Content Include="Skin\Admin\assets\img\glyphicons-halflings.png" />
+    <Content Include="Skin\Admin\assets\img\loading.gif" />
+    <Content Include="Skin\Admin\assets\js\ace-elements.js" />
+    <Content Include="Skin\Admin\assets\js\ace-extra.js" />
+    <Content Include="Skin\Admin\assets\js\ace.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.ajax-content.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.auto-container.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.auto-padding.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.onpage-help.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.searchbox-autocomplete.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.settings-rtl.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.settings-skin.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.settings.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.sidebar-scroll-1.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.sidebar-scroll-2.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.sidebar.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.submenu-hover.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.touch-drag.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.widget-box.js" />
+    <Content Include="Skin\Admin\assets\js\ace\ace.widget-on-reload.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.aside.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.colorpicker.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.fileinput.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.onpage-help.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.scroller.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.spinner.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.treeview.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.typeahead.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.wizard.js" />
+    <Content Include="Skin\Admin\assets\js\ace\elements.wysiwyg.js" />
+    <Content Include="Skin\Admin\assets\js\additional-methods.js" />
+    <Content Include="Skin\Admin\assets\js\autosize.js" />
+    <Content Include="Skin\Admin\assets\js\bootbox.js" />
+    <Content Include="Skin\Admin\assets\js\bootstrap-colorpicker.js" />
+    <Content Include="Skin\Admin\assets\js\bootstrap-multiselect.js" />
+    <Content Include="Skin\Admin\assets\js\bootstrap-tag.js" />
+    <Content Include="Skin\Admin\assets\js\bootstrap-wysiwyg.js" />
+    <Content Include="Skin\Admin\assets\js\bootstrap.js" />
+    <Content Include="Skin\Admin\assets\js\chosen.jquery.js" />
+    <Content Include="Skin\Admin\assets\js\dataTables\extensions\buttons\buttons.colVis.js" />
+    <Content Include="Skin\Admin\assets\js\dataTables\extensions\buttons\buttons.flash.js" />
+    <Content Include="Skin\Admin\assets\js\dataTables\extensions\buttons\buttons.html5.js" />
+    <Content Include="Skin\Admin\assets\js\dataTables\extensions\buttons\buttons.print.js" />
+    <Content Include="Skin\Admin\assets\js\dataTables\extensions\buttons\dataTables.buttons.js" />
+    <Content Include="Skin\Admin\assets\js\dataTables\extensions\buttons\swf\flashExport.swf" />
+    <Content Include="Skin\Admin\assets\js\dataTables\extensions\select\dataTables.select.js" />
+    <Content Include="Skin\Admin\assets\js\dataTables\jquery.dataTables.bootstrap.js" />
+    <Content Include="Skin\Admin\assets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="Skin\Admin\assets\js\date-time\bootstrap-datepicker.js" />
+    <Content Include="Skin\Admin\assets\js\date-time\bootstrap-datetimepicker.js" />
+    <Content Include="Skin\Admin\assets\js\date-time\bootstrap-timepicker.js" />
+    <Content Include="Skin\Admin\assets\js\date-time\daterangepicker.js" />
+    <Content Include="Skin\Admin\assets\js\date-time\moment.js" />
+    <Content Include="Skin\Admin\assets\js\dropzone.js" />
+    <Content Include="Skin\Admin\assets\js\excanvas.js" />
+    <Content Include="Skin\Admin\assets\js\flot\jquery.flot.js" />
+    <Content Include="Skin\Admin\assets\js\flot\jquery.flot.pie.js" />
+    <Content Include="Skin\Admin\assets\js\flot\jquery.flot.resize.js" />
+    <Content Include="Skin\Admin\assets\js\fuelux\fuelux.spinner.js" />
+    <Content Include="Skin\Admin\assets\js\fuelux\fuelux.tree.js" />
+    <Content Include="Skin\Admin\assets\js\fuelux\fuelux.wizard.js" />
+    <Content Include="Skin\Admin\assets\js\fullcalendar.js" />
+    <Content Include="Skin\Admin\assets\js\html5shiv-printshiv.js" />
+    <Content Include="Skin\Admin\assets\js\html5shiv.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-ar.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-bg.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-ca.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-cn.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-cs.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-de.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-dk.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-el.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-es.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-fa.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-fi.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-fr.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-gl.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-he.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-hr.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-hu.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-id.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-is.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-it.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-ja.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-kr.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-lt.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-me.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-nl.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-no.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-pl.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-pt-br.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-pt.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-ro.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-ru.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-sk.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-sr.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-sv.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-th.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-tr.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-tw.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-ua.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-uk.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\i18n\grid.locale-vi.js" />
+    <Content Include="Skin\Admin\assets\js\jqGrid\jquery.jqGrid.js" />
+    <Content Include="Skin\Admin\assets\js\jquery-ui.custom.js" />
+    <Content Include="Skin\Admin\assets\js\jquery-ui.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.bootstrap-duallistbox.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.colorbox.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.easypiechart.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.gritter.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.hotkeys.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.inputlimiter.1.3.1.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.knob.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.maskedinput.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.mobile.custom.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.mousewheel.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.nestable.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.raty.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.slimscroll.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.sparkline.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.ui.touch-punch.js" />
+    <Content Include="Skin\Admin\assets\js\jquery.validate.js" />
+    <Content Include="Skin\Admin\assets\js\jquery1x.js" />
+    <Content Include="Skin\Admin\assets\js\markdown\bootstrap-markdown.js" />
+    <Content Include="Skin\Admin\assets\js\markdown\markdown.js" />
+    <Content Include="Skin\Admin\assets\js\markdown\to-markdown.js" />
+    <Content Include="Skin\Admin\assets\js\pace.js" />
+    <Content Include="Skin\Admin\assets\js\prettify.js" />
+    <Content Include="Skin\Admin\assets\js\respond.js" />
+    <Content Include="Skin\Admin\assets\js\select2.js" />
+    <Content Include="Skin\Admin\assets\js\spin.js" />
+    <Content Include="Skin\Admin\assets\js\typeahead.jquery.js" />
+    <Content Include="Skin\Admin\assets\js\x-editable\ace-editable.js" />
+    <Content Include="Skin\Admin\assets\js\x-editable\bootstrap-editable.js" />
+    <Content Include="Skin\Admin\build\css.html" />
+    <Content Include="Skin\Admin\build\demo\demo-confirmation.html" />
+    <Content Include="Skin\Admin\build\demo\demo-contrast.html" />
+    <Content Include="Skin\Admin\build\demo\demo-navbar.html" />
+    <Content Include="Skin\Admin\build\demo\demo-newsletter.html" />
+    <Content Include="Skin\Admin\build\demo\email-confirmation.html" />
+    <Content Include="Skin\Admin\build\demo\email-contrast.html" />
+    <Content Include="Skin\Admin\build\demo\email-navbar.html" />
+    <Content Include="Skin\Admin\build\demo\email-newsletter.html" />
+    <Content Include="Skin\Admin\build\email-guide.html" />
+    <Content Include="Skin\Admin\build\email.html" />
+    <Content Include="Skin\Admin\build\files\ace-rtl.js" />
+    <Content Include="Skin\Admin\build\files\css-builder.js" />
+    <Content Include="Skin\Admin\build\files\css-strip-media.js" />
+    <Content Include="Skin\Admin\build\files\email-convert.html" />
+    <Content Include="Skin\Admin\build\files\email-convert.js" />
+    <Content Include="Skin\Admin\build\files\email.js" />
+    <Content Include="Skin\Admin\build\files\fix-ie.js" />
+    <Content Include="Skin\Admin\build\files\js-builder.js" />
+    <Content Include="Skin\Admin\build\files\style.css" />
+    <Content Include="Skin\Admin\build\icon.js" />
+    <Content Include="Skin\Admin\build\js.html" />
+    <Content Include="Skin\Admin\build\lib\cleancss-browser.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\display\autorefresh.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\display\fullscreen.css" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\display\fullscreen.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\display\panel.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\display\placeholder.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\display\rulers.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\edit\closebrackets.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\edit\closetag.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\edit\continuelist.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\edit\matchbrackets.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\edit\matchtags.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\edit\trailingspace.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\fold\brace-fold.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\fold\comment-fold.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\fold\foldcode.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\fold\foldgutter.css" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\fold\foldgutter.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\fold\indent-fold.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\fold\markdown-fold.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\addon\fold\xml-fold.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\lib\codemirror.css" />
+    <Content Include="Skin\Admin\build\lib\codemirror\lib\codemirror.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\mode\index.html" />
+    <Content Include="Skin\Admin\build\lib\codemirror\mode\meta.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\mode\xml\index.html" />
+    <Content Include="Skin\Admin\build\lib\codemirror\mode\xml\test.js" />
+    <Content Include="Skin\Admin\build\lib\codemirror\mode\xml\xml.js" />
+    <Content Include="Skin\Admin\build\lib\less.js" />
+    <Content Include="Skin\Admin\build\lib\uglifyjs.js" />
+    <Content Include="Skin\Admin\build\rtl.js" />
+    <Content Include="Skin\Admin\build\strip-media.js" />
+    <Content Include="Skin\Admin\dist\avatars\avatar.png" />
+    <Content Include="Skin\Admin\dist\avatars\avatar1.png" />
+    <Content Include="Skin\Admin\dist\avatars\avatar2.png" />
+    <Content Include="Skin\Admin\dist\avatars\avatar3.png" />
+    <Content Include="Skin\Admin\dist\avatars\avatar4.png" />
+    <Content Include="Skin\Admin\dist\avatars\avatar5.png" />
+    <Content Include="Skin\Admin\dist\avatars\profile-pic.jpg" />
+    <Content Include="Skin\Admin\dist\avatars\user.jpg" />
+    <Content Include="Skin\Admin\dist\css\ace-fonts.min.css" />
+    <Content Include="Skin\Admin\dist\css\ace-ie.min.css" />
+    <Content Include="Skin\Admin\dist\css\ace-part2.min.css" />
+    <Content Include="Skin\Admin\dist\css\ace-rtl.min.css" />
+    <Content Include="Skin\Admin\dist\css\ace-skins.min.css" />
+    <Content Include="Skin\Admin\dist\css\ace.min.css" />
+    <Content Include="Skin\Admin\dist\css\bootstrap-datepicker3.min.css" />
+    <Content Include="Skin\Admin\dist\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Skin\Admin\dist\css\bootstrap-duallistbox.min.css" />
+    <Content Include="Skin\Admin\dist\css\bootstrap-editable.min.css" />
+    <Content Include="Skin\Admin\dist\css\bootstrap-multiselect.min.css" />
+    <Content Include="Skin\Admin\dist\css\bootstrap-timepicker.min.css" />
+    <Content Include="Skin\Admin\dist\css\bootstrap.min.css" />
+    <Content Include="Skin\Admin\dist\css\chosen-sprite%402x.png" />
+    <Content Include="Skin\Admin\dist\css\chosen-sprite.png" />
+    <Content Include="Skin\Admin\dist\css\chosen.min.css" />
+    <Content Include="Skin\Admin\dist\css\colorbox.min.css" />
+    <Content Include="Skin\Admin\dist\css\colorpicker.min.css" />
+    <Content Include="Skin\Admin\dist\css\daterangepicker.min.css" />
+    <Content Include="Skin\Admin\dist\css\dropzone.min.css" />
+    <Content Include="Skin\Admin\dist\css\font-awesome.min.css" />
+    <Content Include="Skin\Admin\dist\css\fullcalendar.min.css" />
+    <Content Include="Skin\Admin\dist\css\fullcalendar.print.min.css" />
+    <Content Include="Skin\Admin\dist\css\images\border.png" />
+    <Content Include="Skin\Admin\dist\css\images\border1.png" />
+    <Content Include="Skin\Admin\dist\css\images\border2.png" />
+    <Content Include="Skin\Admin\dist\css\images\controls.png" />
+    <Content Include="Skin\Admin\dist\css\images\ie6\borderBottomCenter.png" />
+    <Content Include="Skin\Admin\dist\css\images\ie6\borderBottomLeft.png" />
+    <Content Include="Skin\Admin\dist\css\images\ie6\borderBottomRight.png" />
+    <Content Include="Skin\Admin\dist\css\images\ie6\borderMiddleLeft.png" />
+    <Content Include="Skin\Admin\dist\css\images\ie6\borderMiddleRight.png" />
+    <Content Include="Skin\Admin\dist\css\images\ie6\borderTopCenter.png" />
+    <Content Include="Skin\Admin\dist\css\images\ie6\borderTopLeft.png" />
+    <Content Include="Skin\Admin\dist\css\images\ie6\borderTopRight.png" />
+    <Content Include="Skin\Admin\dist\css\images\loading.gif" />
+    <Content Include="Skin\Admin\dist\css\images\loading_background.png" />
+    <Content Include="Skin\Admin\dist\css\images\meteorshower.jpg" />
+    <Content Include="Skin\Admin\dist\css\images\meteorshower2.jpg" />
+    <Content Include="Skin\Admin\dist\css\images\overlay.png" />
+    <Content Include="Skin\Admin\dist\css\images\pattern.jpg" />
+    <Content Include="Skin\Admin\dist\css\images\pattern.png" />
+    <Content Include="Skin\Admin\dist\css\images\spritemap%402x.png" />
+    <Content Include="Skin\Admin\dist\css\images\spritemap.png" />
+    <Content Include="Skin\Admin\dist\css\img\alpha.png" />
+    <Content Include="Skin\Admin\dist\css\img\hue.png" />
+    <Content Include="Skin\Admin\dist\css\img\saturation.png" />
+    <Content Include="Skin\Admin\dist\css\jquery-ui.custom.min.css" />
+    <Content Include="Skin\Admin\dist\css\jquery-ui.min.css" />
+    <Content Include="Skin\Admin\dist\css\jquery.gritter.min.css" />
+    <Content Include="Skin\Admin\dist\css\pace.min.css" />
+    <Content Include="Skin\Admin\dist\css\prettify.min.css" />
+    <Content Include="Skin\Admin\dist\css\select2-spinner.gif" />
+    <Content Include="Skin\Admin\dist\css\select2.min.css" />
+    <Content Include="Skin\Admin\dist\css\select2.png" />
+    <Content Include="Skin\Admin\dist\css\select2x2.png" />
+    <Content Include="Skin\Admin\dist\css\ui.jqgrid.min.css" />
+    <Content Include="Skin\Admin\dist\fonts\fontawesome-webfont.svg" />
+    <Content Include="Skin\Admin\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Skin\Admin\dist\images\back_disabled.png" />
+    <Content Include="Skin\Admin\dist\images\back_enabled.png" />
+    <Content Include="Skin\Admin\dist\images\back_enabled_hover.png" />
+    <Content Include="Skin\Admin\dist\images\email1.png" />
+    <Content Include="Skin\Admin\dist\images\email2.png" />
+    <Content Include="Skin\Admin\dist\images\email3.png" />
+    <Content Include="Skin\Admin\dist\images\email4.png" />
+    <Content Include="Skin\Admin\dist\images\forward_disabled.png" />
+    <Content Include="Skin\Admin\dist\images\forward_enabled.png" />
+    <Content Include="Skin\Admin\dist\images\forward_enabled_hover.png" />
+    <Content Include="Skin\Admin\dist\images\gallery\image-1.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\image-2.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\image-3.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\image-4.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\image-5.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\image-6.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\thumb-1.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\thumb-2.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\thumb-3.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\thumb-4.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\thumb-5.jpg" />
+    <Content Include="Skin\Admin\dist\images\gallery\thumb-6.jpg" />
+    <Content Include="Skin\Admin\dist\images\sort_asc.png" />
+    <Content Include="Skin\Admin\dist\images\sort_asc_disabled.png" />
+    <Content Include="Skin\Admin\dist\images\sort_both.png" />
+    <Content Include="Skin\Admin\dist\images\sort_desc.png" />
+    <Content Include="Skin\Admin\dist\images\sort_desc_disabled.png" />
+    <Content Include="Skin\Admin\dist\images\spritemap%402x.png" />
+    <Content Include="Skin\Admin\dist\images\spritemap.png" />
+    <Content Include="Skin\Admin\dist\img\clear.png" />
+    <Content Include="Skin\Admin\dist\img\glyphicons-halflings-white.png" />
+    <Content Include="Skin\Admin\dist\img\glyphicons-halflings.png" />
+    <Content Include="Skin\Admin\dist\img\loading.gif" />
+    <Content Include="Skin\Admin\dist\js\ace-elements.min.js" />
+    <Content Include="Skin\Admin\dist\js\ace-extra.min.js" />
+    <Content Include="Skin\Admin\dist\js\ace.min.js" />
+    <Content Include="Skin\Admin\dist\js\additional-methods.min.js" />
+    <Content Include="Skin\Admin\dist\js\autosize.min.js" />
+    <Content Include="Skin\Admin\dist\js\bootbox.min.js" />
+    <Content Include="Skin\Admin\dist\js\bootstrap-colorpicker.min.js" />
+    <Content Include="Skin\Admin\dist\js\bootstrap-multiselect.min.js" />
+    <Content Include="Skin\Admin\dist\js\bootstrap-tag.min.js" />
+    <Content Include="Skin\Admin\dist\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="Skin\Admin\dist\js\bootstrap.min.js" />
+    <Content Include="Skin\Admin\dist\js\chosen.jquery.min.js" />
+    <Content Include="Skin\Admin\dist\js\dataTables\extensions\buttons\buttons.colVis.min.js" />
+    <Content Include="Skin\Admin\dist\js\dataTables\extensions\buttons\buttons.flash.min.js" />
+    <Content Include="Skin\Admin\dist\js\dataTables\extensions\buttons\buttons.html5.min.js" />
+    <Content Include="Skin\Admin\dist\js\dataTables\extensions\buttons\buttons.print.min.js" />
+    <Content Include="Skin\Admin\dist\js\dataTables\extensions\buttons\dataTables.buttons.min.js" />
+    <Content Include="Skin\Admin\dist\js\dataTables\extensions\buttons\swf\flashExport.swf" />
+    <Content Include="Skin\Admin\dist\js\dataTables\extensions\select\dataTables.select.min.js" />
+    <Content Include="Skin\Admin\dist\js\dataTables\jquery.dataTables.bootstrap.min.js" />
+    <Content Include="Skin\Admin\dist\js\dataTables\jquery.dataTables.min.js" />
+    <Content Include="Skin\Admin\dist\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="Skin\Admin\dist\js\date-time\bootstrap-datetimepicker.min.js" />
+    <Content Include="Skin\Admin\dist\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="Skin\Admin\dist\js\date-time\daterangepicker.min.js" />
+    <Content Include="Skin\Admin\dist\js\date-time\moment.min.js" />
+    <Content Include="Skin\Admin\dist\js\dropzone.min.js" />
+    <Content Include="Skin\Admin\dist\js\excanvas.min.js" />
+    <Content Include="Skin\Admin\dist\js\flot\jquery.flot.min.js" />
+    <Content Include="Skin\Admin\dist\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="Skin\Admin\dist\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="Skin\Admin\dist\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="Skin\Admin\dist\js\fuelux\fuelux.tree - Copy.min.js" />
+    <Content Include="Skin\Admin\dist\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="Skin\Admin\dist\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="Skin\Admin\dist\js\fullcalendar.min.js" />
+    <Content Include="Skin\Admin\dist\js\html5shiv-printshiv.min.js" />
+    <Content Include="Skin\Admin\dist\js\html5shiv.min.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-ar.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-bg.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-ca.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-cn.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-cs.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-de.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-dk.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-el.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-es.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-fa.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-fi.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-fr.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-gl.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-he.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-hr.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-hu.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-id.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-is.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-it.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-ja.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-kr.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-lt.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-me.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-nl.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-no.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-pl.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-pt-br.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-pt.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-ro.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-ru.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-sk.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-sr.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-sv.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-th.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-tr.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-tw.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-ua.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-uk.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\i18n\grid.locale-vi.js" />
+    <Content Include="Skin\Admin\dist\js\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery-ui.custom.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery-ui.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.bootstrap-duallistbox.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.colorbox.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.easypiechart.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.gritter.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.hotkeys.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.knob.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.maskedinput.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.mobile.custom.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.mousewheel.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.nestable.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.raty.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.slimscroll.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.sparkline.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery.validate.min.js" />
+    <Content Include="Skin\Admin\dist\js\jquery1x.min.js" />
+    <Content Include="Skin\Admin\dist\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="Skin\Admin\dist\js\markdown\markdown.min.js" />
+    <Content Include="Skin\Admin\dist\js\markdown\to-markdown.min.js" />
+    <Content Include="Skin\Admin\dist\js\pace.min.js" />
+    <Content Include="Skin\Admin\dist\js\prettify.min.js" />
+    <Content Include="Skin\Admin\dist\js\respond.min.js" />
+    <Content Include="Skin\Admin\dist\js\select2.min.js" />
+    <Content Include="Skin\Admin\dist\js\spin.min.js" />
+    <Content Include="Skin\Admin\dist\js\typeahead.jquery.min.js" />
+    <Content Include="Skin\Admin\dist\js\x-editable\ace-editable.min.js" />
+    <Content Include="Skin\Admin\dist\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Skin\Admin\docs\assets\js\language\css.js" />
+    <Content Include="Skin\Admin\docs\assets\js\language\generic.js" />
+    <Content Include="Skin\Admin\docs\assets\js\language\html.js" />
+    <Content Include="Skin\Admin\docs\assets\js\language\javascript.js" />
+    <Content Include="Skin\Admin\docs\assets\js\language\php.js" />
+    <Content Include="Skin\Admin\docs\assets\js\rainbow.js" />
+    <Content Include="Skin\Admin\docs\assets\js\rainbow.min.js" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\all-hallows-eve.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\blackboard.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\dreamweaver.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\espresso-libre.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\github.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\kimbie-dark.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\kimbie-light.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\monokai.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\obsidian.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\paraiso-dark.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\paraiso-light.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\pastie.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\solarized-dark.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\solarized-light.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\sunburst.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\tomorrow-night.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\tricolore.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\twilight.css" />
+    <Content Include="Skin\Admin\docs\assets\js\themes\zenburnesque.css" />
+    <Content Include="Skin\Admin\docs\blank.html" />
+    <Content Include="Skin\Admin\docs\images\active.png" />
+    <Content Include="Skin\Admin\docs\images\default.png" />
+    <Content Include="Skin\Admin\docs\images\help-icon1.png" />
+    <Content Include="Skin\Admin\docs\images\help-icon2.png" />
+    <Content Include="Skin\Admin\docs\images\help-include-all.png" />
+    <Content Include="Skin\Admin\docs\images\help-panels.png" />
+    <Content Include="Skin\Admin\docs\images\navbar-mobile1.png" />
+    <Content Include="Skin\Admin\docs\images\navbar-mobile2.png" />
+    <Content Include="Skin\Admin\docs\images\navbar.png" />
+    <Content Include="Skin\Admin\docs\images\new-toggle.png" />
+    <Content Include="Skin\Admin\docs\images\old-toggle.png" />
+    <Content Include="Skin\Admin\docs\images\scroll-content.png" />
+    <Content Include="Skin\Admin\docs\images\sidebar-mobile1.png" />
+    <Content Include="Skin\Admin\docs\images\sidebar-mobile2.png" />
+    <Content Include="Skin\Admin\docs\images\sidebar.png" />
+    <Content Include="Skin\Admin\docs\images\tabbed-dropdown.png" />
+    <Content Include="Skin\Admin\docs\images\tabless-inbox.png" />
+    <Content Include="Skin\Admin\docs\images\toggle-sidebar-1.png" />
+    <Content Include="Skin\Admin\docs\images\toggle-sidebar-11.png" />
+    <Content Include="Skin\Admin\docs\images\toggle-sidebar-3.png" />
+    <Content Include="Skin\Admin\docs\images\user-menu.png" />
+    <Content Include="Skin\Admin\docs\index.html" />
+    <Content Include="Skin\Admin\docs\sections\basics\ajax.html" />
+    <Content Include="Skin\Admin\docs\sections\basics\content.html" />
+    <Content Include="Skin\Admin\docs\sections\basics\footer.html" />
+    <Content Include="Skin\Admin\docs\sections\basics\layout.html" />
+    <Content Include="Skin\Admin\docs\sections\basics\navbar.html" />
+    <Content Include="Skin\Admin\docs\sections\basics\sidebar.html" />
+    <Content Include="Skin\Admin\docs\sections\changes\index.html" />
+    <Content Include="Skin\Admin\docs\sections\credits\index.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\checkbox.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\colorpicker.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\content-slider.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\extra.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\file-input.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\index.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\inline-editable.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\onpage-help.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\scrollbar.html" />
+    <Content Include="Skin\Admin\docs\sections\custom\widget-box.html" />
+    <Content Include="Skin\Admin\docs\sections\elements\index.html" />
+    <Content Include="Skin\Admin\docs\sections\files\css.html" />
+    <Content Include="Skin\Admin\docs\sections\files\examples.html" />
+    <Content Include="Skin\Admin\docs\sections\files\html.html" />
+    <Content Include="Skin\Admin\docs\sections\files\javascript.html" />
+    <Content Include="Skin\Admin\docs\sections\files\mustache.html" />
+    <Content Include="Skin\Admin\docs\sections\intro\index.html" />
+    <Content Include="Skin\Admin\docs\sections\issues\index.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\dashboard.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\email.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\error.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\faq.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\gallery.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\inbox.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\invoice.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\login.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\pricing.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\profile.html" />
+    <Content Include="Skin\Admin\docs\sections\pages\timeline.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\bootstrap.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\charts.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\date-time.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\editor.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\fuelux.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\input.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\jquery.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\misc.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\tables.html" />
+    <Content Include="Skin\Admin\docs\sections\plugins\tools.html" />
+    <Content Include="Skin\Admin\docs\sections\settings\index.html" />
+    <Content Include="Skin\Admin\Editor.js" />
+    <Content Include="Skin\css\bootstrap.css" />
+    <Content Include="Skin\css\bootstrap.min.css" />
+    <Content Include="Skin\css\default.css" />
+    <Content Include="Skin\css\highslide.css" />
+    <Content Include="Skin\css\jquery.bxslider.css" />
+    <Content Include="Skin\css\jquery.fancybox.css" />
+    <Content Include="Skin\css\jquery.treeview.css" />
+    <Content Include="Skin\css\Skin.css" />
+    <Content Include="Skin\css\style.css" />
+    <Content Include="Skin\css\th-styles.css" />
+    <Content Include="Skin\css\wzfKY-zYrpM.css" />
+    <Content Include="Skin\css\ZBExJa90O4S.css" />
+    <Content Include="Skin\images\01.jpg" />
+    <Content Include="Skin\images\02.jpg" />
+    <Content Include="Skin\images\03.jpg" />
+    <Content Include="Skin\images\04.jpg" />
+    <Content Include="Skin\images\1.jpg" />
+    <Content Include="Skin\images\10013858_995019533864629_2451654168966411100_n.jpg" />
+    <Content Include="Skin\images\10678796_10203631034388871_5342307328884042293_n.jpg" />
+    <Content Include="Skin\images\10917067_908554192511164_1539955112359452605_n.jpg" />
+    <Content Include="Skin\images\12189603_700241446778315_2037752433420660701_n.jpg" />
+    <Content Include="Skin\images\12208871_1082323788444735_6262946738207783013_n.jpg" />
+    <Content Include="Skin\images\12512465_475070842699346_3428105636793162929_n.jpg" />
+    <Content Include="Skin\images\1619238_498766753578649_964903952_n.jpg" />
+    <Content Include="Skin\images\1CHUAN-BIG.png" />
+    <Content Include="Skin\images\2014_07_03_14_36_11_06.jpg" />
+    <Content Include="Skin\images\2014_07_03_14_38_54_97.jpg" />
+    <Content Include="Skin\images\2014_07_15_11_45_56_94.jpg" />
+    <Content Include="Skin\images\2014_07_15_11_48_03_93.jpg" />
+    <Content Include="Skin\images\2014_07_15_11_48_22_53.jpg" />
+    <Content Include="Skin\images\2014_07_15_11_48_35_10.jpg" />
+    <Content Include="Skin\images\2014_07_15_11_48_59_69.jpg" />
+    <Content Include="Skin\images\2014_07_15_11_51_55_97.jpg" />
+    <Content Include="Skin\images\2014_07_15_11_52_30_10.jpg" />
+    <Content Include="Skin\images\2014_07_15_12_18_49_62.jpg" />
+    <Content Include="Skin\images\2014_07_15_13_36_57_07.jpg" />
+    <Content Include="Skin\images\2014_07_22_21_18_22_12_smallSize.jpg" />
+    <Content Include="Skin\images\2014_08_16_13_52_13_66_smallSize.jpg" />
+    <Content Include="Skin\images\2014_08_22_14_00_58_88.jpg" />
+    <Content Include="Skin\images\2014_08_22_14_04_51_35_smallSize.jpg" />
+    <Content Include="Skin\images\2014_08_22_14_10_32_15_smallSize.jpg" />
+    <Content Include="Skin\images\2014_08_22_15_21_16_16_smallSize.jpg" />
+    <Content Include="Skin\images\2014_08_22_16_07_08_00_smallSize.jpg" />
+    <Content Include="Skin\images\2014_08_22_16_12_55_89_smallSize.jpg" />
+    <Content Include="Skin\images\2014_08_22_16_36_36_18_smallSize.jpg" />
+    <Content Include="Skin\images\2014_09_22_10_19_47_80_smallSize.png" />
+    <Content Include="Skin\images\2014_09_28_15_58_09_93_smallSize.jpg" />
+    <Content Include="Skin\images\2014_11_21_11_26_34_26_smallSize.jpg" />
+    <Content Include="Skin\images\2014_11_21_11_35_22_49_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_18_10_49_17_29_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_19_09_46_39_86_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_19_11_07_45_57_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_19_11_09_26_48_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_19_11_16_09_37_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_19_11_19_58_77_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_19_11_30_36_70_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_19_11_38_29_48_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_19_11_40_42_31_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_20_13_48_07_68_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_20_13_53_16_04_smallSize.jpg" />
+    <Content Include="Skin\images\2014_12_27_08_41_04_67.jpg" />
+    <Content Include="Skin\images\2014_12_27_10_56_51_84.jpg" />
+    <Content Include="Skin\images\2015_01_08_11_39_49_33.jpg" />
+    <Content Include="Skin\images\2015_01_08_11_41_24_20.jpg" />
+    <Content Include="Skin\images\2015_01_20_17_08_10_80_smallSize.jpg" />
+    <Content Include="Skin\images\2015_04_14_14_51_57_13_smallSize.jpg" />
+    <Content Include="Skin\images\2015_05_02_14_55_04_79_smallSize.jpg" />
+    <Content Include="Skin\images\2015_05_04_16_06_19_37_smallSize.jpg" />
+    <Content Include="Skin\images\2015_05_25_10_57_33_28_smallSize.jpg" />
+    <Content Include="Skin\images\2015_06_13_15_38_39_11_smallSize.jpg" />
+    <Content Include="Skin\images\2015_06_15_10_21_48_69_smallSize.jpg" />
+    <Content Include="Skin\images\2015_07_08_14_27_57_44_smallSize.jpg" />
+    <Content Include="Skin\images\2015_07_08_14_35_22_47_smallSize.jpg" />
+    <Content Include="Skin\images\2015_07_20_15_45_49_73_smallSize.jpg" />
+    <Content Include="Skin\images\2015_07_20_15_49_09_79_smallSize.jpg" />
+    <Content Include="Skin\images\2015_08_10_10_12_00_29_smallSize.jpg" />
+    <Content Include="Skin\images\2015_08_13_15_37_56_11_smallSize.jpg" />
+    <Content Include="Skin\images\2015_08_20_16_33_08_12_smallSize.jpg" />
+    <Content Include="Skin\images\2015_08_22_15_45_26_01_smallSize.jpg" />
+    <Content Include="Skin\images\2015_08_27_16_46_08_56_smallSize.jpg" />
+    <Content Include="Skin\images\2015_09_07_13_47_10_06_smallSize.jpg" />
+    <Content Include="Skin\images\2015_09_20_08_57_44_61_smallSize.jpg" />
+    <Content Include="Skin\images\2015_09_20_10_23_31_97_smallSize.jpg" />
+    <Content Include="Skin\images\2015_09_20_11_02_23_07_smallSize.jpg" />
+    <Content Include="Skin\images\2015_09_20_11_16_15_12_smallSize.jpg" />
+    <Content Include="Skin\images\2015_09_20_11_32_32_71_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_14_13_50_12_51_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_20_16_44_11_11_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_21_09_24_47_40_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_27_20_13_50_95_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_27_21_14_37_41_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_28_13_15_56_79_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_28_14_06_19_25_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_28_14_11_59_44_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_28_14_26_29_36_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_28_14_46_03_73_smallSize.jpg" />
+    <Content Include="Skin\images\2015_10_30_10_16_25_94_smallSize.jpg" />
+    <Content Include="Skin\images\2015_11_03_16_25_57_45_smallSize.jpg" />
+    <Content Include="Skin\images\2015_11_11_09_23_28_88_smallSize.jpg" />
+    <Content Include="Skin\images\2015_11_19_09_34_41_52_smallSize.jpg" />
+    <Content Include="Skin\images\2015_11_19_10_23_56_81.jpg" />
+    <Content Include="Skin\images\2015_11_19_10_49_06_61_smallSize.jpg" />
+    <Content Include="Skin\images\2015_11_28_10_55_24_31_smallSize.jpg" />
+    <Content Include="Skin\images\2015_12_02_13_23_24_82_smallSize.jpg" />
+    <Content Include="Skin\images\2015_12_19_17_27_56_87_smallSize.jpg" />
+    <Content Include="Skin\images\2015_12_19_21_30_45_45_smallSize.JPG" />
+    <Content Include="Skin\images\2015_12_28_12_19_18_21_smallSize.jpg" />
+    <Content Include="Skin\images\2016_01_05_16_59_26_54_mediumSize.jpg" />
+    <Content Include="Skin\images\2016_01_05_16_59_26_54_smallSize.jpg" />
+    <Content Include="Skin\images\2016_01_05_17_14_00_68_smallSize.jpg" />
+    <Content Include="Skin\images\2016_01_05_20_53_52_58_smallSize.jpg" />
+    <Content Include="Skin\images\2016_01_05_21_30_21_49_smallSize.jpg" />
+    <Content Include="Skin\images\a17.png" />
+    <Content Include="Skin\images\background2.jpg" />
+    <Content Include="Skin\images\backward.png" />
+    <Content Include="Skin\images\bag.png" />
+    <Content Include="Skin\images\Banner - team 5.jpg" />
+    <Content Include="Skin\images\banner.png" />
+    <Content Include="Skin\images\banner3.jpg" />
+    <Content Include="Skin\images\banner_left.png" />
+    <Content Include="Skin\images\banner_right.png" />
+    <Content Include="Skin\images\bestlight - green.jpg" />
+    <Content Include="Skin\images\bestlightT3.jpg" />
+    <Content Include="Skin\images\bestlight_chuan.jpg" />
+    <Content Include="Skin\images\bg.jpg" />
+    <Content Include="Skin\images\BLD002_2.jpg" />
+    <Content Include="Skin\images\BLD_0022.jpg" />
+    <Content Include="Skin\images\bong led.jpg" />
+    <Content Include="Skin\images\call-center-supervisor-resume.jpg" />
+    <Content Include="Skin\images\Den ngoai nha 2.jpg" />
+    <Content Include="Skin\images\Den ngoai nha%281%29.jpg" />
+    <Content Include="Skin\images\Den pha 1.jpg" />
+    <Content Include="Skin\images\Den xuong 1.jpg" />
+    <Content Include="Skin\images\Den xuong 2.jpg" />
+    <Content Include="Skin\images\DL8.jpg" />
+    <Content Include="Skin\images\downlight8.jpg" />
+    <Content Include="Skin\images\emple.png" />
+    <Content Include="Skin\images\flag_en.gif" />
+    <Content Include="Skin\images\flag_vn.gif" />
+    <Content Include="Skin\images\foward.png" />
+    <Content Include="Skin\images\home_icon.png" />
+    <Content Include="Skin\images\icon_new.gif" />
+    <Content Include="Skin\images\LED SIEU MONG.JPG" />
+    <Content Include="Skin\images\led tube22.jpg" />
+    <Content Include="Skin\images\li_icon.png" />
+    <Content Include="Skin\images\loading.gif" />
+    <Content Include="Skin\images\logo.jpg" />
+    <Content Include="Skin\images\logo2.png" />
+    <Content Include="Skin\images\next.png" />
+    <Content Include="Skin\images\NoImage.jpg" />
+    <Content Include="Skin\images\panel office%281%29.jpg" />
+    <Content Include="Skin\images\pre.png" />
+    <Content Include="Skin\images\search_bg.png" />
+    <Content Include="Skin\images\sepa_02.jpg" />
+    <Content Include="Skin\images\Slide 11%281%29.jpg" />
+    <Content Include="Skin\images\Slide 33.jpg" />
+    <Content Include="Skin\images\Slide 44.jpg" />
+    <Content Include="Skin\images\Slide1.png" />
+    <Content Include="Skin\images\tiet kiem dien.jpg" />
+    <Content Include="Skin\images\toend.png" />
+    <Content Include="Skin\images\top.jpg" />
+    <Content Include="Skin\images\tostart.png" />
+    <Content Include="Skin\IsProduct.js" />
+    <Content Include="Skin\JsCart.js" />
+    <Content Include="Skin\js\0wM5s1Khldu.js" />
+    <Content Include="Skin\js\all.js" />
+    <Content Include="Skin\js\b94UUzHjapV.js" />
+    <Content Include="Skin\js\bannerTruot.js" />
+    <Content Include="Skin\js\bootstrap.js" />
+    <Content Include="Skin\js\bootstrap.min.js" />
+    <Content Include="Skin\js\cc_3023.js" />
+    <Content Include="Skin\js\CommonUtilities.js" />
+    <Content Include="Skin\js\CommPrototype.js" />
+    <Content Include="Skin\js\f6T91Deal_q.js" />
+    <Content Include="Skin\js\highslide-with-gallery.js" />
+    <Content Include="Skin\js\I6-MnjEovm5.js" />
+    <Content Include="Skin\js\jquery-1.9.1.js" />
+    <Content Include="Skin\js\jquery-1.9.1.min.js" />
+    <Content Include="Skin\js\jquery.bxslider.min.js" />
+    <Content Include="Skin\js\jquery.carouFredSel-5.6.4-packed.js" />
+    <Content Include="Skin\js\jquery.fancybox.js" />
+    <Content Include="Skin\js\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Skin\js\js15.js" />
+    <Content Include="Skin\js\jssor.slider.min.js" />
+    <Content Include="Skin\js\mqajJoRXkq3.js" />
+    <Content Include="Skin\js\TTCre3391I0.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_MenuLeft.cshtml" />
+    <Content Include="Views\Home\ListSPPartial.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Product\ListByCat.cshtml" />
+    <Content Include="Views\Home\ListSpHotPartial.cshtml" />
+    <Content Include="Skin\Admin\assets\css\less\ace-features.less" />
+    <Content Include="Skin\Admin\assets\css\less\ace-nav.less" />
+    <Content Include="Skin\Admin\assets\css\less\ace-responsive.less" />
+    <Content Include="Skin\Admin\assets\css\less\ace-rtl.less" />
+    <Content Include="Skin\Admin\assets\css\less\ace.less" />
+    <Content Include="Skin\Admin\assets\css\less\basic.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\alerts.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\badges.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\bootstrap.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\breadcrumbs.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\button-groups.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\buttons.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\carousel.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\close.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\code.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\component-animations.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\dropdowns.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\forms.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\glyphicons.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\grid.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\input-groups.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\jumbotron.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\labels.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\list-group.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\media.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\alerts.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\background-variant.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\border-radius.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\buttons.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\center-block.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\clearfix.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\forms.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\gradients.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\grid.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\hide-text.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\image.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\labels.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\list-group.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\opacity.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\pagination.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\panels.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\reset-text.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\resize.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\size.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\table-row.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\modals.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\navbar.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\navs.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\normalize.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\pager.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\pagination.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\panels.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\popovers.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\print.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\progress-bars.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\responsive-embed.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\responsive-utilities.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\scaffolding.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\tables.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\theme.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\thumbnails.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\tooltip.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\type.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\utilities.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\variables.less" />
+    <Content Include="Skin\Admin\assets\css\less\bootstrap\wells.less" />
+    <Content Include="Skin\Admin\assets\css\less\breadcrumbs.less" />
+    <Content Include="Skin\Admin\assets\css\less\bs3-reset.less" />
+    <Content Include="Skin\Admin\assets\css\less\buttons.less" />
+    <Content Include="Skin\Admin\assets\css\less\dropdown.less" />
+    <Content Include="Skin\Admin\assets\css\less\dropdown\colorpicker.less" />
+    <Content Include="Skin\Admin\assets\css\less\dropdown\navbar-dropdown.less" />
+    <Content Include="Skin\Admin\assets\css\less\dropdown\navbar-tabbed-dropdown.less" />
+    <Content Include="Skin\Admin\assets\css\less\ext\bootstrap-tag.less" />
+    <Content Include="Skin\Admin\assets\css\less\fonts-rel.less" />
+    <Content Include="Skin\Admin\assets\css\less\fonts.less" />
+    <Content Include="Skin\Admin\assets\css\less\footer.less" />
+    <Content Include="Skin\Admin\assets\css\less\form.less" />
+    <Content Include="Skin\Admin\assets\css\less\form\checkbox.less" />
+    <Content Include="Skin\Admin\assets\css\less\form\file.less" />
+    <Content Include="Skin\Admin\assets\css\less\gallery.less" />
+    <Content Include="Skin\Admin\assets\css\less\general.less" />
+    <Content Include="Skin\Admin\assets\css\less\icon-animated.less" />
+    <Content Include="Skin\Admin\assets\css\less\infobox.less" />
+    <Content Include="Skin\Admin\assets\css\less\items.less" />
+    <Content Include="Skin\Admin\assets\css\less\label-badge.less" />
+    <Content Include="Skin\Admin\assets\css\less\mixins.less" />
+    <Content Include="Skin\Admin\assets\css\less\modal.less" />
+    <Content Include="Skin\Admin\assets\css\less\navbar\collapsible.less" />
+    <Content Include="Skin\Admin\assets\css\less\navbar\navbar-menu-form.less" />
+    <Content Include="Skin\Admin\assets\css\less\navbar\toggle-button.less" />
+    <Content Include="Skin\Admin\assets\css\less\navbar\user-buttons-move-down.less" />
+    <Content Include="Skin\Admin\assets\css\less\navbar\user-buttons.less" />
+    <Content Include="Skin\Admin\assets\css\less\navbar\user-dropdown-position.less" />
+    <Content Include="Skin\Admin\assets\css\less\navbar\user-menu.less" />
+    <Content Include="Skin\Admin\assets\css\less\onpage-help.less" />
+    <Content Include="Skin\Admin\assets\css\less\other.less" />
+    <Content Include="Skin\Admin\assets\css\less\page.error.less" />
+    <Content Include="Skin\Admin\assets\css\less\page.inbox.less" />
+    <Content Include="Skin\Admin\assets\css\less\page.invoice.less" />
+    <Content Include="Skin\Admin\assets\css\less\page.login.less" />
+    <Content Include="Skin\Admin\assets\css\less\page.pricing.less" />
+    <Content Include="Skin\Admin\assets\css\less\page.profile.less" />
+    <Content Include="Skin\Admin\assets\css\less\page.timeline.less" />
+    <Content Include="Skin\Admin\assets\css\less\print.less" />
+    <Content Include="Skin\Admin\assets\css\less\progressbar.less" />
+    <Content Include="Skin\Admin\assets\css\less\scroll.less" />
+    <Content Include="Skin\Admin\assets\css\less\searchbox.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\active.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\compact.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\ff_fix.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\highlight.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\horizontal.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\hover.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\min.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\multiple.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\old-toggle-button.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\responsive-1.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\responsive-2.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\responsive-3.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\shortcuts-toggle.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\sidebar-fixed.less" />
+    <Content Include="Skin\Admin\assets\css\less\sidebar\sub-arrow.less" />
+    <Content Include="Skin\Admin\assets\css\less\skins\empty.less" />
+    <Content Include="Skin\Admin\assets\css\less\skins\no-skin.less" />
+    <Content Include="Skin\Admin\assets\css\less\skins\skin-1.less" />
+    <Content Include="Skin\Admin\assets\css\less\skins\skin-2.less" />
+    <Content Include="Skin\Admin\assets\css\less\skins\skin-3.less" />
+    <Content Include="Skin\Admin\assets\css\less\skins\skins.less" />
+    <Content Include="Skin\Admin\assets\css\less\tab-accordion.less" />
+    <Content Include="Skin\Admin\assets\css\less\tables.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-calendar.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-chosen.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-colorbox.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-dataTables.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-date.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-dropzone.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-duallist-multiselect.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-editable.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-fuelux.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-gritter.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-jqgrid.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-jquery-ui.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-nestable.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-raty.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-select2.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-slider.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-typeahead.less" />
+    <Content Include="Skin\Admin\assets\css\less\thirdparty-wysiwyg.less" />
+    <Content Include="Skin\Admin\assets\css\less\tooltip-popover.less" />
+    <Content Include="Skin\Admin\assets\css\less\utility.less" />
+    <Content Include="Skin\Admin\assets\css\less\variables.less" />
+    <Content Include="Skin\Admin\assets\css\less\widget.less" />
+    <Content Include="Skin\Admin\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Skin\Admin\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Skin\Admin\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Skin\Admin\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Skin\Admin\assets\fonts\FontAwesome.otf" />
+    <Content Include="Skin\Admin\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Skin\Admin\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Skin\Admin\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Skin\Admin\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Skin\Admin\assets\fonts\OpenSans-300.woff" />
+    <Content Include="Skin\Admin\assets\fonts\OpenSans-400.woff" />
+    <Content Include="Skin\Admin\assets\fonts\readme" />
+    <Content Include="Skin\Admin\assets\js\ace\readme" />
+    <Content Include="Skin\Admin\assets\js\ace\scripts.json" />
+    <Content Include="Skin\Admin\build\icon.js-readme" />
+    <Content Include="Skin\Admin\build\package.json" />
+    <Content Include="Skin\Admin\dist\fonts\fontawesome-webfont.eot" />
+    <Content Include="Skin\Admin\dist\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Skin\Admin\dist\fonts\fontawesome-webfont.woff" />
+    <Content Include="Skin\Admin\dist\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Skin\Admin\dist\fonts\FontAwesome.otf" />
+    <Content Include="Skin\Admin\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Skin\Admin\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Skin\Admin\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Skin\Admin\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Skin\Admin\dist\fonts\OpenSans-300.woff" />
+    <Content Include="Skin\Admin\dist\fonts\OpenSans-400.woff" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Shared\_CartInfo.cshtml" />
+    <Content Include="Views\HuongDan\Index.cshtml" />
+    <Content Include="Views\GioiThieu\Index.cshtml" />
+    <Content Include="Views\LienHe\Insert.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
+    <Folder Include="Areas\Admin\Views\CartItem\" />
+    <Folder Include="Views\Category\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{2fe0e2ce-3f8d-4282-ba1c-7d9bf2e92953}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4057</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4057/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,24 @@
+,vao somee dang nhap 
+lobetpattinson
+Runningman12345
+Bam vao Upload
+nen lai thanh fize zip bang cchuot phai add to archie chon zip
+
+chon upload and unzip archives
+Chon database b?m ch?n create NH? LÀ máy cài b?n sqlserve 2014
+mssql login:lobetpattinson_SQLLogin_1
+ mo databse lên click chu?t ph?i vào database copy file backup
+ c=>programfile/mssqlserve/mssql12sqlexpress/mssql/backup/web_denled.bak
+o database v?a t?o b?m restore database =>
+chontep
+c
+programfile
+Microsoft SqlS?ver
+MSSQLL12.SQLEXPRESS
+
+Chinh lai web config o muc <system.web>
+<system.web>
+    <httpRuntime  maxRequestLength="1048576" targetFramework="4.5.2" />
+     <customErrors mode="RemoteOnly" defaultRedirect="Home/Index.html"/>
+  </system.web>
+Nh? copu d?t sau ch? Serve=""

@@ -1,0 +1,511 @@
+﻿@model Doan_26.Models.tblProduct
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content_box">
+
+    <div class="th-tab" style="margin: 0;">
+        <div class="th-tab-left">
+            <span>CHI TIẾT SẢN PHẨM</span>
+        </div>
+    </div>
+    <div class="box_ct contenttext" style="padding: 10px; line-height: 16pt; min-height: 287px; margin-bottom: 8px;">
+        <div style="min-height: 295px;">
+
+            <script src="js/jquery.carouFredSel-5.6.4-packed.js" type="text/javascript"></script>
+            <link href="css/th-styles.css" rel="stylesheet" type="text/css">
+            <script src="js/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+            <script src="js/jquery.fancybox.js" type="text/javascript"></script>
+            <link href="css/jquery.fancybox.css" rel="stylesheet" type="text/css">
+            <div id="product_img" class="fl_l" style="margin: 0 15px 15px 0">
+                <a id="ctl00_MainContent_ProductDetail1_hplImg" class="fancybox" rel="gallery1" href="images/2016_01_05_16_59_26_54.jpg"><img id="ctl00_MainContent_ProductDetail1_imgImage" class="img_large fl_l" src="~/Skin/images/@Model.ImagesMain" style="border-width:0px;"></a>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $("#foo2").carouFredSel({
+                            circular: true,
+                            infinite: false,
+                            auto: false,
+                            scroll: {
+                                items: 1,
+                                //easing: "swing",
+                                duration: 350
+                            },
+                            prev: {
+                                button: "#foo2_prev",
+                                key: "left"
+                            },
+                            next: {
+                                button: "#foo2_next",
+                                key: "right"
+                            }
+                            //pagination: "#foo2_pag"
+                        });
+
+                        $(".fancybox").fancybox({
+                            openEffect: 'none',
+                            closeEffect: 'none'
+                        });
+                    });
+                </script>
+
+            </div>
+            <div>
+                <span id="ctl00_MainContent_ProductDetail1_lblProductName" style="color: #30887C; font-weight: bold;">@Model.NameProduct</span>
+                <br>
+                Model:
+                <span id="ctl00_MainContent_ProductDetail1_lblModel" style="font-weight:bold;">BLD002</span>
+                <br>
+                Giá cũ: <span class="td_lt">
+                    <b>
+                        <span id="ctl00_MainContent_ProductDetail1_lblPriceAfter">@Model.Price</span>
+                    </b>
+                    <span id="ctl00_MainContent_ProductDetail1_lblCurrency">VNĐ</span>
+                </span>
+                <br>
+                Giá mới: <b style="color: red">
+                    <span id="ctl00_MainContent_ProductDetail1_lblPrice">@Model.PriceNews</span>
+                </b>
+                <span id="ctl00_MainContent_ProductDetail1_lblCurrency2">VNĐ</span>
+
+                <br>
+                <div>
+                    Xuất xứ:
+                    <span id="ctl00_MainContent_ProductDetail1_lblManufacture">Chính hãng</span>
+                    <br>
+                    Bảo hành:
+                    <span id="ctl00_MainContent_ProductDetail1_lblWantity">24</span>
+                    tháng
+
+                    <br>
+                    Trạng thái kho:
+                    <span id="ctl00_MainContent_ProductDetail1_lblStockStatus">còn trong kho</span>
+                </div>
+                <br>
+                <a href="~/them-gio-hang?ProductID=@Model.ProductID&Quantity=1" class=" th-button add_cart">Mua ngay </a>
+                <br>
+                <br>
+                <!-- AddThis Button BEGIN -->
+
+                <script type="text/javascript">var addthis_config = { "data_track_addressbar": false };</script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524a768b58d89f5b"></script>
+                <!-- AddThis Button END -->
+            </div>
+        </div>
+        <div>
+            <h1><a href="chitietsp.html">@Model.NameProduct</a></h1>
+            <p>
+                <span style="font-size: larger;">
+                    Model: BLD-002 là dòng đèn led với  thiết kế đẹp nhất, tinh tế và sang trọng, sơn tĩnh điện toàn bộ  nên rất bền.<br>
+                </span>
+            </p>
+            <h3><span style="color: rgb(0, 0, 0);">Thông số kỹ thuật:</span>&nbsp;</h3>
+            <table width="394" height="223" cellspacing="1" cellpadding="1" border="1" align="center">
+                <tbody>
+                    <tr>
+                        <td>Tổng Công suất</td>
+                        <td>@Model.HeSoCongSuat</td>
+                    </tr>
+                    <tr>
+                        <td>Điện áp</td>
+                        <td>85-265VAC</td>
+                    </tr>
+                    <tr>
+                        <td>Led Chip</td>
+                        <td>Taiwan</td>
+                    </tr>
+                    <tr>
+                        <td>Số lượng LED</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Tuổi thọ</td>
+                        <td>40.000 giờ</td>
+                    </tr>
+                    <tr>
+                        <td>Quang thông</td>
+                        <td>480 LM</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Hệ số hoàn màu CRI</td>
+                        <td>&nbsp;&gt;80</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Nhiệt độ màu</td>
+                        <td>&nbsp;3000K-6500K</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Góc mở</td>
+                        <td>&nbsp;152 độ</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Độ kín</td>
+                        <td>&nbsp;IP20</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;Nhiệt độ làm việc</td>
+                        <td>&nbsp;-20 đến +45 độ C</td>
+                    </tr>
+                    <tr>
+                        <td>Kích thước</td>
+                        <td>D110x30</td>
+                    </tr>
+                    <tr>
+                        <td>Lỗ khoét trần</td>
+                        <td>D90</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <span style="font-size: larger;">
+                    <br>
+                </span><span style="font-size: larger;">
+                    <br>
+                </span><img width="1044" height="806" alt="den led downlight" src="~/Skin/images/BLD_0022.jpg"><span style="font-size: larger;">
+                    <br>
+                </span>
+            </p>
+            <p><img width="1272" height="916" alt="den led downlight" src="~/Skin/images/BLD002_2.jpg"></p>
+            <h3>
+                <span style="color: rgb(0, 0, 0);"><span style="font-size: larger;">Các ứng dụng </span></span><span style="font-size: larger;">
+                    <br>
+                </span>
+            </h3>
+            <p>
+                <span style="font-size: larger;">
+                    + Cho chiếu sáng dân dụng như: chiếu sáng phòng khách, phòng ngủ, phòng tập luyện...<br>
+                </span>
+            </p>
+            <p>
+                <span style="font-size: larger;">
+                    + Chiếu sáng trung tâm thương mại, <br>
+                </span>
+            </p>
+            <p>
+                <span style="font-size: larger;">
+                    + Chiếu sáng cho các nhà văn phòng, hội trường, phòng họp...<br>
+                </span>
+            </p>
+            <p>
+                <span style="font-size: larger;">
+                    + Chiếu sáng cho nhà hát, rạp chiếu phim...<br>
+                </span>
+            </p>
+            <p><span style="font-size: larger;">+ Chiếu sáng hành lang, khu vực công cộng...</span></p>
+            <p>&nbsp;<span style="font-size: larger;">Các <a href="#"><strong>đèn led downlight</strong></a> khác</span></p>
+            <p style="text-align: center;">
+                <span style="color: rgb(0, 102, 51);"><span style="font-size: x-large;">*****</span></span>
+
+
+                <br>
+
+        </div>
+    </div>
+
+    <div class="clear">
+    </div>
+
+    <div class="th-tab" style="margin: 0;">
+        <div class="th-tab-left">
+            <span>
+                SẢN PHẨM CÙNG LOẠI
+            </span>
+        </div>
+    </div>
+    <div id="ProductDetail">
+        <div class="product_grid" style="border: 1px solid #CCC; border-radius: 0 0 5px 5px; border-top: 0">
+
+            <div class="item_product">
+                <span class="icon_sales" style="display: none">- 0%</span>
+                <img src="images/icon_new.gif" class="icon_new" style="display: block">
+                <div class="pdL10">
+                    <a href="#">
+                        <b>
+                            Đèn led downlight 7W - Chip Taiwan - denledmh.com
+                        </b>
+                    </a>
+                    <br>
+                    Model:
+                    BLD-006
+                </div>
+                <div class="sepa">
+                </div>
+                <div class="img">
+                    <a href="images/2016_01_05_17_14_00_68.jpg" class="highslide" onclick="return hs.expand(this)">
+
+                        <img id="ctl00_MainContent_ProductDetail1_rptProduct_ctl00_Image1" src="images/2016_01_05_17_14_00_68_smallSize.jpg" style="height:140px;width:187px;border-width:0px;">
+                    </a>
+                </div>
+                <div class="sepa">
+                </div>
+
+                <div class="pdL10 pdT10">
+                    <div class="pdL10-1">
+                        Giá cũ: <span class="td_lt">
+                            <b>
+                                0
+                            </b>
+                            VNĐ
+                        </span>
+                        <br>
+                        Giá mới: <b style="color: red;">
+                            185.000
+                        </b>
+                        VNĐ
+                    </div>
+                    <div class="pdL10-2">
+                        <a href="#" class="btn-01">
+                            Chi tiết
+                        </a>
+                        <input type="submit" name="ctl00$MainContent$ProductDetail1$rptProduct$ctl00$btnAddCart" value="Mua hàng" id="ctl00_MainContent_ProductDetail1_rptProduct_ctl00_btnAddCart" class="btn-01 add_cart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_product">
+                <span class="icon_sales" style="display: none">- 0%</span>
+                <img src="images/icon_new.gif" class="icon_new" style="display: block">
+                <div class="pdL10">
+                    <a href="#">
+                        <b>
+                            Đèn led downlight 7W- bestlight BLD003 - denledmh.com
+                        </b>
+                    </a>
+                    <br>
+                    Model:
+                    BLD003
+                </div>
+                <div class="sepa">
+                </div>
+                <div class="img">
+                    <a href="images/2015_06_13_15_38_39_11.jpg" class="highslide" onclick="return hs.expand(this)">
+
+                        <img id="ctl00_MainContent_ProductDetail1_rptProduct_ctl01_Image1" src="images/2015_06_13_15_38_39_11_smallSize.jpg" style="height:140px;width:187px;border-width:0px;">
+                    </a>
+                </div>
+                <div class="sepa">
+                </div>
+
+                <div class="pdL10 pdT10">
+                    <div class="pdL10-1">
+                        Giá cũ: <span class="td_lt">
+                            <b>
+                                0
+                            </b>
+                            VNĐ
+                        </span>
+                        <br>
+                        Giá mới: <b style="color: red;">
+                            145.000
+                        </b>
+                        VNĐ
+                    </div>
+                    <div class="pdL10-2">
+                        <a href="#" class="btn-01">
+                            Chi tiết
+                        </a>
+                        <input type="submit" name="ctl00$MainContent$ProductDetail1$rptProduct$ctl01$btnAddCart" value="Mua hàng" id="ctl00_MainContent_ProductDetail1_rptProduct_ctl01_btnAddCart" class="btn-01 add_cart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_product">
+                <span class="icon_sales" style="display: none">- 0%</span>
+                <img src="images/icon_new.gif" class="icon_new" style="display: none">
+                <div class="pdL10">
+                    <a href="#">
+                        <b>
+                            Đèn led downlight 7W - BLD-001 - Denledmh.com
+                        </b>
+                    </a>
+                    <br>
+                    Model:
+                    BLD001
+                </div>
+                <div class="sepa">
+                </div>
+                <div class="img">
+                    <a href="images/2015_05_25_10_57_33_28.jpg" class="highslide" onclick="return hs.expand(this)">
+
+                        <img id="ctl00_MainContent_ProductDetail1_rptProduct_ctl02_Image1" src="images/2015_05_25_10_57_33_28_smallSize.jpg" style="height:140px;width:187px;border-width:0px;">
+                    </a>
+                </div>
+                <div class="sepa">
+                </div>
+
+                <div class="pdL10 pdT10">
+                    <div class="pdL10-1">
+                        Giá cũ: <span class="td_lt">
+                            <b>
+                                0
+                            </b>
+                            VNĐ
+                        </span>
+                        <br>
+                        Giá mới: <b style="color: red;">
+                            245.000
+                        </b>
+                        VNĐ
+                    </div>
+                    <div class="pdL10-2">
+                        <a href="#" class="btn-01">
+                            Chi tiết
+                        </a>
+                        <input type="submit" name="ctl00$MainContent$ProductDetail1$rptProduct$ctl02$btnAddCart" value="Mua hàng" id="ctl00_MainContent_ProductDetail1_rptProduct_ctl02_btnAddCart" class="btn-01 add_cart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_product">
+                <span class="icon_sales" style="display: none">- 0%</span>
+                <img src="images/icon_new.gif" class="icon_new" style="display: none">
+                <div class="pdL10">
+                    <a href="#">
+                        <b>
+                            Đèn led downlight mỏng vuông 9W-denledmh.com
+                        </b>
+                    </a>
+                    <br>
+                    Model:
+                    PCE-MBD13
+                </div>
+                <div class="sepa">
+                </div>
+                <div class="img">
+                    <a href="images/2014_12_20_13_48_07_68.jpg" class="highslide" onclick="return hs.expand(this)">
+
+                        <img id="ctl00_MainContent_ProductDetail1_rptProduct_ctl03_Image1" src="images/2014_12_20_13_48_07_68_smallSize.jpg" style="height:140px;width:187px;border-width:0px;">
+                    </a>
+                </div>
+                <div class="sepa">
+                </div>
+
+                <div class="pdL10 pdT10">
+                    <div class="pdL10-1">
+                        Giá cũ: <span class="td_lt">
+                            <b>
+                                0
+                            </b>
+                            VNĐ
+                        </span>
+                        <br>
+                        Giá mới: <b style="color: red;">
+                            210.000
+                        </b>
+                        VNĐ
+                    </div>
+                    <div class="pdL10-2">
+                        <a href="#" class="btn-01">
+                            Chi tiết
+                        </a>
+                        <input type="submit" name="ctl00$MainContent$ProductDetail1$rptProduct$ctl03$btnAddCart" value="Mua hàng" id="ctl00_MainContent_ProductDetail1_rptProduct_ctl03_btnAddCart" class="btn-01 add_cart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_product">
+                <span class="icon_sales" style="display: none">- 0%</span>
+                <img src="images/icon_new.gif" class="icon_new" style="display: none">
+                <div class="pdL10">
+                    <a href="#">
+                        <b>
+                            Đèn led downlight siêu mỏng 6W - Denledmh.com
+                        </b>
+                    </a>
+                    <br>
+                    Model:
+                    PCE-MBD21
+                </div>
+                <div class="sepa">
+                </div>
+                <div class="img">
+                    <a href="images/2014_12_19_11_19_58_77.jpg" class="highslide" onclick="return hs.expand(this)">
+
+                        <img id="ctl00_MainContent_ProductDetail1_rptProduct_ctl04_Image1" src="images/2014_12_19_11_19_58_77_smallSize.jpg" style="height:140px;width:187px;border-width:0px;">
+                    </a>
+                </div>
+                <div class="sepa">
+                </div>
+
+                <div class="pdL10 pdT10">
+                    <div class="pdL10-1">
+                        Giá cũ: <span class="td_lt">
+                            <b>
+                                0
+                            </b>
+                            VNĐ
+                        </span>
+                        <br>
+                        Giá mới: <b style="color: red;">
+                            150.000
+                        </b>
+                        VNĐ
+                    </div>
+                    <div class="pdL10-2">
+                        <a href="#" class="btn-01">
+                            Chi tiết
+                        </a>
+                        <input type="submit" name="ctl00$MainContent$ProductDetail1$rptProduct$ctl04$btnAddCart" value="Mua hàng" id="ctl00_MainContent_ProductDetail1_rptProduct_ctl04_btnAddCart" class="btn-01 add_cart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_product">
+                <span class="icon_sales" style="display: none">- 0%</span>
+                <img src="images/icon_new.gif" class="icon_new" style="display: none">
+                <div class="pdL10">
+                    <a href="#">
+                        <b>
+                            Đèn led downlight mỏng 12W-denledmh.com
+                        </b>
+                    </a>
+                    <br>
+                    Model:
+                    PCE-MBD14
+                </div>
+                <div class="sepa">
+                </div>
+                <div class="img">
+                    <a href="images/2014_12_18_10_49_17_29.jpg" class="highslide" onclick="return hs.expand(this)">
+
+                        <img id="ctl00_MainContent_ProductDetail1_rptProduct_ctl05_Image1" src="images/2014_12_18_10_49_17_29_smallSize.jpg" style="height:140px;width:187px;border-width:0px;">
+                    </a>
+                </div>
+                <div class="sepa">
+                </div>
+
+                <div class="pdL10 pdT10">
+                    <div class="pdL10-1">
+                        Giá cũ: <span class="td_lt">
+                            <b>
+                                0
+                            </b>
+                            VNĐ
+                        </span>
+                        <br>
+                        Giá mới: <b style="color: red;">
+                            250.000
+                        </b>
+                        VNĐ
+                    </div>
+                    <div class="pdL10-2">
+                        <a href="#" class="btn-01">
+                            Chi tiết
+                        </a>
+                        <input type="submit" name="ctl00$MainContent$ProductDetail1$rptProduct$ctl05$btnAddCart" value="Mua hàng" id="ctl00_MainContent_ProductDetail1_rptProduct_ctl05_btnAddCart" class="btn-01 add_cart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear">
+            </div>
+        </div>
+        <div class="page">
+            <span id="ctl00_MainContent_ProductDetail1_PQTPager1" name="ctl00$MainContent$ProductDetail1$PQTPager1"><img src="images/tostart.png" style="vertical-align:middle;">&nbsp;<img src="images/backward.png" style="vertical-align:middle;">&nbsp;&nbsp;&nbsp;<strong>1</strong>&nbsp;<a id="ctl00_MainContent_ProductDetail1_PQTPager11" name="ctl00$MainContent$ProductDetail1$PQTPager11" href="javascript:__doPostBack('ctl00$MainContent$ProductDetail1$PQTPager1','1')">2</a>&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/foward.png" style="vertical-align:middle;">&nbsp;<img src="images/toend.png" onclick="javascript:__doPostBack('ctl00$MainContent$ProductDetail1$PQTPager1','1')" style="cursor:Hand;vertical-align:middle;"></span>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,37 @@
+﻿
+<span id="result">
+
+</span>
+
+    
+
+<ul class="pager">
+    <li><a href="0">|<<</a></li>
+    <li><a href="--PageNo"><<</a></li>
+    <li><a href="++PageNo">>></a></li>
+    <li><a href="-1">>>|</a></li>
+</ul>
+    <script>
+        var PageNo = 0;
+        var PageCount =@(ViewBag.PageCount);
+        function fnLoadPage(){
+            $.ajax({
+                url:"/Home/List",
+                data:{PageNo:PageNo},
+                success:function(response){
+                    $("#result").html(response);
+                }
+            });
+        }
+</script>
+<script>
+    $(function(){
+        fnLoadPage();
+        $(".pager a").click(function(){
+            eval("PageNo=(PageCount + " + $(this).attr("href") + ") % PageCount");
+            fnLoadPage();
+            return false;
+        });
+    })
+</script>
+    

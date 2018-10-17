@@ -1,0 +1,125 @@
+namespace Models.EF
+{
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class DenLedShopDbContext : DbContext
+    {
+        public DenLedShopDbContext()
+            : base("name=DenLedShopDbContext")
+        {
+        }
+
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<tblCategory> tblCategories { get; set; }
+        public virtual DbSet<tblCategoryProduct> tblCategoryProducts { get; set; }
+        public virtual DbSet<tblContact> tblContacts { get; set; }
+        public virtual DbSet<tblCustomer> tblCustomers { get; set; }
+        public virtual DbSet<tblFooter> tblFooters { get; set; }
+        public virtual DbSet<tblManufacture> tblManufactures { get; set; }
+        public virtual DbSet<tblOrderDetail> tblOrderDetails { get; set; }
+        public virtual DbSet<tblOrder> tblOrders { get; set; }
+        public virtual DbSet<tblProduct_Images> tblProduct_Images { get; set; }
+        public virtual DbSet<tblProduct> tblProducts { get; set; }
+        public virtual DbSet<tblRole> tblRoles { get; set; }
+        public virtual DbSet<tblSlide> tblSlides { get; set; }
+        public virtual DbSet<tblTypeInfo> tblTypeInfoes { get; set; }
+        public virtual DbSet<tblType> tblTypes { get; set; }
+        public virtual DbSet<tblUser_Roles> tblUser_Roles { get; set; }
+        public virtual DbSet<tblUser> tblUsers { get; set; }
+        public virtual DbSet<tblVisister> tblVisisters { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<tblContact>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tblCustomer>()
+                .Property(e => e.Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tblCustomer>()
+                .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tblCustomer>()
+                .Property(e => e.Sex)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblFooter>()
+                .Property(e => e.Content)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblManufacture>()
+                .Property(e => e.Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tblOrderDetail>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<tblProduct_Images>()
+                .Property(e => e.Images)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tblProduct_Images>()
+                .Property(e => e.Images_Thum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.PriceNews)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.DienAp)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.QuangThong)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.HeSoCRI)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.NhietDoMau)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.GocMo)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.DoKin)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.HeSoCongSuat)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblProduct>()
+                .Property(e => e.VatLieu)
+                .IsFixedLength();
+
+            modelBuilder.Entity<tblTypeInfo>()
+                .Property(e => e.Summary)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tblUser>()
+                .Property(e => e.Account)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<tblUser>()
+                .Property(e => e.Password)
+                .IsUnicode(false);
+        }
+    }
+}

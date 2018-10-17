@@ -1,0 +1,47 @@
+﻿@model EShop.Models.Master
+@{
+    Layout = null;
+}
+@using (Html.BeginForm("AddorEdit", "AjaxRetrieveDatatable", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <div class="col-md-2">Id</div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.Id, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">Password</div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">FullName</div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.FullName, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">Email</div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">Mobile</div>
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-4">
+                <input type="submit" value="Submit" class="btn btn-danger" />
+                <input type="submit" value="Reset" class="btn btn-warning" />
+            </div>
+        </div>
+    </div>
+
+}

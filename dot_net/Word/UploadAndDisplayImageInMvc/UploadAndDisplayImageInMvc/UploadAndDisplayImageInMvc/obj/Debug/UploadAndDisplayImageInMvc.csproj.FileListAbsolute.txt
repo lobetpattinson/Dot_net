@@ -1,0 +1,59 @@
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\UploadAndDisplayImageInMvc.dll.config
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\UploadAndDisplayImageInMvc.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\UploadAndDisplayImageInMvc.pdb
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Antlr3.Runtime.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\EntityFramework.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\EntityFramework.SqlServer.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Microsoft.Web.Infrastructure.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Newtonsoft.Json.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Helpers.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Mvc.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Optimization.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Razor.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.Deployment.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.Razor.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\WebGrease.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\EntityFramework.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\EntityFramework.SqlServer.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Helpers.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Mvc.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Optimization.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Razor.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.Deployment.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.Razor.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Newtonsoft.Json.xml
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Antlr3.Runtime.pdb
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\obj\Debug\UploadAndDisplayImageInMvc.csprojResolveAssemblyReference.cache
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\obj\Debug\UploadAndDisplayImageInMvc.dll
+H:\C Sharp Corner\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\obj\Debug\UploadAndDisplayImageInMvc.pdb
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\UploadAndDisplayImageInMvc.dll.config
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\UploadAndDisplayImageInMvc.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\UploadAndDisplayImageInMvc.pdb
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Antlr3.Runtime.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\EntityFramework.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\EntityFramework.SqlServer.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Microsoft.Web.Infrastructure.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Newtonsoft.Json.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Helpers.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Mvc.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Optimization.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Razor.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.Deployment.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.Razor.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\WebGrease.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\EntityFramework.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\EntityFramework.SqlServer.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Helpers.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Mvc.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Optimization.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.Razor.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.Deployment.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\System.Web.WebPages.Razor.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Newtonsoft.Json.xml
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\bin\Antlr3.Runtime.pdb
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\obj\Debug\UploadAndDisplayImageInMvc.dll
+D:\dotnet\Word\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\UploadAndDisplayImageInMvc\obj\Debug\UploadAndDisplayImageInMvc.pdb

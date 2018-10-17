@@ -1,0 +1,39 @@
+
+<div class="navbar navbar-inverse row">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse">
+        <!--Menu-->
+        <ul class="nav navbar-nav">
+            <li><a href=""><span class="glyphicon glyphicon-home"></span>Home</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-th-list"></span> Gi?i thi?u</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-earphone"></span> Liên h?</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-envelope"></span> Góp ý</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-question-sign"></span> H?i dáp</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Tài kho?n <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/Account/Login">Ðang nh?p</a></li>
+                    <li><a href="/Account/Forgot">Quên m?t kh?u</a></li>
+                    <li><a href="/Account/Register">Ðang ký thành viên</a></li>
+                    <li><a href="/Account/Logoff">Ðang xu?t</a></li>
+                    <li><a href="/Account/Change">Ð?i m?t kh?u</a></li>
+                    <li><a href="/Account/Edit">C?p nh?t h? so</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/Order/List">Ðon hàng</a></li>
+                    <li><a href="/Order/Items">Hàng dã mua</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-lang="en">English</a></li>
+            <li><a href="#" data-lang="vi">Ti?ng Vi?t</a></li>
+        </ul>
+        <!--Menu-->
+    </div>
+</div>

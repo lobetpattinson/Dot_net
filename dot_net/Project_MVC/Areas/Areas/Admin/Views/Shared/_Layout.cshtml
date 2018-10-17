@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Mall</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Scripts/eshop.js"></script>
+
+    @RenderSection("scripts", required: false)
+    
+</head>
+<body>
+    <div class="container">
+        <header class="nn-header row" style="height: 90px;">
+            <div class="nn-company">
+	            <h1>Website administration tool</h1>
+            </div>
+        </header>
+
+        <div class="navbar navbar-inverse row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">Trang chủ</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quản lý <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admin/product">Hàng hóa</a></li>
+                            <li><a href="/admin/supplier">Nhà cung cấp</a></li>
+                            <li><a href="/admin/category">Chủng loại</a></li>
+                            <li><a href="/admin/customer">Khách hàng</a></li>
+                            <li><a href="/admin/order">Hóa đơn</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Thống kê <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admin/inventory/bycategory">Theo loại</a></li>
+                            <li><a href="/admin/inventory/bysupplier">Theo hãng</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/revenue/byproduct">Theo từng mặt hàng</a></li>
+                            <li><a href="/admin/revenue/bycategory">Theo từng loại hàng</a></li>
+                            <li><a href="/admin/revenue/bysupplier">Theo từng hãng</a></li>
+                            <li><a href="/admin/revenue/bycustomer">Theo từng khách hàng</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/revenue/byyear">Theo từng năm</a></li>
+                            <li><a href="/admin/revenue/byquarter">Theo từng quí</a></li>
+                            <li><a href="/admin/revenue/bymonth">Theo từng tháng</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tài khoản <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admin/home/loggoff">Đăng xuất</a></li>
+                            <li><a href="/admin/home/change">Đổi mật khẩu</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/master">Quản lý tài khoản</a></li>
+                            <li><a href="/admin/role">Quản lý vai trò</a></li>
+                            <li><a href="/admin/webaction">Quản lý chức năng</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/masterrole">Quản lý tài khoản</a></li>
+                            <li><a href="/admin/actionrole">Phân quyền</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nn-sheet row">
+            <article class="nn-body">
+                @RenderBody()
+            </article>
+        </div>
+
+        <footer class="panel panel-default row">
+	        <div class="panel-heading">
+	        	<p class="text-center">Nhất Nghệ &copy; 2018. All rights reserved.</p>
+	        </div>
+        </footer>
+    </div>
+</body>
+</html>

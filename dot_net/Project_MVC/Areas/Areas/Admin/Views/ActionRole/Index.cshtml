@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Master-Roles Manager";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <div class="input-group">
+            <span class="input-group-addon panel-title">Role: </span>
+            @Html.DropDownList("RoleId", null, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="panel-footer"></div>
+    <div class="panel-body">
+        <ul class="list-unstyled row">
+            @foreach (var Item in ViewBag.WebActions as List<EShop.Models.WebAction>)
+            {
+                <li class="form-group col-sm-3">
+                    <div class="form-control">
+                        <label class="checkbox-inline">
+                            <input value="@Item.Id" type="checkbox" /> @Item.Name
+                        </label>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+@section scripts{
+<script>
+    $(document).ready(function () {
+        $("#RoleId").change(function () {
+            var rid = $(this).val();
+            $.ajax({
+                url: "/Admin/ActionRole/GetWebActionIds/" + rid,
+                success: function (response) {
+                    $(":checkbox").prop("checked", false);
+                    $(response).each(function (index, item) {
+                        $(":checkbox[value='" + item + "']").prop("checked", true);
+                    });
+                }
+            });
+        });
+        $("#RoleId").change();
+
+        $(":checkbox").click(function () {
+            var aid = $(this).val();
+            var rid = $("#RoleId").val();
+
+            $.ajax({
+                url: "/Admin/ActionRole/AddOrDelete",
+                data:{WebActionId: aid, RoleId: rid},
+                success: function (response) {
+                    $(".panel-footer").html(response);
+                }
+            });
+        });
+    });
+</script>
+}

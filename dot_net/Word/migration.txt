@@ -1,0 +1,7 @@
+Enable-Migrations
+Update-Database
+Add-migration
+
+
+Add-Migration Initial -IgnoreChanges
+Update-Database -verbose

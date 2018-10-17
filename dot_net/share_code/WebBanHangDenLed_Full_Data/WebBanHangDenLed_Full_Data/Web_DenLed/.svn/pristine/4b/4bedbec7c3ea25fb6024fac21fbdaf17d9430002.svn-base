@@ -1,0 +1,66 @@
+﻿$(function () {
+    $('#AlertBox').removeClass("hide");
+    $('#AlertBox').delay(1000).slideUp();
+})
+function _pagela(_currentPage) {
+    
+    $.ajax({
+        url: '/Admin/ProductAdmin/_paging',
+        type: "GET",
+        data: { "_currentPage": _currentPage },
+        success: function (data) {
+            //$("#_pagingla").html(data)
+            console.log(data)
+        }
+    });
+}
+function _deleteProduct(id) {
+   
+    var b = confirm("Bạn có chắc chắn muốn xóa!");
+    if (b) {
+        $.ajax({
+            url: '/Admin/ProductAdmin/Delete',
+            data: { 'id': id },
+            success: function (data) {
+                $("#" + id).remove();
+                console.log(data);
+            }
+        });
+    }
+}
+function _filldata(id) {
+   
+    $.ajax({
+        url: '/Admin/ProductAdmin/_SendDetail',
+        data: { "id": id },
+        dataType: 'json',
+        contentType: 'application/json;charset=utf-8',
+        success: function (_data) {
+
+            $.each(_data, function (key, value) {
+                if (key == "Status")
+                {
+                    $("option[value="+value+"]").prop("selected",true)
+                }
+                else
+                if (key !== 'ImagesMain') {
+
+                    $('[name=' + key + ']').val(value);
+
+                }
+               
+
+            });
+        }
+    });
+}
+function DucAnh() {
+    $.ajax({
+        url: '/Admin/ProductAdmin/TestList',
+        data: { "a": "Trong" },
+
+        success: function (_data) {
+            alert("thanh cong")
+        }
+    })
+}

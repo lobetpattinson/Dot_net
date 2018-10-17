@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/27079745/upload-image-display-and-save-it-to-database-in-asp-net-mvc4?noredirect=1&lq=1

@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content_box">
+    <div class="th-tab" style="margin: 0;">
+        <div class="th-tab-left">
+            <span id="ctl00_MainContent_lblTitle">Giới thiệu</span>
+        </div>
+    </div>
+    <div class="box_ct contenttext" style="min-height: 500px">
+        <p>
+            <strong>
+                + Công ty cổ phần<a href="#"> Đèn Led Việt Nam</a> được thành lập theo mã số: 0106590479 do Sở kế hoạch đầu tư Hà Nội cấp<br>
+            </strong>
+        </p>
+        <p><strong>+ Trụ sở: Số 2 ngõ 248 Trần Cung, Phường Cổ Nhuế 1, Q. Bắc Từ Liêm</strong></p>
+        <p><strong>+ Văn phòng giới thiệu sản phẩn: Số 12 đường Nguyễn Quốc Hoàn, Cầu Giấy, Hà Nội</strong></p>
+        <p><strong>+ Sản phẩm đèn led <a href="#">Bestlight</a>  dẫn đầu trong ngành công nghiệp chiếu sáng thông qua hệ thống quản lý  chất lượng ISO9001 và hệ thống bảo vệ môi trường ISO14001 trong ngành  công nghiệp chiếu sáng bán dẫn . Tất cả các loại sản phẩm chiếu  sáng&nbsp;Denled viet sẽ được cấp chứng nhận quốc tế như CE, ROHS,..</strong></p>
+        <p><strong>Thương hiệu:&nbsp; Đèn led <a href="#">Bestlight</a> hình thành quá trình tạo ra giá trị tiết kiệm tối đa cho khách hàng khi sử dụng đèn LED chiếu sáng.&nbsp;</strong></p>
+        <p><strong>Văn hóa Doanh nghiệp:&nbsp;&nbsp;Den led Bestlight giữ quan điểm phục  vụ cộng đồng: Trung thực, sản phẩm chất lượng cao và dịch vụ khách hàng  chu đáo là những giá trị cốt lõi của công ty.</strong></p>
+        <p><strong>Định vị sản phẩm :&nbsp;&nbsp;Den led Bestlight khẳng định trên dòng  sản phẩm chất lượng cao, khẳng định sự bền vững , tiết kiệm và hiện đại  cho khách hàng</strong></p>
+        <p><span style="color: rgb(255, 0, 0);"><strong>TẦM NHÌN: </strong></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Thương hiệu BESTLIGHT khát khao trở thành thương hiệu đèn led tốt  nhất Việt Nam bằng việc không ngừng cải tiến <strong>CHẤT LƯỢNG, MẪU MÃ</strong> và <strong>DỊCH  VỤ</strong> chăm sóc khách hàng</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Chúng tôi cam kết mang lại cho khách hàng hơn cả những gì mà khách hàng mong đợi</p>
+        <p><span style="color: rgb(255, 0, 0);"><strong>SỨ MỆNH: </strong></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  * Mang đến cho khách hàng các thiết bị chiếu sáng tốt nhất, bền đẹp  nhất và đặc biệt là tiết kiệm điện nhất, thân thiện với môi trường  nhất... vì một hành tinh xanh</p>
+        <p><span style="color: rgb(255, 0, 0);"><strong>GIÁ TRỊ CỐT LÕI: </strong></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Đặt lợi ích khách hàng lên hàng đầu</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Phục vụ khách hàng tốt nhất</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Luôn cải tiến sản phẩm và dịch vụ</p>
+        <p>
+            <strong>
+                <br>
+            </strong><span style="font-size: larger;"><strong>+ Lo go công ty</strong>:</span>
+        </p>
+        <p style="text-align: center;"><strong><img width="400" height="342" alt="" src="~/Skin/images/1CHUAN-BIG.png"></strong></p>
+        <p><strong><span style="font-size: larger;">+ Chúng tôi cung cấp dòng sản phẩm: Bestlight</span></strong></p>
+        <p style="text-align: center;">
+            <span style="font-size: larger;">
+                <strong>
+                    <img width="393" height="150" alt="bestlight" src="~/Skin/images/bestlight_chuan.jpg"><br>
+                </strong>
+            </span>
+        </p>
+        <p style="text-align: center;"><span style="font-size: larger;"><strong><img width="393" height="190" alt="bestlight" src="~/Skin/images/bestlightT3.jpg"></strong></span></p>
+        <p><span style="font-size: larger;"><strong>+ Dòng sản phẩmTouve:</strong></span></p>
+        <p style="text-align: center;"><img width="220" height="85" alt="touve" src="~/Skin/images/top.jpg"></p>
+        <p style="text-align: left;"><span style="font-size: larger;">Tất cả sản  phẩm chúng tôi cung cấp đều cam kết bảo hành tại công trình, khách hàng  chỉ cần alo chúng tôi sẽ tới tận nơi hỗ trợ kỹ thuật, bảo hành cho  khách hàng...</span></p>
+        <p style="text-align: left;"><strong><span style="font-size: larger;">*** Chính sách bảo hành</span></strong></p>
+        <p style="text-align: left;"><span style="font-size: larger;">+ Tất cả các sản phẩm của chúng tôi đều bảo hành ít nhất là 2 năm</span></p>
+        <p style="text-align: left;">
+            <span style="font-size: larger;">
+                + Bảo hành  tại nhà cho khách hàng: Khi có bất cứ hỏng hóc nào của sản phẩm, khách  hàng chỉ cần alo cho chúng tôi, chậm nhất sau 12 giờ chúng tôi sẽ có mặt  để kiểm tra và bảo hành sản phẩm cho khách hàng<br>
+            </span>
+        </p>
+        <p style="text-align: left;"><span style="font-size: larger;">+ Chế độ  bảo hàng 1 đổi 1: Khi sản phẩm bị lỗi, hỏng trong thời gian bảo hành,  chúng tôi không sửa chữa mà đổi sản phẩm mới cho khách hàng.</span></p>
+        <p style="text-align: left;"><strong><span style="font-size: larger;">***Các dòng sản phẩm chính:</span></strong></p>
+        <p><em><span style="font-size: small;"><a href="#"><span style="font-size: small;">Đèn led downlight</span></a></span></em><span style="font-size: small;"> </span></p>
+        <p><em><span style="font-size: small;"><a href="#"><span style="font-size: small;">Đèn led tuýp (Led tube)</span></a></span></em><span style="font-size: small;">  </span><span style="font-size: x-small;"> </span></p>
+        <p><a href="#"><span style="font-size: small;"><em>Đèn led panel (đèn led máng âm trần)</em></span></a><span style="font-size: small;"> </span></p>
+        <p><em><span style="font-size: small;"><a href="#"><span style="font-size: small;">Đèn led âm nước (under water Led)</span></a></span></em><span style="font-size: small;"> </span></p>
+        <p><em><span style="font-size: small;"><a href="#"><span style="font-size: small;">Đèn led nhà xưởng (high bay led)</span></a></span></em><span style="font-size: small;">   </span><span style="font-size: x-small;"> </span></p>
+        <p><a href="#"><span style="font-size: small;"><em>Đèn led âm đất (underground Led)</em></span></a><span style="font-size: small;">  </span><span style="font-size: x-small;"> </span></p>
+        <p><a href="#"><span style="font-size: small;"><em>Đèn led pha (flood led light)</em></span></a><span style="font-size: small;"> </span></p>
+        <p><a href="#"><span style="font-size: small;"><em>Bóng đèn led (led bulb, led búp)</em></span></a></p>
+        <p><span style="font-size: small;"><em><a href="#">Đèn led ốp trần</a></em></span></p>
+    </div>
+</div>
+
+

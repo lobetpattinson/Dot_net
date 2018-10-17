@@ -1,0 +1,294 @@
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\MyWeb.dll.config
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\MyWeb.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\MyWeb.pdb
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Antlr3.Runtime.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\EntityFramework.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\EntityFramework.SqlServer.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.Google.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Newtonsoft.Json.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Owin.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.Helpers.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.Mvc.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.Optimization.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.Razor.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.WebPages.Deployment.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.WebPages.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.WebPages.Razor.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\WebGrease.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.Helpers.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.Mvc.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.Optimization.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.Razor.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.WebPages.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.WebPages.Deployment.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\System.Web.WebPages.Razor.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Newtonsoft.Json.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Antlr3.Runtime.pdb
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\EntityFramework.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\EntityFramework.SqlServer.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.Google.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Project\CongNgheWeb\MyWeb\MyWeb\obj\Debug\MyWeb.csprojResolveAssemblyReference.cache
+E:\Project\CongNgheWeb\MyWeb\MyWeb\obj\Debug\MyWeb.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\obj\Debug\MyWeb.pdb
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Models.dll
+E:\Project\CongNgheWeb\MyWeb\MyWeb\bin\Models.pdb
+E:\HocTap\CNWeb\MyWeb\bin\MyWeb.dll.config
+E:\HocTap\CNWeb\MyWeb\bin\MyWeb.dll
+E:\HocTap\CNWeb\MyWeb\bin\MyWeb.pdb
+E:\HocTap\CNWeb\MyWeb\bin\Antlr3.Runtime.dll
+E:\HocTap\CNWeb\MyWeb\bin\EntityFramework.dll
+E:\HocTap\CNWeb\MyWeb\bin\EntityFramework.SqlServer.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.AspNet.Identity.Core.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.Cookies.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.Facebook.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.Google.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.OAuth.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.Twitter.dll
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Web.Infrastructure.dll
+E:\HocTap\CNWeb\MyWeb\bin\Models.dll
+E:\HocTap\CNWeb\MyWeb\bin\Newtonsoft.Json.dll
+E:\HocTap\CNWeb\MyWeb\bin\Owin.dll
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.Helpers.dll
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.Mvc.dll
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.Optimization.dll
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.Razor.dll
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.WebPages.Deployment.dll
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.WebPages.dll
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.WebPages.Razor.dll
+E:\HocTap\CNWeb\MyWeb\bin\WebGrease.dll
+E:\HocTap\CNWeb\MyWeb\bin\Models.pdb
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.Helpers.xml
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.Mvc.xml
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.Optimization.xml
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.Razor.xml
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.WebPages.xml
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.WebPages.Deployment.xml
+E:\HocTap\CNWeb\MyWeb\bin\System.Web.WebPages.Razor.xml
+E:\HocTap\CNWeb\MyWeb\bin\Newtonsoft.Json.xml
+E:\HocTap\CNWeb\MyWeb\bin\Antlr3.Runtime.pdb
+E:\HocTap\CNWeb\MyWeb\bin\EntityFramework.xml
+E:\HocTap\CNWeb\MyWeb\bin\EntityFramework.SqlServer.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.AspNet.Identity.Core.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.Facebook.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.Cookies.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.OAuth.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.Google.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.Twitter.xml
+E:\HocTap\CNWeb\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\HocTap\CNWeb\MyWeb\obj\Debug\MyWeb.csprojResolveAssemblyReference.cache
+E:\HocTap\CNWeb\MyWeb\obj\Debug\MyWeb.dll
+E:\HocTap\CNWeb\MyWeb\obj\Debug\MyWeb.pdb
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\MyWeb.dll.config
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\MyWeb.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\MyWeb.pdb
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Antlr3.Runtime.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\BotDetect.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\BotDetect.Web.Mvc.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\EntityFramework.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\EntityFramework.SqlServer.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Google.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Models.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Newtonsoft.Json.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Owin.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.Helpers.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.Mvc.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.Optimization.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.Razor.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.WebPages.Deployment.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.WebPages.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.WebPages.Razor.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\WebGrease.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Models.pdb
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.Helpers.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.Mvc.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.Optimization.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.Razor.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.WebPages.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.WebPages.Deployment.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\System.Web.WebPages.Razor.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Newtonsoft.Json.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Antlr3.Runtime.pdb
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\EntityFramework.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\EntityFramework.SqlServer.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Google.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\obj\Debug\MyWeb.csprojResolveAssemblyReference.cache
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\obj\Debug\MyWeb.dll
+E:\Project\CongNgheWeb\Web_DenLed\MyWeb\obj\Debug\MyWeb.pdb
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\MyWeb.dll.config
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\MyWeb.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\MyWeb.pdb
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Antlr3.Runtime.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\BotDetect.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\BotDetect.Web.Mvc.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\EntityFramework.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\EntityFramework.SqlServer.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Google.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Web.Infrastructure.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Models.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Newtonsoft.Json.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Owin.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.Helpers.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.Mvc.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.Optimization.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.Razor.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.WebPages.Deployment.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.WebPages.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.WebPages.Razor.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\WebGrease.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Models.pdb
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.Helpers.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.Mvc.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.Optimization.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.Razor.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.WebPages.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.WebPages.Deployment.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\System.Web.WebPages.Razor.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Newtonsoft.Json.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Antlr3.Runtime.pdb
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\EntityFramework.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\EntityFramework.SqlServer.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Google.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\obj\Debug\MyWeb.csprojResolveAssemblyReference.cache
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\obj\Debug\MyWeb.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\MyWeb\obj\Debug\MyWeb.pdb
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\MyWeb.dll.config
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\MyWeb.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\MyWeb.pdb
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Antlr3.Runtime.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\BotDetect.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\BotDetect.Web.Mvc.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\EntityFramework.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\EntityFramework.SqlServer.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Google.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Models.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Newtonsoft.Json.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Owin.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.Helpers.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.Mvc.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.Optimization.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.Razor.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.WebPages.Deployment.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.WebPages.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.WebPages.Razor.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\WebGrease.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Models.pdb
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Models.dll.config
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.Helpers.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.Mvc.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.Optimization.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.Razor.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.WebPages.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.WebPages.Deployment.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\System.Web.WebPages.Razor.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Newtonsoft.Json.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Antlr3.Runtime.pdb
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\EntityFramework.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\EntityFramework.SqlServer.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Google.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\obj\Debug\MyWeb.csprojAssemblyReference.cache
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\obj\Debug\MyWeb.csproj.CoreCompileInputs.cache
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\obj\Debug\MyWeb.csproj.CopyComplete
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\obj\Debug\MyWeb.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\MyWeb\obj\Debug\MyWeb.pdb

@@ -1,0 +1,5 @@
+public ManagerDbContext:DbContext
+    {
+        public ManagerDbContext ():base("name=ChuoiKetNoi"){}
+        public DbSet<Category>Categories { get; set; }
+    }

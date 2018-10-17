@@ -1,0 +1,9 @@
+﻿
+@{
+    ViewBag.Title = "View1";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>View1</h2>
+<a href="#">content</a>
+<p id="demo"></p>

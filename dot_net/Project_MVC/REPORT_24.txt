@@ -1,0 +1,120 @@
++Tai khoan trang admin:username:admin pass:admin
++Trang chu home/index chua tat ca san pham
++phan sidebar goc ben trai bam vao san pham nao hien ra danh muc san pham tung loai
++Chuc nang dang ky danh cho user
++Chuc nang dang nhap
++Admin co quyen them moi san pham bang cach vao trang admin/productadmin/index
++Chuc nang sua va xoa san pham cung o trang admin/productadmin/index
++bam vao san pham quan ly tat ca san pham bao gom chuc nang them moi sua xoa
++Bam vao nguoi dung quan ly tat ca nguoi dung 
++Bam vao danh muc hien ra quan ly tat san pham thuoc danh muc nao
+
+
+
+
+
+
+
+
+
+
+b1:copy layout 
+b2:sao chep thu muc skin qua prject
+b3:tao partialview _menuleft
+b4:Trang index tao controller:
+ public ActionResult _Category()
+        {
+            var res = db.tblCategories;
+            return PartialView("_MenuLeft",res);
+        }
+trong layout co:    @Html.Action("_Category", "Home");
+ngay duoi menu SanPham =>hien thi ra tung san pham chi tiet
+
+b5:Hien thi trang chu:
+Van tai HomeController: public ActionResult List()
+        {
+            var model = db.tblProducts.ToList();
+            return PartialView(model);
+        }
+tao view List tuong ung trong view index.cshtml ta them doan code sau:
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="ProductList">
+    @Html.Action("List", "Home")
+    
+</div>
+
+b5:Khi click vao ChiTiet Hien ra chi tiet san pham
+ tao controller:public ActionResult Details(int id)
+        {
+            var res = db.tblProducts.Find(id);
+            return View(res);
+        }
+
+Tao view Detail tuong ung:nen nho trong Lít.cshtml co doan code sau:
+ <div class="pdL10-2">
+                    <a href="/Home/Details/@item.ProductID" class="btn-01">
+                        Chi ti?t
+                    </a>
+                    <a href="~/them-gio-hang?ProductID=@item.ProductID&Quantity=1" class="btn-01 add_cart">Mua hàng</a>
+                </div>
+            </div>
+Cho nen khi click vao Chitiet no tu dong dua ve trang:Home/Detail
+
+b6:Gioi Thieu ve cua hang:
+tao controller:GioiThieuControoler:
+ public ActionResult Index()
+        {
+            return View();
+        }
+add view index.cshtml tuong ung: roi copy paste qua;
+Chay trang Home/Index click vao GioiThieu tren menu chay ra trang GioiThieu/Index vi co doan code sau:
+ <div class="mainmenu">
+                        <ul class="menu collapse clearfix">
+                            <li id="menu01" class="selected"><a href="/Home/Index">&nbsp;</a></li>
+                            <li class="th-rmn"></li>
+                            <li>
+                                <a href="/Home/Index">
+                                    Trang Ch?
+                                </a>
+                            </li>
+                            <li class="th-rmn"></li>
+                            <li>
+                                <a href="/GioiThieu/Index" id="menu02">
+                                    Gi?i thi?u
+                                </a>
+                            </li>
+
+b7:Tao trang Huong dan mua hang
+Tao trang Controller:HuongDanController
+ public ActionResult Index()
+        {
+            return View();
+        }
+Tao view tuong ung:Chay trang Home/Index roi click vao HD Mua Hang tren thanh menu no se chay den tran HuongDan/Index
+vi co doan code sau trong layout.cshtml:
+<li>
+                                <a href="/HuongDan/Index" id="menu07">
+                                    HD mua hàng
+                                </a>
+                            </li>
+
+
+Phan b8 quay lai lam lai sau:
+B8:Tao trang Lien He voi nguoi ban hang(Day la chuc nang gui mail)
+Tao Controller LienHeController:public ActionResult Index()
+        {
+            return View();
+        }
+
+
+B9:Tao trang ProductController
+
+
+
+
+

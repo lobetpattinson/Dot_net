@@ -1,0 +1,19 @@
+﻿<table class="table table-condensed table-hover">
+    <thead>
+        <tr>
+            <td>ProductID</td>
+            <td>NameProduct</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.ProductID</td>
+                <td>@item.NameProduct</td>
+                <td>@item.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>

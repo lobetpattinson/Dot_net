@@ -1,0 +1,77 @@
+﻿@model List<Doan_25.Models.tblProduct>
+@{
+    ViewBag.Title = "ListByCat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="th-tab">
+        <div class="th-tab-left">
+            <span>@ViewBag.T</span>
+
+        </div>
+    </div>
+    <div class="cate_des">
+        <img src="~/Skin/images/2015_01_08_11_39_49_33.jpg" style="border-width:0px;">
+    </div>
+    <div class="product_grid">
+        @foreach (var item in Model)
+        {
+            <div class="item_product">
+                <span class="icon_sales" style="display: none">- 0%</span>
+                <img src="~/Skin/images/icon_new.gif" class="icon_new" style="display: block">
+                <div class="pdL10">
+                    <a href="/Home/Details/@item.ProductID">
+                        <b>
+                            @item.NameProduct
+                        </b>
+                    </a>
+                    <br>
+                    Model:
+                    BLD-006
+                </div>
+                <div class="sepa">
+                </div>
+                <div class="img">
+                    <a href="images/2016_01_05_17_14_00_68.jpg" class="highslide" onclick="return hs.expand(this)">
+
+                        <img id="ctl00_MainContent_Product1_ddlProduct_ctl00_Image1" src="~/Skin/images/@item.ImagesMain" style="height:140px;width:187px;border-width:0px;">
+                    </a>
+                </div>
+                <div class="sepa">
+                </div>
+
+                <div class="pdL10 pdT10">
+                    <div class="pdL10-1">
+                        Giá cũ: <span class="td_lt">
+                            <b>
+                                @item.Price
+                            </b>
+                            VNĐ
+                        </span>
+                        <br>
+                        Giá mới: <b style="color: red;">
+                            @item.PriceNews
+                        </b>
+                        VNĐ
+                    </div>
+                    <div class="pdL10-2">
+                        <a href="/Home/Details/@item.ProductID" class="btn-01">
+                            Chi tiết
+                        </a>
+                        <a href="~/them-gio-hang?ProductID=@item.ProductID&Quantity=1" class="btn-01 add_cart">Mua ngay </a>
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+
+    <div class="clear">
+    </div>
+
+</div>
+
+

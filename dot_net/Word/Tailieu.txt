@@ -1,0 +1,20 @@
+https://stackblitz.com/edit/angular-6-registration-login-example
+
+angular 6 crud example
+https://stackblitz.com/angular/nlvrooxxdvy
+
+
+https://www.devglan.com/angular/angular-6-example
+
+google map
+
+https://angular-maps.com/guides/getting-started/
+
+schedule
+
+https://stackblitz.com/run?file=demo/component.ts
+
+
+chart
+
+https://www.npmjs.com/package/angular-highcharts

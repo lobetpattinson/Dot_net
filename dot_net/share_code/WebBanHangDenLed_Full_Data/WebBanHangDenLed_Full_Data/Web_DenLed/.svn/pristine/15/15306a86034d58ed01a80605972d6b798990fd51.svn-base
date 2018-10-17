@@ -1,0 +1,130 @@
+﻿@model List<MyWeb.Models.CartItem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content_box">
+    <div class="th-tab" style="margin: 0;">
+        <div class="th-tab-left">
+            <span class="cufont-span">
+                Giỏ hàng
+            </span>
+        </div>
+    </div>
+    <div class="box_ct">
+        <div class="indent" align="center">
+
+            <div id="ctl00_MainContent_divCartInfo">
+                <center>
+                    <div class="table-responsive">
+                        @if (ViewBag.TotalCart > 0)
+                        {
+                            <table id="table_cart" cellpadding="0" cellspacing="0" class="table_cart">
+                                <tbody>
+                                    <tr>
+
+                                        <td class="tc_header">
+                                            STT
+                                        </td>
+                                        <td class="tc_header">
+                                            Tên sản phẩm
+                                        </td>
+                                        <td class="tc_header" style="display: none">
+                                            Mã
+                                        </td>
+                                        <td class="tc_header">
+                                            Hình ảnh
+                                        </td>
+                                        <td class="tc_header">
+                                            Giá mới
+                                        </td>
+                                        <td class="tc_header">
+                                            Số lượng
+                                        </td>
+                                        <td class="tc_header">
+                                            Thành tiền
+                                        </td>
+                                        <td class="tc_header">
+                                            Xóa
+                                        </td>
+                                    </tr>
+
+                                    @foreach (var item in Model)
+                                    {
+                                        ViewBag.TotalMoney = ViewBag.TotalMoney + item.Product.PriceNews * item.Quantity;
+                                        <tr>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                <a href="/chi-tiet-san-pham/Den-led-nha-xuong-100W-chip-SMD-2835-Epistar-denledmhcom-656.html" class="bold font_Myriad">
+                                                    @item.Product.NameProduct
+                                                </a>
+                                            </td>
+                                            <td style="display: none">
+                                                BLH-100SMD2835
+                                            </td>
+                                            <td>
+                                                <a href="/chi-tiet-san-pham/Den-led-nha-xuong-100W-chip-SMD-2835-Epistar-denledmhcom-656.html">
+                                                    <img src="~/Skin/images/@item.Product.ImagesMain" style="max-width: 50px" alt="">
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <span class="cl_red">
+                                                   @String.Format("{0:0,0}", item.Product.PriceNews)
+                                                    VNĐ
+                                                </span>
+                                            </td>
+                                            <td style="width: 85px">
+                                                <input type="text" value="@item.Quantity" data-id="@item.Product.ProductID"class="txtQuantity" style="width: 50px;text-align: center;">
+                                                
+                                            </td>
+                                            <td>
+                                                <span id="label_656" class="cl_red">
+                                                   @String.Format("{0:0,0}", (item.Product.PriceNews * item.Quantity))
+                                                    VNĐ
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <img class="btn-delete" data-id="@item.Product.ProductID" src="~/Skin/images/delete_icon.png" style="cursor: pointer">
+                                            </td>
+                                        </tr>
+                                    }
+
+
+
+                                    <tr>
+                                        <td colspan="5" style="text-align: right !important" class="bold cl_black">
+                                            Tổng tiển thanh toán
+                                        </td>
+                                        <td colspan="2" style="background: #30887C">
+                                            <span  class="cl_white" style="font-weight:bold;font-family: Arial">@String.Format("{0:0,0}",ViewBag.TotalMoney) VNĐ</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        }
+                        else
+                        {
+                            <span class="alert alert-danger" style="font-size: x-large;">Chưa có sản phẩm nào trong giỏi hàng</span>
+                        }
+                    </div>
+                </center>
+                <br>
+                <div class="t_al_cen">
+                   
+                    <a href="/Home/Index" class="btn-01 add_cart">Tiếp tục mua hàng</a>
+                    <input type="button" id="btnUpdate" value="Cập nhật giỏi hàng" class="btn-01 add_cart"> 
+                    <button id="btnDelete" class="btn-01 add_cart">Xóa hết giỏ hàng</button>
+                    <button id="btnSuccess" class="btn-01 add_cart">Hoàn Tất</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+@section Js{
+<script src="~/Skin/JsCart.js"></script>
+}

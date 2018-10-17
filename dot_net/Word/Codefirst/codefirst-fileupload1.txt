@@ -1,0 +1,47 @@
+[HttpPost]
+        public ActionResult Upload(HttpPostedFileBase file)
+        {
+            var model = new ImageModel();
+            try
+            {
+                if (file.ContentLength > 0)
+                {
+                    var fileName = Path.GetFileName(file.FileName);
+                    var path = Path.Combine(Server.MapPath("~/Content/Uploads"), fileName);
+                    model.ImageServerPath = path;
+                    file.SaveAs(path);
+                    db.images.Add(model); //Database
+                    db.SaveChanges();
+                }
+                ViewBag.Message = "Upload Successful";
+                return RedirectToAction("Index");
+            }
+            catch (Exception e)
+            {
+                ViewBag.Message = "Upload Failed";
+                return RedirectToAction("Upload");
+            }
+        }
+
+
+public class ImageModel
+   {
+       [Key]
+       public int Id { get; set; }
+       public string ImageServerPath { get; set; }
+   }
+
+@model IEnumerable<ArtStore.Models.ImageModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@foreach (var item in Model)
+{
+    string path = item.ImageServerPath;
+    <img src="@item.ImageServerPath" alt="Blah" />
+}

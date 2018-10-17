@@ -1,0 +1,7 @@
+﻿
+@foreach (var item in Model)
+{
+    <li id="leftmenu_@item.CategoryID">
+        <a href="/Product/ListByCat/@item.CategoryID">@item.Name</a>
+    </li>
+}

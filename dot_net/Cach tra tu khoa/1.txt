@@ -1,0 +1,2 @@
+	
+Upload and display image in MVC application CC-CONNNER

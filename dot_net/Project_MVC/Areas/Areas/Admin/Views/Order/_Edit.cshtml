@@ -1,0 +1,72 @@
+﻿@model EShop.Models.Order
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="text-right text-danger">@TempData["Message"]</div>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label>Id</label>
+                    @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @readonly = true })
+                </div>
+
+                <div class="form-group col-sm-4">
+                    <label>Customer Id</label>
+                    @Html.TextBoxFor(m => m.CustomerId, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-sm-4">
+                    <label>Order Date</label>
+                    @Html.TextBoxFor(m => m.OrderDate, "{0:MM/dd/yyyy}", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label>Required Date</label>
+                    @Html.TextBoxFor(m => m.RequireDate, "{0:MM/dd/yyyy}", new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-sm-4">
+                    <label>Receiver</label>
+                    @Html.TextBoxFor(m => m.Receiver, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group col-sm-4">
+                    <label>Shipping Address</label>
+                    @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label>Total Amount</label>
+                    @Html.TextBoxFor(m => m.Amount, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-sm-12">
+                    <label>Notes</label>
+                    @Html.TextAreaFor(m => m.Description, new { @class = "form-control", rows = 5 })
+                </div>
+            </div>
+        </div>
+        @if (Model.OrderDetails.Count > 0)
+        {
+            @Html.Partial("_Detail", Model.OrderDetails)
+        }
+        <div class="panel-footer">
+            <button class="btn btn-default" formaction="@ViewBag.Controller/Insert">
+                <span class="glyphicon glyphicon-save"></span> Create
+            </button>
+            <button class="btn btn-default" formaction="@ViewBag.Controller/Update">
+                <span class="glyphicon glyphicon-saved"></span> Update
+            </button>
+            <button class="btn btn-default" formaction="@ViewBag.Controller/Delete">
+                <span class="glyphicon glyphicon-trash"></span> Delete
+            </button>
+            <a class="btn btn-default" href="@ViewBag.Controller/Index">
+                <span class="glyphicon glyphicon-plus"></span> New
+            </a>
+        </div>
+    </div>
+}

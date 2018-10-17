@@ -1,0 +1,2 @@
+neu cau du lieu chuyen vao trong lfotm day len sever co cho nao
+!modelstate.isvalid:neu co 1 du lieu nao do trong model bi sai

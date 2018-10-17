@@ -1,0 +1,45 @@
+﻿<button class="btn btn btn-danger" id="btn-Add">Click</button>
+<div class="UpdatePanel"></div>
+<script>
+    $(function () {
+        $("#btn-Add").click(function () {
+            debugger;
+            $.ajax({
+                url: '/Ajax/GetAllData',
+                type: 'GET',
+                data: '',
+                dataType: 'json',
+                success: function (data) {
+                    debugger;
+                    loaddata(data);
+                    debugger;
+                },
+                error: function () {
+                    alert('Failed!please try again');
+                }
+            });
+        })
+        function loaddata(data)
+        {
+            var tab = $('<table class=table table-border table-hover></table>');
+            var thead = $('<thead></thead>');
+            thead.append('<th>id</th>');
+            thead.append('<th>Pass</th>');
+            thead.append('<th>FullName</th>');
+            thead.append('<th>Email</th>');
+            thead.append('<th>Mobile</th>');
+            tab.append(thead);
+            $.each(data, function (i, val) {
+                var trow = $('<tr></tr>');
+                trow.append('<td>' + val.id + '</td>');
+                debugger;
+                trow.append('<td>' + val.pass + '</td>');
+                trow.append('<td>' + val.Full + '</td>');
+                trow.append('<td>' + val.email + '</td>');
+                trow.append('<td>' + val.mobile + '</td>');
+                tab.append(trow);
+            });
+            $(".UpdatePanel").html(tab);
+        }
+    })
+</script>

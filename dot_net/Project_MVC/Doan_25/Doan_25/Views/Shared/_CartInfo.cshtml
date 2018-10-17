@@ -1,0 +1,18 @@
+﻿@model List<Doan_25.Model.CartItem>
+
+@foreach (var item in Model)
+{
+    ViewBag.tongtien = ViewBag.tongtien + item.Quantity * item.Product.PriceNews;
+}
+<div class="box_ct">
+
+    <div style="padding: 20px 5px 0 5px; width: 140px; float: left; text-align: center;" class="maximg2">
+        <span id="ctl00_lblCartStatus">Có @Model.Count Sản phẩm</span>
+        <br />
+        <span class="border_cart"></span>Tổng:
+        <span id="ctl00_lblTotal" style="color: #ff0000; padding-left: 2px;">@String.Format("{0:0,0}", ViewBag.tongtien) VNĐ</span>
+    </div>
+    <a href="/Cart">
+        <img src="~/Skin/images/bag.png" style="float: left; margin-bottom: 10px; width: 50px" />
+    </a>
+</div>

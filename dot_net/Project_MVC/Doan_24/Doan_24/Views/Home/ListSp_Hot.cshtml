@@ -1,0 +1,64 @@
+﻿
+
+<div class="th-tab">
+    <div class="th-tab-left">
+
+        <span>   <a style="color:White;" href="#">Sản phẩm hot</a></span>
+    </div>
+</div>
+<div class="cate_des">
+    <a style="color:White;" href="#">  <img src="~/Skin/images/2014_07_03_14_38_54_97.jpg" style="border-width:0px;"></a>
+</div>
+<div class="product_grid">
+    @foreach (var item in Model)
+    {
+        <div class="item_product">
+            <span class="icon_sales" style="display: none">- 0%</span>
+            <img src="~/Skin/images/icon_new.gif" class="icon_new" style="display: block">
+            <div class="pdL10">
+                <a href="/Home/Details/@item.ProductID">
+                    <b>
+                        @item.NameProduct
+                    </b>
+                </a>
+                <br>
+                Model:
+                BLD-006
+            </div>
+            <div class="sepa">
+            </div>
+            <div class="img">
+                <a href="images" class="highslide" onclick="return hs.expand(this)">
+                    <img src="~/Skin/images/@item.ImagesMain" style="height:140px;width:187px;border-width:0px;">
+                </a>
+            </div>
+            <div class="sepa">
+            </div>
+            <div class="pdL10 pdT10">
+                <div class="pdL10-1">
+                    Giá cũ: <span class="td_lt">
+                        <b>
+                            @item.Price
+                        </b>
+                        VNĐ
+                    </span>
+                    <br>
+                    Giá mới: <b style="color: red;">
+                        @item.PriceNews
+                    </b>
+                    VNĐ
+                </div>
+                <div class="pdL10-2">
+                    <a href="/Home/Details/@item.ProductID" class="btn-01">
+                        Chi tiết
+                    </a>
+                    <a href="~/them-gio-hang?ProductID=@item.ProductID&Quantity=1" class="btn-01 add_cart">Mua hàng</a>
+                </div>
+            </div>
+        </div>
+
+    }
+    <div class="clear">
+    </div>
+</div>
+

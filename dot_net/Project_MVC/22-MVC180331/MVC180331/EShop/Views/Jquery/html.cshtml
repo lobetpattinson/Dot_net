@@ -1,0 +1,28 @@
+﻿<div></div>
+<div></div>
+<div></div>
+<p>Chao mung ham kiet den voi the gioi jquery</p>
+<button class="btn btn-warning" id="btnOK">Click</button>
+<button class="btn btn-primary" id="btnKetqua">Click</button>
+<div id="container">
+    <div id="one">test 1 </div>
+    <div id="two">test 2 </div>
+    <div id="three">test 3 </div>
+    <div id="four">test 4 </div>
+</div>
+<div id="Save"></div>
+<script>
+    $(function () {
+        $("#btnOK").click(function () {
+            $("div").html("<span style='color:red'>Chao mung ban den voi the gioi jquery</span>");
+        });
+        $("#btnKetqua").click(function () {
+            var x = $('#container').html();
+            debugger;
+            $('#Save').val(x);
+            debugger;
+        })
+       
+    });
+
+</script>

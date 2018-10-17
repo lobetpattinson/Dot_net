@@ -1,0 +1,51 @@
+E:\Project\CongNgheWeb\MyWeb\Models\bin\Debug\Models.dll.config
+E:\Project\CongNgheWeb\MyWeb\Models\bin\Debug\Models.dll
+E:\Project\CongNgheWeb\MyWeb\Models\bin\Debug\Models.pdb
+E:\Project\CongNgheWeb\MyWeb\Models\bin\Debug\EntityFramework.dll
+E:\Project\CongNgheWeb\MyWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\Project\CongNgheWeb\MyWeb\Models\bin\Debug\EntityFramework.xml
+E:\Project\CongNgheWeb\MyWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\Project\CongNgheWeb\MyWeb\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\Project\CongNgheWeb\MyWeb\Models\obj\Debug\Models.dll
+E:\Project\CongNgheWeb\MyWeb\Models\obj\Debug\Models.pdb
+E:\HocTap\CNWeb\Models\bin\Debug\Models.dll.config
+E:\HocTap\CNWeb\Models\bin\Debug\Models.dll
+E:\HocTap\CNWeb\Models\bin\Debug\Models.pdb
+E:\HocTap\CNWeb\Models\bin\Debug\EntityFramework.dll
+E:\HocTap\CNWeb\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\HocTap\CNWeb\Models\bin\Debug\EntityFramework.xml
+E:\HocTap\CNWeb\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\HocTap\CNWeb\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\HocTap\CNWeb\Models\obj\Debug\Models.dll
+E:\HocTap\CNWeb\Models\obj\Debug\Models.pdb
+E:\Project\CongNgheWeb\Web_DenLed\Models\bin\Debug\Models.dll.config
+E:\Project\CongNgheWeb\Web_DenLed\Models\bin\Debug\Models.dll
+E:\Project\CongNgheWeb\Web_DenLed\Models\bin\Debug\Models.pdb
+E:\Project\CongNgheWeb\Web_DenLed\Models\bin\Debug\EntityFramework.dll
+E:\Project\CongNgheWeb\Web_DenLed\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\Project\CongNgheWeb\Web_DenLed\Models\bin\Debug\EntityFramework.xml
+E:\Project\CongNgheWeb\Web_DenLed\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\Project\CongNgheWeb\Web_DenLed\Models\obj\Debug\Models.dll
+E:\Project\CongNgheWeb\Web_DenLed\Models\obj\Debug\Models.pdb
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\bin\Debug\Models.dll.config
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\bin\Debug\Models.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\bin\Debug\Models.pdb
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\bin\Debug\EntityFramework.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\bin\Debug\EntityFramework.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\obj\Debug\Models.dll
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\obj\Debug\Models.pdb
+E:\Project test\BTL_CNWeb_Trong_TH12A\Web_DenLed\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\bin\Debug\Models.dll.config
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\bin\Debug\Models.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\bin\Debug\Models.pdb
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\bin\Debug\EntityFramework.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\bin\Debug\EntityFramework.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\obj\Debug\Models.csproj.CopyComplete
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\obj\Debug\Models.dll
+D:\Doan_ dot_net\dot_net\share_code\WebBanHangDenLed_Full_Data\WebBanHangDenLed_Full_Data\Web_DenLed\Models\obj\Debug\Models.pdb

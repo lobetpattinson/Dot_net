@@ -1,0 +1,29 @@
+namespace Models.EF
+{
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("tblTypeInfo")]
+    public partial class tblTypeInfo
+    {
+        public int ID { get; set; }
+
+        public int? TypeID { get; set; }
+
+        [Column(TypeName = "ntext")]
+        public string Title { get; set; }
+
+        [StringLength(200)]
+        public string Summary { get; set; }
+
+        [Column(TypeName = "ntext")]
+        public string Content { get; set; }
+
+        public bool? Status { get; set; }
+
+        public virtual tblType tblType { get; set; }
+    }
+}

@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Doan_003.Controllers
+{
+    public class FileUploadController : Controller
+    {
+        // GET: FileUpload
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Upload()
+        {
+            var image = Request.Files["image"];
+            if(image !=null && image.ContentLength >0)
+            {
+                var path = Server.MapPath("~/Images/" + image.FileName);
+                image.SaveAs(path);
+                ViewBag.ImageUrl = "/Images/" + image.FileName;
+            }
+            var document = Request.Files["document"];
+            if(document !=null && document.ContentLength >0)
+            {
+                var path = Server.MapPath("~/Images/" + document.FileName);
+                document.SaveAs(path);
+                ViewBag.FileName = document.FileName;
+                ViewBag.FileType = document.ContentType;
+                ViewBag.FileSize = document.ContentLength;
+            }
+            return View();
+        }
+    }
+}
+
+<form action="/FileUpload/Upload" method="post" enctype="multipart/form-data">
+    <div>Hinh anh:</div>
+    <input name="image" type="file" />
+    <div>Tai lieu:</div>
+    <input name="document" type="file" />
+    <hr />
+    <input type="submit" value="Upload" />
+</form>

@@ -1,0 +1,24 @@
+ta da co bang products trong database:
+
+ public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+b2:bay gio ta tim cach them moi 1 column Image vao trong cot:
+
+b3:doi lai class:
+public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public byte[] Image { get; set; }
+    }
+b4:chinh lai muc view trong create input type =file
+<div class="form-group">
+ <input type="file" class="form-control">
+</div>
+b5:chay ta thay da co column them vao trong thu muc sqlsever nhung chua add duoc du lieu vao muc imgae
+b7:ta tim cach dua du lieu vao thu muc image
+
+

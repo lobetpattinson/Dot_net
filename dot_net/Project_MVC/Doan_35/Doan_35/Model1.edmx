@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Web_DenLedModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblCategories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" />
+          <Property Name="Levels" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="CreateDate" Type="date" />
+          <Property Name="TypeID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblCategoryProducts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="CategoryID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblContact">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="ntext" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Content" Type="ntext" />
+          <Property Name="DateSent" Type="date" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameCus" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Adress" Type="ntext" />
+          <Property Name="Sex" Type="nchar" MaxLength="10" />
+          <Property Name="Birthday" Type="date" />
+          <Property Name="CreateDate" Type="date" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Account" Type="nchar" MaxLength="40" />
+          <Property Name="Password" Type="ntext" />
+        </EntityType>
+        <EntityType Name="tblManufactures">
+          <Key>
+            <PropertyRef Name="ManufacturesID" />
+          </Key>
+          <Property Name="ManufacturesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblOrderDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="tblOrders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="DateSet" Type="date" />
+          <Property Name="DeliveryDate" Type="date" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblProduct_Images">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductID" Type="int" />
+          <Property Name="Images" Type="varchar" MaxLength="100" />
+          <Property Name="Images_Thum" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblProducts">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MetaTitle" Type="ntext" />
+          <Property Name="NameProduct" Type="ntext" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PriceNews" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ManufacturesID" Type="int" />
+          <Property Name="ImagesMain" Type="nvarchar" MaxLength="100" />
+          <Property Name="DienAp" Type="nchar" MaxLength="10" />
+          <Property Name="LedChip" Type="nvarchar" MaxLength="50" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="TuoiTho" Type="nvarchar" MaxLength="50" />
+          <Property Name="QuangThong" Type="nchar" MaxLength="10" />
+          <Property Name="HeSoCRI" Type="nchar" MaxLength="10" />
+          <Property Name="NhietDoMau" Type="nchar" MaxLength="10" />
+          <Property Name="GocMo" Type="nchar" MaxLength="10" />
+          <Property Name="DoKin" Type="nchar" MaxLength="10" />
+          <Property Name="NhietDoLamViec" Type="ntext" />
+          <Property Name="HeSoCongSuat" Type="nchar" MaxLength="10" />
+          <Property Name="VatLieu" Type="nchar" MaxLength="10" />
+          <Property Name="Content" Type="ntext" />
+          <Property Name="Warranty" Type="int" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="CreateDate" Type="date" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="tblRoles">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameRole" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblUsers">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Account" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <Association Name="FK_tblCategoryProducts_tblCategories">
+          <End Role="tblCategories" Type="Self.tblCategories" Multiplicity="0..1" />
+          <End Role="tblCategoryProducts" Type="Self.tblCategoryProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="tblCategoryProducts">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblOrderDetail_tblOrders">
+          <End Role="tblOrders" Type="Self.tblOrders" Multiplicity="0..1" />
+          <End Role="tblOrderDetail" Type="Self.tblOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblOrders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="tblOrderDetail">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblOrders_tblCustomer">
+          <End Role="tblCustomer" Type="Self.tblCustomer" Multiplicity="0..1" />
+          <End Role="tblOrders" Type="Self.tblOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCustomer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="tblOrders">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="tblCategory_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="tblProducts_List" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Web_DenLedModelStoreContainer">
+          <EntitySet Name="tblCategories" EntityType="Self.tblCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCategoryProducts" EntityType="Self.tblCategoryProducts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblContact" EntityType="Self.tblContact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCustomer" EntityType="Self.tblCustomer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblManufactures" EntityType="Self.tblManufactures" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblOrderDetail" EntityType="Self.tblOrderDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblOrders" EntityType="Self.tblOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblProduct_Images" EntityType="Self.tblProduct_Images" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblProducts" EntityType="Self.tblProducts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblRoles" EntityType="Self.tblRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUsers" EntityType="Self.tblUsers" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblCategoryProducts_tblCategories" Association="Self.FK_tblCategoryProducts_tblCategories">
+            <End Role="tblCategories" EntitySet="tblCategories" />
+            <End Role="tblCategoryProducts" EntitySet="tblCategoryProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblOrderDetail_tblOrders" Association="Self.FK_tblOrderDetail_tblOrders">
+            <End Role="tblOrders" EntitySet="tblOrders" />
+            <End Role="tblOrderDetail" EntitySet="tblOrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblOrders_tblCustomer" Association="Self.FK_tblOrders_tblCustomer">
+            <End Role="tblCustomer" EntitySet="tblCustomer" />
+            <End Role="tblOrders" EntitySet="tblOrders" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Web_DenLedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblCategory">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Levels" Type="Int32" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="TypeID" Type="Int32" />
+          <NavigationProperty Name="tblCategoryProducts" Relationship="Self.FK_tblCategoryProducts_tblCategories" FromRole="tblCategories" ToRole="tblCategoryProducts" />
+        </EntityType>
+        <EntityType Name="tblCategoryProduct">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <NavigationProperty Name="tblCategory" Relationship="Self.FK_tblCategoryProducts_tblCategories" FromRole="tblCategoryProducts" ToRole="tblCategories" />
+        </EntityType>
+        <EntityType Name="tblContact">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateSent" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tblCustomer">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameCus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="Account" Type="String" MaxLength="40" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblOrders" Relationship="Self.FK_tblOrders_tblCustomer" FromRole="tblCustomer" ToRole="tblOrders" />
+        </EntityType>
+        <EntityType Name="tblManufacture">
+          <Key>
+            <PropertyRef Name="ManufacturesID" />
+          </Key>
+          <Property Name="ManufacturesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblOrderDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="tblOrder" Relationship="Self.FK_tblOrderDetail_tblOrders" FromRole="tblOrderDetail" ToRole="tblOrders" />
+        </EntityType>
+        <EntityType Name="tblOrder">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="DateSet" Type="DateTime" Precision="0" />
+          <Property Name="DeliveryDate" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="Boolean" />
+          <NavigationProperty Name="tblCustomer" Relationship="Self.FK_tblOrders_tblCustomer" FromRole="tblOrders" ToRole="tblCustomer" />
+          <NavigationProperty Name="tblOrderDetails" Relationship="Self.FK_tblOrderDetail_tblOrders" FromRole="tblOrders" ToRole="tblOrderDetail" />
+        </EntityType>
+        <EntityType Name="tblProduct_Images">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="Images" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Images_Thum" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblProduct">
+          <Key>
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MetaTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameProduct" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PriceNews" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ManufacturesID" Type="Int32" />
+          <Property Name="ImagesMain" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DienAp" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="LedChip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="TuoiTho" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QuangThong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="HeSoCRI" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NhietDoMau" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="GocMo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DoKin" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="NhietDoLamViec" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HeSoCongSuat" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="VatLieu" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Warranty" Type="Int32" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tblRole">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameRole" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Account" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_tblCategoryProducts_tblCategories">
+          <End Role="tblCategories" Type="Self.tblCategory" Multiplicity="0..1" />
+          <End Role="tblCategoryProducts" Type="Self.tblCategoryProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCategories">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="tblCategoryProducts">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblOrders_tblCustomer">
+          <End Role="tblCustomer" Type="Self.tblCustomer" Multiplicity="0..1" />
+          <End Role="tblOrders" Type="Self.tblOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCustomer">
+              <PropertyRef Name="CustomerID" />
+            </Principal>
+            <Dependent Role="tblOrders">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblOrderDetail_tblOrders">
+          <End Role="tblOrders" Type="Self.tblOrder" Multiplicity="0..1" />
+          <End Role="tblOrderDetail" Type="Self.tblOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblOrders">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="tblOrderDetail">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Web_DenLedEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblCategories" EntityType="Self.tblCategory" />
+          <EntitySet Name="tblCategoryProducts" EntityType="Self.tblCategoryProduct" />
+          <EntitySet Name="tblContacts" EntityType="Self.tblContact" />
+          <EntitySet Name="tblCustomers" EntityType="Self.tblCustomer" />
+          <EntitySet Name="tblManufactures" EntityType="Self.tblManufacture" />
+          <EntitySet Name="tblOrderDetails" EntityType="Self.tblOrderDetail" />
+          <EntitySet Name="tblOrders" EntityType="Self.tblOrder" />
+          <EntitySet Name="tblProduct_Images" EntityType="Self.tblProduct_Images" />
+          <EntitySet Name="tblProducts" EntityType="Self.tblProduct" />
+          <EntitySet Name="tblRoles" EntityType="Self.tblRole" />
+          <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+          <AssociationSet Name="FK_tblCategoryProducts_tblCategories" Association="Self.FK_tblCategoryProducts_tblCategories">
+            <End Role="tblCategories" EntitySet="tblCategories" />
+            <End Role="tblCategoryProducts" EntitySet="tblCategoryProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblOrders_tblCustomer" Association="Self.FK_tblOrders_tblCustomer">
+            <End Role="tblCustomer" EntitySet="tblCustomers" />
+            <End Role="tblOrders" EntitySet="tblOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblOrderDetail_tblOrders" Association="Self.FK_tblOrderDetail_tblOrders">
+            <End Role="tblOrders" EntitySet="tblOrders" />
+            <End Role="tblOrderDetail" EntitySet="tblOrderDetails" />
+          </AssociationSet>
+          <FunctionImport Name="tblCategory_List" ReturnType="Collection(Web_DenLedModel.tblCategory_List_Result)" />
+          <FunctionImport Name="tblProducts_List" ReturnType="Collection(Web_DenLedModel.tblProducts_List_Result)" />
+        </EntityContainer>
+        <ComplexType Name="tblCategory_List_Result">
+          <Property Type="Int32" Name="CategoryID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="250" />
+          <Property Type="Int32" Name="Levels" Nullable="true" />
+          <Property Type="Boolean" Name="Status" Nullable="true" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="true" />
+          <Property Type="Int32" Name="TypeID" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="tblProducts_List_Result">
+          <Property Type="Int32" Name="ProductID" Nullable="false" />
+          <Property Type="String" Name="MetaTitle" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="NameProduct" Nullable="true" MaxLength="Max" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="PriceNews" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Int32" Name="ManufacturesID" Nullable="true" />
+          <Property Type="String" Name="ImagesMain" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DienAp" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="LedChip" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Quantity" Nullable="true" />
+          <Property Type="String" Name="TuoiTho" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="QuangThong" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="HeSoCRI" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NhietDoMau" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="GocMo" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="DoKin" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="NhietDoLamViec" Nullable="true" MaxLength="Max" />
+          <Property Type="String" Name="HeSoCongSuat" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="VatLieu" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Content" Nullable="true" MaxLength="Max" />
+          <Property Type="Int32" Name="Warranty" Nullable="true" />
+          <Property Type="Int32" Name="UserID" Nullable="true" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="true" />
+          <Property Type="Boolean" Name="Status" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Web_DenLedModelStoreContainer" CdmEntityContainer="Web_DenLedEntities">
+          <EntitySetMapping Name="tblCategories">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblCategory">
+              <MappingFragment StoreEntitySet="tblCategories">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Levels" ColumnName="Levels" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCategoryProducts">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblCategoryProduct">
+              <MappingFragment StoreEntitySet="tblCategoryProducts">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblContacts">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblContact">
+              <MappingFragment StoreEntitySet="tblContact">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCustomers">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblCustomer">
+              <MappingFragment StoreEntitySet="tblCustomer">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="NameCus" ColumnName="NameCus" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblManufactures">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblManufacture">
+              <MappingFragment StoreEntitySet="tblManufactures">
+                <ScalarProperty Name="ManufacturesID" ColumnName="ManufacturesID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblOrderDetails">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblOrderDetail">
+              <MappingFragment StoreEntitySet="tblOrderDetail">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblOrders">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblOrder">
+              <MappingFragment StoreEntitySet="tblOrders">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="DateSet" ColumnName="DateSet" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblProduct_Images">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblProduct_Images">
+              <MappingFragment StoreEntitySet="tblProduct_Images">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Images" ColumnName="Images" />
+                <ScalarProperty Name="Images_Thum" ColumnName="Images_Thum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblProducts">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblProduct">
+              <MappingFragment StoreEntitySet="tblProducts">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+                <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="PriceNews" ColumnName="PriceNews" />
+                <ScalarProperty Name="ManufacturesID" ColumnName="ManufacturesID" />
+                <ScalarProperty Name="ImagesMain" ColumnName="ImagesMain" />
+                <ScalarProperty Name="DienAp" ColumnName="DienAp" />
+                <ScalarProperty Name="LedChip" ColumnName="LedChip" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="TuoiTho" ColumnName="TuoiTho" />
+                <ScalarProperty Name="QuangThong" ColumnName="QuangThong" />
+                <ScalarProperty Name="HeSoCRI" ColumnName="HeSoCRI" />
+                <ScalarProperty Name="NhietDoMau" ColumnName="NhietDoMau" />
+                <ScalarProperty Name="GocMo" ColumnName="GocMo" />
+                <ScalarProperty Name="DoKin" ColumnName="DoKin" />
+                <ScalarProperty Name="NhietDoLamViec" ColumnName="NhietDoLamViec" />
+                <ScalarProperty Name="HeSoCongSuat" ColumnName="HeSoCongSuat" />
+                <ScalarProperty Name="VatLieu" ColumnName="VatLieu" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRoles">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblRole">
+              <MappingFragment StoreEntitySet="tblRoles">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="NameRole" ColumnName="NameRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUsers">
+            <EntityTypeMapping TypeName="Web_DenLedModel.tblUser">
+              <MappingFragment StoreEntitySet="tblUsers">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="tblCategory_List" FunctionName="Web_DenLedModel.Store.tblCategory_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Web_DenLedModel.tblCategory_List_Result">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Levels" ColumnName="Levels" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="tblProducts_List" FunctionName="Web_DenLedModel.Store.tblProducts_List">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Web_DenLedModel.tblProducts_List_Result">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+                <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="PriceNews" ColumnName="PriceNews" />
+                <ScalarProperty Name="ManufacturesID" ColumnName="ManufacturesID" />
+                <ScalarProperty Name="ImagesMain" ColumnName="ImagesMain" />
+                <ScalarProperty Name="DienAp" ColumnName="DienAp" />
+                <ScalarProperty Name="LedChip" ColumnName="LedChip" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="TuoiTho" ColumnName="TuoiTho" />
+                <ScalarProperty Name="QuangThong" ColumnName="QuangThong" />
+                <ScalarProperty Name="HeSoCRI" ColumnName="HeSoCRI" />
+                <ScalarProperty Name="NhietDoMau" ColumnName="NhietDoMau" />
+                <ScalarProperty Name="GocMo" ColumnName="GocMo" />
+                <ScalarProperty Name="DoKin" ColumnName="DoKin" />
+                <ScalarProperty Name="NhietDoLamViec" ColumnName="NhietDoLamViec" />
+                <ScalarProperty Name="HeSoCongSuat" ColumnName="HeSoCongSuat" />
+                <ScalarProperty Name="VatLieu" ColumnName="VatLieu" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Warranty" ColumnName="Warranty" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

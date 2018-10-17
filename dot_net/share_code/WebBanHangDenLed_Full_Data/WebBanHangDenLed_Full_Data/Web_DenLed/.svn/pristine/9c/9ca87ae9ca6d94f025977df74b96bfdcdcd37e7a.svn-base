@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Insert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content_box">
+
+    <div class="th-tab" style="margin: 0;">
+        <div class="th-tab-left">
+            <span>
+
+                Liên hệ mua hàng
+            </span>
+        </div>
+
+
+
+    </div>
+    <div class="box_ct contenttext">
+        <div style="padding-left: 10px; padding-bottom: 20px;">
+            @if (TempData["AlertMes"] != null)
+            {
+                <div id="AlertBox" class="alert @TempData["AlertType"] hide">@TempData["AlertMes"]</div>
+            }
+            <p><strong>Công ty cổ phần đèn led việt nam</strong></p>
+            <p>Email: info@denledmh.com - denledbestlight@gmail.com</p>
+            <p>ĐC: Số 12 Nguyễn Đình Hoàn (Ngõ 1 Hoàng Quốc Việt), Cầu Giấy, HN</p>
+            <p>ĐT: 0437 918 575 - Hotline: 0912 185 632</p>
+        </div>
+        <form action="/LienHe/Insert" method="post" enctype="multipart/form-data">
+            
+            <table cellpadding="0" cellspacing="0">
+
+                <tbody>
+
+                    <tr>
+                        <td class="R pdR10 pdB5" style="width: 20%;">
+                            Tên bạn:
+                        </td>
+                        <td>
+                            <input name="Name" type="text" class="Input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="R pdR10 pdB5" style="">
+                            Email:
+                        </td>
+                        <td>
+                            <input name="Email" type="text" class="Input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="R pdR10 pdB5" style="">
+                            Tiêu Đề:
+                        </td>
+                        <td>
+                            <input name="Title" type="text" class="Input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="R pdR10 pdB5" style="" align="left" valign="top">
+                            Nội Dung:
+                        </td>
+                        <td>
+                            <textarea name="Content" rows="2" cols="20" class="Input_text" style="height:80px;width: 250px;"></textarea>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left;">
+                            <div style="padding-top: 10px; padding-right: 140px">
+                                <input type="button"id="btnSubmit" value="Gửi" class="th-button">
+
+                            </div>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+@section Js{
+    <script type="text/javascript">
+        $(function () {
+            $('#AlertBox').removeClass("hide");
+            $('#AlertBox').delay(1000).slideUp();
+        })
+
+
+    </script>
+<script type="text/javascript">
+                    var cart = {
+                        init:function(){
+                            cart.regEvents();
+                        },
+                        regEvents: function ()
+                        {
+
+                            $('#btnSubmit').click(function () {
+                               
+                                
+                                     var  cartList= {
+                                         Name: $("input[name='Name']").val(),
+                                         Email:$("input[name='Email']").val(),
+                                         Title :$("input[name='Title']").val(),
+                                        Content:$("textarea[name='Content']").val()
+                                }
+
+
+                                $.ajax({
+                                    url: '/LienHe/PhanHoi',
+                                    data: { id: JSON.stringify(cartList) },
+                                    dataType: 'json',
+                                    type: 'POST',
+                                    success:function(res)
+                                    {
+                                        if (res.status==true) {
+                                            window.location.href = '@Url.Action("Insert", "LienHe")';;
+                                        }
+
+                                    },
+                                    error:function (res) {
+                                        console.log(res)
+                                    }
+                                })
+                            })
+                        }
+
+                    }
+                    cart.init();
+</script>
+}

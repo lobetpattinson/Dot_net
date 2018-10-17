@@ -1,0 +1,84 @@
+   public class Customer
+    {
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+public class Doan_001DbContext:DbContext
+    {
+        public Doan_001DbContext():base("name=ChuoiKetNoi"){ }
+        public DbSet<Customer>Customers { get; set; }
+    }
+
+using Doan_001.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Doan_001.Controllers
+{
+    public class AccountController : Controller
+    {
+        Doan_001DbContext db = new Doan_001DbContext();
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Register(Customer user)
+        {
+            if(!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Vui long sua cac loi sau day");
+                return View();
+            }
+            try
+            {
+                db.Customers.Add(user);
+                db.SaveChanges();
+                ModelState.AddModelError("", "Dang ky thanh cong");
+            }
+            catch
+            {
+                ModelState.AddModelError("", "Dang ky that bai!");
+            }
+            return View(user);
+        }
+    }
+}
+
+@model Doan_001.Models.Customer
+<div class="panel panel-default">
+    <div class="panel-heading">Dang ky thanh vien</div>
+    <div class="panel-body">
+        @Html.ValidationSummary(true)
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+        {
+            <div class="form-group">
+                <label>Ten dang nhap</label>
+                @Html.TextBoxFor(m => m.Username, new { @class="form-control"})
+                @Html.ValidationMessageFor(m=>m.Username)
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                @Html.TextBoxFor(m => m.Email, new { @class="form-control"})
+                @Html.ValidationMessageFor(m=>m.Email)
+            </div>
+            <div class="form-group">
+                <label>Mat khau:</label>
+                @Html.TextBoxFor(m => m.Password, new { @class="form-control"})
+                @Html.ValidationMessageFor(m=>m.Password)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dang ky" class="btn btn-danger" />
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,449 @@
+﻿@model Models.Function.PageInfo<Models.EF.tblProduct>
+@using MyWeb.Areas.Admin.Code;
+@{
+    ViewBag.Title = "Danh sách sản phẩm";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<!-- /section:settings.box -->
+<div class="page-content">
+    <input class="btn btn-primary" type="button" value="Thêm sản phẩm" data-toggle="modal" data-target="#addProduct" />
+    <div class="page-header">
+        <h1>
+           
+        </h1>
+        @if (TempData["AlertMes"] != null)
+        {
+            <div id="AlertBox" class="alert @TempData["AlertType"] hide">@TempData["AlertMes"]</div>
+        }
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12" id="_pagingla">
+                    @Html.Partial("_paging", Model)
+                
+                </div><!-- /.span -->
+            </div><!-- /.row -->
+
+
+        </div>
+    </div>
+
+</div>
+<!--Modal-->
+<div id="addProduct" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="width: 1114px;margin: 0 0 0 -251px;">
+            <div class=" modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Thêm mới sản phẩm</h4>
+            </div>
+           
+            <form action="/Admin/ProductAdmin/createProduct" method="post" enctype="multipart/form-data">
+                <div class="modal-body form-horizontal row">
+                    <div class="col-xs-6">
+                        <input type="hidden" name="ProductID" />
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> MetaTitle </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="MetaTitle" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NameProduct </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="NameProduct" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Price </label>
+
+                            <div class="col-sm-9">
+                                <input type="number" name="Price" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> PriceNews </label>
+
+                            <div class="col-sm-9">
+                                <input type="number" name="PriceNews" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> ManufacturesID </label>
+
+                            <div class="col-sm-9">
+                                <select class="col-xs-10 col-sm-10" name="ManufacturesID">
+                                    @foreach (var item in ViewBag.Manufacture)
+                                    {
+                                        <option value="@item.ManufacturesID">@item.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Catgorioes </label>
+
+                            <div class="col-sm-9">
+                                <select class="col-xs-10 col-sm-10" name="CategoryID">
+                                    @foreach (var item in ViewBag.Cat)
+                                    {
+                                        <option value="@item.CategoryID">@item.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> ImagesMain </label>
+
+                            <div class="col-sm-9">
+
+                                <input type="file" name="ImagesMain" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> DienAp </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="DienAp" placeholder="640-80 VAC" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> LedChip </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="LedChip" placeholder="SMD 285 Taiwan" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Quantity </label>
+
+                            <div class="col-sm-9">
+                                <input type="number" name="Quantity" placeholder="100" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> QuangThong </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="QuangThong" placeholder=">9000 LM  " class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> HeSoCRI </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="HeSoCRI" placeholder=">80 " class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NhietDoMau </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="NhietDoMau" placeholder="3000 -6500" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> GocMo </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="GocMo" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> DoKin </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="DoKin" placeholder="IP54      " class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NhietDoLamViec </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="NhietDoLamViec" placeholder="-20 den 45" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> HeSoCongSuat </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="HeSoCongSuat" placeholder=">=0.9     " class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> VatLieu </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="VatLieu" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Content </label>
+
+                            <div class="col-sm-9">
+                                <textarea name="Content" placeholder="Content" class="col-xs-10 col-sm-10"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Warranty </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="Warranty" placeholder="Warranty" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Status </label>
+
+                            <div class="col-sm-9">
+                                <select class="col-xs-10 col-sm-10" name="Status">
+                                    <option value="False">False</option>
+                                    <option value="True">True</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    @*<button class="btn btn-primary" value="AAA" onclick="ThemMoiSP();">Thêm mới</button>*@
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<!--Chinh Sua San Pham-->
+<div id="editProduct" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" style="width: 1114px;margin: 0 0 0 -251px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Sửa</h4>
+            </div>
+            <form action="/Admin/ProductAdmin/getDatatoEdit" method="post" enctype="multipart/form-data">
+
+                <div class="modal-body form-horizontal row">
+                    <div class="col-xs-6">
+                        <input type="hidden" name="ProductID" />
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> MetaTitle </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="MetaTitle" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NameProduct </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="NameProduct" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Price </label>
+
+                            <div class="col-sm-9">
+                                <input type="number" name="Price" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> PriceNews </label>
+
+                            <div class="col-sm-9">
+                                <input type="number" name="PriceNews" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> ManufacturesID </label>
+
+                            <div class="col-sm-9">
+                                <select class="col-xs-10 col-sm-10" name="ManufacturesID">
+                                    @foreach (var item in ViewBag.Manufacture)
+                                    {
+                                        <option value="@item.ManufacturesID">@item.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Catgorioes </label>
+
+                            <div class="col-sm-9">
+                                <select class="col-xs-10 col-sm-10" name="CategoryID">
+                                    @foreach (var item in ViewBag.Cat)
+                                    {
+                                        <option value="@item.CategoryID">@item.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> ImagesMain </label>
+
+                            <div class="col-sm-9">
+
+                                <input type="file" name="ImagesMain" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> DienAp </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="DienAp" placeholder="640-80 VAC" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> LedChip </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="LedChip" placeholder="SMD 285 Taiwan" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Quantity </label>
+
+                            <div class="col-sm-9">
+                                <input type="number" name="Quantity" placeholder="100" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> QuangThong </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="QuangThong" placeholder=">9000 LM  " class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-6">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> HeSoCRI </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="HeSoCRI" placeholder=">80 " class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NhietDoMau </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="NhietDoMau" placeholder="3000 -6500" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> GocMo </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="GocMo" placeholder="Username" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> DoKin </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="DoKin" placeholder="IP54      " class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NhietDoLamViec </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="NhietDoLamViec" placeholder="-20 den 45" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> HeSoCongSuat </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="HeSoCongSuat" placeholder=">=0.9     " class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> VatLieu </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="VatLieu" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Content </label>
+
+                            <div class="col-sm-9">
+                                <textarea name="Content" placeholder="Content" class="col-xs-10 col-sm-10"></textarea>
+                                @*<input type="text" name="Content" placeholder="Username" class="col-xs-10 col-sm-10">*@
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Warranty </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" name="Warranty" placeholder="Warranty" class="col-xs-10 col-sm-10">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Status </label>
+
+                            <div class="col-sm-9">
+                                <select class="col-xs-10 col-sm-10" name="Status">
+                                    <option value="False">False</option>
+                                    <option value="True">True</option>
+
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+@section JqueryPage{
+<script src="~/Skin/Admin/assets/js/jquery-ui.custom.js"></script>
+
+<script src="~/Skin/Admin/assets/js/bootstrap-wysiwyg.js"></script>
+    <script src="~/Skin/Admin/Editor.js"></script>
+    <script src="~/Skin/IsProduct.js"></script>
+    <script type="text/javascript">
+
+        $('.btn.btn-xs.btn-info').click(function () {
+            $("select[name='Status']").find("option[value='true']").attr("selected", true);
+
+        })
+        //$('.paginate_button').click(function () {
+        //    $(this).find(".paginate_button").removeClass("active")
+        //    $(this).addClass("active")
+        //})
+        $("#Them").click(function () {
+            alert("a")
+
+        })
+    </script>
+}

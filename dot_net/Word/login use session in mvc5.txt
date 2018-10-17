@@ -1,0 +1,92 @@
+ public class Customer
+    {
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+
+namespace Doan_001.Models
+{
+    public class Doan_001DbContext:DbContext
+    {
+        public Doan_001DbContext():base("name=ChuoiKetNoi"){ }
+        public DbSet<Customer>Customers { get; set; }
+    }
+}
+@model Doan_001.Models.Customer
+    <div class="panel panel-default">
+        <div class="panel-heading">Dang nhap</div>
+        <div class="panel-body">
+            @Html.ValidationSummary()
+            @using (Html.BeginForm())
+            {
+                <div class="form-group">
+                    <label>Ten dang nhap:</label>
+                    @Html.TextBox("Username", null, new { @class="form-control"})
+                </div>
+                <div class="form-group">
+                    <label>Mat khau:</label>
+                    @Html.TextBox("Password", null, new { @class="form-control"})
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-danger">Dang nhap</button>
+                </div>
+            }
+        </div>
+    </div>
+
+
+  public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        
+        public ActionResult Login(Customer objUser)
+        {
+            if (ModelState.IsValid)
+            {
+                using (Doan_001DbContext db = new Doan_001DbContext())
+                {
+                    var obj = db.Customers.Where(a => a.Username.Equals(objUser.Username) && a.Password.Equals(objUser.Password)).FirstOrDefault();
+                    if (obj != null)
+                    {
+                        Session["UserID"] = obj.Id.ToString();
+                        Session["UserName"] = obj.Username.ToString();
+                        return RedirectToAction("UserDashBoard");
+                    }
+                }
+            }
+            return View(objUser);
+        }
+
+        public ActionResult UserDashBoard()
+        {
+            if (Session["UserID"] != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
+        }
+    }
+
+
+@ {  
+    ViewBag.Title = "UserDashBoard";  
+}  
+  
+< fieldset >  
+    < legend > User DashBoard < /legend>  
+  
+@if(Session["UserName"] != null) { < text >  
+        Welcome @Session["UserName"].ToString() < /text>  
+} < /fieldset> 

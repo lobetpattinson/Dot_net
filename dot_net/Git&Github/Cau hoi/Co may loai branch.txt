@@ -1,0 +1,2 @@
+co 2 loai branch la local branch:branch nam tren may tinh cua ban
+remote branch:branch nam tren may chu tu xa

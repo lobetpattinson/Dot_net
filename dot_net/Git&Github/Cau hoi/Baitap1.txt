@@ -1,0 +1,4 @@
+bai tap1:tao 1 file moi Ahamove.txt
+bai tap2:mo file ahamove.txt va thay doi noi dung ben trong
+bai tap3:go git status va xem ket qua? =>dua ve trang thai midified=>khong the commit
+bai tap4:muon commit tap tin nay can phai su dung lenh git add

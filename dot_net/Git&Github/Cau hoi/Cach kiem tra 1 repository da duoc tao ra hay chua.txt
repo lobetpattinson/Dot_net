@@ -1,0 +1,2 @@
+git init
+nhan duoc thong bao:Initialized empty Git repository in F:/freetuts/.git/

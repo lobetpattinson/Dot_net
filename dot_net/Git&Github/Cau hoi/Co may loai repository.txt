@@ -1,0 +1,3 @@
+co 2 loai repository do la:
+local repository
+remote repository la repo duoc dat tren server dien hinh la github

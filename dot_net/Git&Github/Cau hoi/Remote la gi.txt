@@ -1,0 +1,4 @@
+remote la nhanh tu xa
+
+git remote add origin https://github.com/lobetpattinson/dot_net_002.git
+git remote -v

@@ -1,0 +1,8 @@
+git init 
+git add Tendoan
+git commit -m "first commit"
+git remote add origin https://github.com/lobetpattinson/Doan_Mvc5_Den_Led.git
+git push -u origin master
+
+Khi dua du an len ko duoc de file rar
+thu muc git nam cung cap thu muc can dua len github

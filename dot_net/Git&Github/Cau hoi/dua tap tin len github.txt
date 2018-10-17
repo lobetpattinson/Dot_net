@@ -1,0 +1,11 @@
+dung lenh git push
+truoc khi push no len phai commito truoc
+truoc khi commit no no thi file phai nam o trang thai stagged
+muon file nam o trang thai stagged phai dung lenh git add +ten file
+
+
+git init
+git add dot_net
+git commit -m "HamKiet"
+git remote
+git push

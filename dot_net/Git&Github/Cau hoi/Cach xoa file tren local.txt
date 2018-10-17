@@ -1,0 +1,5 @@
+git rm new.txt    new.txt la ten file
+khi xoa file xong ta phai commit lai cho no
+git commit -m"vua xoa file xong"
+khi nay tren github van con chua cap nhat ta phai push len github lai nhu sau:
+git push origin master

@@ -1,0 +1,3 @@
+la uy thac
+la qua trinh git luu lai 1 ban chup cua cac su thay doi trong thu muc lam viec moi lan commit no se luu lai
+lich su cua nguoi chinh sua ma nguon va kem theo ten va dia chi email cua nguoi commit

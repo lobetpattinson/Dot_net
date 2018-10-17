@@ -1,0 +1,33 @@
+//Toan bo cach su dung git
+Git la h? th?ng qu?n lý phiên b?n phân tán qu?n lý sourcode trên linux
+Luu tr?ng thái c?a fiel duwois d?ng l?ch s?
+Resopitory
+Remote respository:duoc dat tren server
+Local repository:duoc de tren may
+Cach kiem tra da cai dat git hay chua
+Git – version    kiem tra version cua git cai tren windown
+touch text.txt   Tao 1 file text.txt 
+Cd thumuc
+Git help config
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+Git init =>tao repository tu dong tao thu muc .git se bi an di
+git init   tao ra thu muc .git luu tru toan bo database
+Git add “text.txt”	<commit 1 file>
+
+Git add .                   dua tat ca cac file co trong thu muc vao su quan ly cua git
+Git status                  Kiem tra trang thai cua git
+
+Cach hien thi file bi an trong win7:Controlpanel =>folder and option =>tab view =>show hideen folder
+
+
+Lenh commit:
+Git add .        De theo doi cac tap tin moi
+Git commit –m “commit to repository”
+Git log                   kie tra lai ai da thay doi trang thai cua file
+https://github.com/lobetpattinson/Test.git
+git remote add origin https://github.com/lobetpattinson/dot_net_002.git
+
+
+Xem thay d?i (chua dc add) c?a nh?ng file hi?n t?i  git diff --cached
+

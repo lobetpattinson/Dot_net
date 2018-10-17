@@ -1,0 +1,4 @@
+vao trang github 
+chon tab clone or download
+use ssh
+copy duong dan

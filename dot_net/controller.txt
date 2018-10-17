@@ -1,0 +1,12 @@
+public JsonResult GetAllEmployee()
+        {
+
+            var model = db.tblProducts.Select(x => new
+            {
+                ProductID = x.ProductID,
+                NameProduct = x.NameProduct,
+                // Price = x.Price,
+                //PriceNews = x.PriceNews
+            }).ToList();
+            return Json (model,JsonRequestBehavior.AllowGet);
+        }
